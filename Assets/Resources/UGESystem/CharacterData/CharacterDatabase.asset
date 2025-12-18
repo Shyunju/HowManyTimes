@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282236a47d058574c89356611d465943, type: 3}
+  m_Name: CharacterDatabase
+  m_EditorClassIdentifier: 
+  _characters:
+  - <CharacterID>k__BackingField: 22fb8c20-862b-461a-b817-67b4a140f67e
+    <Name>k__BackingField: she
+    <Is3D>k__BackingField: 0
+    <Prefab>k__BackingField: {fileID: 5889619025958826295, guid: 2c3543235f3b255489d1188058ead623, type: 3}
+    <Expressions>k__BackingField:
+    - <ExpressionName>k__BackingField: default
+      <AnimationStateName>k__BackingField: Default
+  - <CharacterID>k__BackingField: 6f3f04bd-d09d-480d-bc2e-8e2f1cf6c2bf
+    <Name>k__BackingField: me
+    <Is3D>k__BackingField: 0
+    <Prefab>k__BackingField: {fileID: 8814941506187807103, guid: 43d79c169018b15489d018572a07e458, type: 3}
+    <Expressions>k__BackingField:
+    - <ExpressionName>k__BackingField: default
+      <AnimationStateName>k__BackingField: Default

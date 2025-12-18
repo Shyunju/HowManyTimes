@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e2aa8099716774b8ead8a5bb920782, type: 3}
+  m_Name: MainQuest
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  _eventNodes:
+  - rid: 7888812723376226508
+  - rid: 7888812723376226510
+  references:
+    version: 2
+    RefIds:
+    - rid: 7888812723376226508
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: cafce1bf-fb1b-4d4a-87f7-cbf539948d1d
+        _name: FirstTalk
+        _type: 0
+        IsStartNode: 1
+        _isRepeatable: 0
+        _position: {x: 136, y: -229.5}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 84e0297a04d2b4e96b8f8ab664c2659b, type: 2}
+    - rid: 7888812723376226510
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 18add5fc-7f33-4446-9359-322d4a5f416c
+        _name: Test
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: 686, y: -229.5}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 7142548f709c544a58106f69b02f3293, type: 2}

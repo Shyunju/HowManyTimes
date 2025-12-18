@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61e9adde95d3a4418c2ca934b48d984, type: 3}
+  m_Name: GE_First_Talk
+  m_EditorClassIdentifier: Assembly-CSharp::UGESystem.GameEvent
+  <Guid>k__BackingField: ea1d0901-1dbb-4b4f-a3a6-26db4f04de9f
+  _archetype: 1
+  _commands:
+  - rid: 2238037552763502660
+  - rid: 2238037552763502661
+  - rid: 2238037552763502663
+  - rid: 2238037552763502662
+  - rid: 2238037552763502664
+  - rid: 2238037552763502665
+  - rid: 2238037552763502666
+  - rid: 2238037552763502667
+  - rid: 2238037594887946309
+  - rid: 2238037594887946308
+  - rid: 2238037552763502668
+  - rid: 2238037552763502669
+  references:
+    version: 2
+    RefIds:
+    - rid: 2238037552763502660
+      type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 2
+        _isNodeExpanded: 0
+        _action: 0
+        _type: 0
+        _image: {fileID: 2800000, guid: 0c47494c1f7a2d54bb9e6058b452f700, type: 3}
+        _video: {fileID: 0}
+    - rid: 2238037552763502661
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 1
+        _dialogueText: What brings you here?
+        _characterName: 2b262eca-84b5-4c36-95fa-c42df63faa26
+        _expression: Default
+        _characterPosition: 0
+        _clearAllCharacters: 0
+        _showCharacter: 1
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3
+    - rid: 2238037552763502662
+      type: {class: ChoiceCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 3
+        _isNodeExpanded: 0
+        _choices:
+        - _text: I'm looking around the village.
+          _targetLabel: Friendly
+        - _text: Where is the weapon shop?
+          _targetLabel: Suspicious
+    - rid: 2238037552763502663
+      type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 1
+        _isNodeExpanded: 0
+        _characterId: e7cbf9bb-40af-4380-86c8-549267f4942f
+        _action: 0
+        _position: 2
+        _expression: Happy
+    - rid: 2238037552763502664
+      type: {class: LabelCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 4
+        _isNodeExpanded: 0
+        _labelName: Friendly
+    - rid: 2238037552763502665
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: Alright. Feel free to look around.
+        _characterName: 21b606b7-98ec-494c-8cc0-7c0d82c0a51b
+        _expression: Happy
+        _characterPosition: 0
+        _clearAllCharacters: 1
+        _showCharacter: 1
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3
+    - rid: 2238037552763502666
+      type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 7
+        _isNodeExpanded: 0
+        _rewards: []
+        _isBranching: 0
+        _targetNodeID: 
+    - rid: 2238037552763502667
+      type: {class: LabelCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 4
+        _isNodeExpanded: 0
+        _labelName: Suspicious
+    - rid: 2238037552763502668
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: State your business, quickly!
+        _characterName: 990a2693-b415-48b4-bcf7-b0a6830925b2
+        _expression: Angry
+        _characterPosition: 0
+        _clearAllCharacters: 1
+        _showCharacter: 1
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3
+    - rid: 2238037552763502669
+      type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 7
+        _isNodeExpanded: 0
+        _rewards: []
+        _isBranching: 0
+        _targetNodeID: 
+    - rid: 2238037594887946308
+      type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 2
+        _isNodeExpanded: 0
+        _action: 0
+        _type: 1
+        _image: {fileID: 0}
+        _video: {fileID: 32900000, guid: da67b16ab1e392d4683ecfcd4ed5eecd, type: 3}
+    - rid: 2238037594887946309
+      type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 2
+        _isNodeExpanded: 0
+        _action: 1
+        _type: 0
+        _image: {fileID: 0}
+        _video: {fileID: 0}

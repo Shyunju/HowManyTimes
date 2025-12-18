@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e2aa8099716774b8ead8a5bb920782, type: 3}
+  m_Name: SB_MainStory
+  m_EditorClassIdentifier: Assembly-CSharp::UGESystem.Storyboard
+  <Name>k__BackingField: 
+  _eventNodes:
+  - rid: 2238037552763502670
+  references:
+    version: 2
+    RefIds:
+    - rid: 2238037552763502670
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: c606c0d3-43e7-4d66-b047-47c0727b8808
+        _name: FirstTalk
+        _type: 0
+        IsStartNode: 1
+        _isRepeatable: 0
+        _position: {x: 2, y: 3}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: c2c0b5bee1553824ab01516f1a470736, type: 2}
