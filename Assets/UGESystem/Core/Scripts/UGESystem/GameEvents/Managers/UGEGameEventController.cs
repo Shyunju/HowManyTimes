@@ -60,6 +60,7 @@ namespace UGESystem
                 
         private Dictionary<string, int> _labelMap;
         private Dictionary<GameEventType, Dictionary<Type, ICommandHandler>> _commandHandlers;
+        private float _lastContinueTime = 0f;
         
         private void Awake()
         {
@@ -229,6 +230,11 @@ namespace UGESystem
         /// </summary>
         public void ContinueEvent()
         {
+            // Prevent input flooding and double skipping (0.2s cooldown)
+            // 입력 플러딩 및 이중 스킵 방지 (0.2초 쿨다운)
+            if (Time.time < _lastContinueTime + 0.2f) return;
+            _lastContinueTime = Time.time;
+
             IsWaitingForChoice = false;
         }
         

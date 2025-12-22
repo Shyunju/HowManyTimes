@@ -54,7 +54,7 @@ MonoBehaviour:
       type: {class: LabelCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 4
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _labelName: Friendly
     - rid: 7888812723376226499
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
@@ -108,7 +108,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: first choice
         _characterName: 22fb8c20-862b-461a-b817-67b4a140f67e
         _expression: default

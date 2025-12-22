@@ -11,61 +11,123 @@ namespace UGESystem
     /// </summary>
     public class UGESystemController : Singleton<UGESystemController>
     {
+        private UGEUIManager _uiManager;
         /// <summary>
         /// Manages all UI elements related to events (dialogue boxes, choices, etc.).
         /// </summary>
-        public UGEUIManager UIManager { get; private set; }
+        public UGEUIManager UIManager
+        {
+            get
+            {
+                if (_uiManager == null) _uiManager = FindOrCreateManager<UGEUIManager>();
+                return _uiManager;
+            }
+        }
+
+        private UGECharacterManager _characterManager;
         /// <summary>
         /// Manages character instantiation, placement, and animations.
         /// </summary>
-        public UGECharacterManager CharacterManager { get; private set; }
+        public UGECharacterManager CharacterManager
+        {
+            get
+            {
+                if (_characterManager == null) _characterManager = FindOrCreateManager<UGECharacterManager>();
+                return _characterManager;
+            }
+        }
+
+        private UGEGameEventController _gameEventController;
         /// <summary>
         /// Executes the command sequence within a single GameEvent.
         /// </summary>
-        public UGEGameEventController GameEventController { get; private set; }
+        public UGEGameEventController GameEventController
+        {
+            get
+            {
+                if (_gameEventController == null) _gameEventController = FindOrCreateManager<UGEGameEventController>();
+                return _gameEventController;
+            }
+        }
+
+        private UGECameraManager _cameraManager;
         /// <summary>
         /// Manages all Cinemachine-based camera operations during events.
         /// </summary>
-        public UGECameraManager CameraManager { get; private set; }
+        public UGECameraManager CameraManager
+        {
+            get
+            {
+                if (_cameraManager == null) _cameraManager = FindOrCreateManager<UGECameraManager>();
+                return _cameraManager;
+            }
+        }
+
+        private UGEDelayedEventInvoker _delayedEventInvoker;
         /// <summary>
         /// Manages the delayed invocation of events from the event bus to prevent race conditions.
         /// </summary>
-        public UGEDelayedEventInvoker DelayedEventInvoker { get; private set; }
+        public UGEDelayedEventInvoker DelayedEventInvoker
+        {
+            get
+            {
+                if (_delayedEventInvoker == null) _delayedEventInvoker = FindOrCreateManager<UGEDelayedEventInvoker>();
+                return _delayedEventInvoker;
+            }
+        }
+
+        private UGESoundManager _soundManager;
         /// <summary>
         /// Manages background music (BGM) and sound effects (SFX).
         /// </summary>
-        public UGESoundManager SoundManager { get; private set; }
+        public UGESoundManager SoundManager
+        {
+            get
+            {
+                if (_soundManager == null) _soundManager = FindOrCreateManager<UGESoundManager>();
+                return _soundManager;
+            }
+        }
+
+        private UGEInputManager _inputManager;
         /// <summary>
         /// Manages event-specific user inputs (e.g., continue, skip).
         /// </summary>
-        public UGEInputManager InputManager { get; private set; }
+        public UGEInputManager InputManager
+        {
+            get
+            {
+                if (_inputManager == null) _inputManager = FindOrCreateManager<UGEInputManager>();
+                return _inputManager;
+            }
+        }
+
+        private UGEScreenEffectManager _screenEffectManager;
         /// <summary>
         /// Manages full-screen effects like fades and tints.
         /// </summary>
-        public UGEScreenEffectManager ScreenEffectManager { get; private set; }
+        public UGEScreenEffectManager ScreenEffectManager
+        {
+            get
+            {
+                if (_screenEffectManager == null) _screenEffectManager = FindOrCreateManager<UGEScreenEffectManager>();
+                return _screenEffectManager;
+            }
+        }
 
         // Runner and Queue Management
         private List<UGEEventTaskRunner> _activeRunners = new List<UGEEventTaskRunner>();
         private List<(UGEEventTaskRunner runner, EventNodeData node, int insertionOrder)> _globalPendingNodes = new List<(UGEEventTaskRunner, EventNodeData, int)>();
         private int _insertionCounter = 0;
 
-        private bool _initialEventsKickedOff = false; 
+        private bool _initialEventsKickedOff = false;
 
         protected override void OnAwake()
         {
             base.OnAwake();
 
-            // Find or create manager components as children.
-            UIManager = FindOrCreateManager<UGEUIManager>();
-            CharacterManager = FindOrCreateManager<UGECharacterManager>();
-            GameEventController = FindOrCreateManager<UGEGameEventController>();
-            CameraManager = FindOrCreateManager<UGECameraManager>();
-            DelayedEventInvoker = FindOrCreateManager<UGEDelayedEventInvoker>();
-            SoundManager = FindOrCreateManager<UGESoundManager>();
-            InputManager = FindOrCreateManager<UGEInputManager>();
-            ScreenEffectManager = FindOrCreateManager<UGEScreenEffectManager>();
-
             // Inject dependencies.
+            // Accessing the properties ensures they are initialized via FindOrCreateManager.
             if (GameEventController != null)
             {
                 GameEventController.UIManager = UIManager;
@@ -78,6 +140,10 @@ namespace UGESystem
 
         private T FindOrCreateManager<T>() where T : Component
         {
+            // 먼저 이미 생성된 필드에 있는지 확인 (Lazy Init 중복 호출 방지용)
+            // First check if it's already in the created field (to prevent redundant Lazy Init calls)
+            // (이 메서드는 프로퍼티 내부에서 호출되므로 이 체크는 사실상 프로퍼티의 null 체크와 동일하지만, 안전을 위해 유지)
+
             T manager = GetComponentInChildren<T>(true);
             if (manager == null)
             {
@@ -112,7 +178,7 @@ namespace UGESystem
             {
                 // If priority is 0, attempt to start nodes for all priority 0 runners (they will enter the queue sequentially).
                 // Order by name to ensure deterministic execution order.
-                foreach (var runner in highestPriorityRunners.OrderBy(r => r.name)) 
+                foreach (var runner in highestPriorityRunners.OrderBy(r => r.name))
                 {
                     if (runner.Storyboard != null)
                     {
@@ -219,10 +285,10 @@ namespace UGESystem
                 // If priorities are equal, sort by insertion order to maintain FIFO
                 return item1.insertionOrder.CompareTo(item2.insertionOrder);
             });
-            
+
             var nextItem = _globalPendingNodes[0];
             _globalPendingNodes.RemoveAt(0);
-            
+
             nextItem.runner.StartNode(nextItem.node);
         }
         #endregion

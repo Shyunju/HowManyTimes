@@ -71,12 +71,15 @@ namespace UGESystem
 
         private void OnDisable()
         {
-            // Unsubscribe to prevent memory leaks.
-            // 메모리 누수를 방지하기 위해 구독을 해제합니다.
-            var inputManager = UGESystemController.Instance?.InputManager;
-            if (inputManager != null)
+            if (UGESystemController.HasInstance)
             {
-                inputManager.OnContinueDialogue -= OnContinueClicked;
+                // Unsubscribe to prevent memory leaks.
+                // 메모리 누수를 방지하기 위해 구독을 해제합니다.
+                var inputManager = UGESystemController.Instance.InputManager;
+                if (inputManager != null)
+                {
+                    inputManager.OnContinueDialogue -= OnContinueClicked;
+                }
             }
         }
         

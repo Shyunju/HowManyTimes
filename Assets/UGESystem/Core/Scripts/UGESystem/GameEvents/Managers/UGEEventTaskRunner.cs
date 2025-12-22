@@ -85,7 +85,7 @@ namespace UGESystem
 
         private void OnDisable()
         {
-            if (UGESystemController.Instance != null)
+            if (UGESystemController.HasInstance)
             {
                 UGESystemController.Instance.UnregisterRunner(this);
             }

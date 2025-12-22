@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282236a47d058574c89356611d465943, type: 3}
+  m_Name: CharacterDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::UGESystem.CharacterDatabase
+  _characters:
+  - <CharacterID>k__BackingField: e7cbf9bb-40af-4380-86c8-549267f4942f
+    <Name>k__BackingField: Player2D
+    <Is3D>k__BackingField: 0
+    <Prefab>k__BackingField: {fileID: 8814941506187807103, guid: 43d79c169018b15489d018572a07e458, type: 3}
+    <Expressions>k__BackingField:
+    - <ExpressionName>k__BackingField: Default
+      <AnimationStateName>k__BackingField: Default
+    - <ExpressionName>k__BackingField: Happy
+      <AnimationStateName>k__BackingField: Happy
+    - <ExpressionName>k__BackingField: Sad
+      <AnimationStateName>k__BackingField: Sad
+  - <CharacterID>k__BackingField: 2b262eca-84b5-4c36-95fa-c42df63faa26
+    <Name>k__BackingField: NPC2D
+    <Is3D>k__BackingField: 0
+    <Prefab>k__BackingField: {fileID: 5889619025958826295, guid: 2c3543235f3b255489d1188058ead623, type: 3}
+    <Expressions>k__BackingField:
+    - <ExpressionName>k__BackingField: Default
+      <AnimationStateName>k__BackingField: Default
+    - <ExpressionName>k__BackingField: Happy
+      <AnimationStateName>k__BackingField: Happy
+    - <ExpressionName>k__BackingField: Sad
+      <AnimationStateName>k__BackingField: Sad
+  - <CharacterID>k__BackingField: 990a2693-b415-48b4-bcf7-b0a6830925b2
+    <Name>k__BackingField: Player3D
+    <Is3D>k__BackingField: 1
+    <Prefab>k__BackingField: {fileID: 3557766966346103426, guid: 17fbf584802fa794f9d71f6081131fc7, type: 3}
+    <Expressions>k__BackingField:
+    - <ExpressionName>k__BackingField: Default
+      <AnimationStateName>k__BackingField: Default
+    - <ExpressionName>k__BackingField: Happy
+      <AnimationStateName>k__BackingField: Happy
+    - <ExpressionName>k__BackingField: Sad
+      <AnimationStateName>k__BackingField: Sad
+    - <ExpressionName>k__BackingField: Angry
+      <AnimationStateName>k__BackingField: Angry
+  - <CharacterID>k__BackingField: 21b606b7-98ec-494c-8cc0-7c0d82c0a51b
+    <Name>k__BackingField: NPC3D
+    <Is3D>k__BackingField: 1
+    <Prefab>k__BackingField: {fileID: 2166150266146513963, guid: a0116b389791a2047a57fb00f179e974, type: 3}
+    <Expressions>k__BackingField:
+    - <ExpressionName>k__BackingField: Default
+      <AnimationStateName>k__BackingField: Default
+    - <ExpressionName>k__BackingField: Happy
+      <AnimationStateName>k__BackingField: Happy
+    - <ExpressionName>k__BackingField: Sad
+      <AnimationStateName>k__BackingField: Sad
+    - <ExpressionName>k__BackingField: Angry
+      <AnimationStateName>k__BackingField: Angry

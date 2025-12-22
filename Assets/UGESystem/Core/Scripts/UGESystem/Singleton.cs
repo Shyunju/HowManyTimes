@@ -29,6 +29,12 @@ namespace UGESystem
         protected bool _isDontDestroy = false;
 
         /// <summary>
+        /// 인스턴스가 존재하는지 여부를 확인합니다 (생성하지 않음).
+        /// Checks if an instance exists (does not create one).
+        /// </summary>
+        public static bool HasInstance => _instance != null;
+
+        /// <summary>
         /// 싱글톤 인스턴스를 가져옵니다. 존재하지 않으면 생성됩니다.
         /// Gets the singleton instance. If it doesn't exist, it will be created.
         /// </summary>
