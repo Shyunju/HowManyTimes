@@ -24,16 +24,38 @@ namespace UGESystem
         /// </summary>
         public Storyboard Storyboard => _storyboard;
 
-        [Tooltip("A unique ID to find and trigger this runner from a command.")]
-        [SerializeField] private string _runnerId = System.Guid.NewGuid().ToString(); // 기본값으로 GUID 할당
+        [Tooltip("A unique ID to find and trigger this runner from a command. Must be unique within the scene.")]
+        [SerializeField] private string _runnerId;
         /// <summary>
-        /// A unique identifier for this runner, used by TriggerEventCommand.
+        /// A unique identifier for this runner, used by TriggerEventCommand and Save/Load system.
         /// </summary>
         public string RunnerId => _runnerId;
 
 #if UNITY_EDITOR
+        private void OnValidate()
+        {
+            // ID가 비어있을 때만 생성하여 영속성 보장 (복제 시에도 자동 변경하지 않음)
+            if (string.IsNullOrEmpty(_runnerId))
+            {
+                GenerateNewId();
+            }
+        }
+
+        [ContextMenu("Regenerate Runner ID")]
+        private void GenerateNewId()
+        {
+            _runnerId = System.Guid.NewGuid().ToString();
+            UnityEditor.EditorUtility.SetDirty(this);
+            Debug.Log($"[UGEEventTaskRunner] New RunnerId generated for {gameObject.name}: {_runnerId}", gameObject);
+        }
+
         private void Reset()
         {
+            if (string.IsNullOrEmpty(_runnerId))
+            {
+                GenerateNewId();
+            }
+
             var allRunners = FindObjectsByType<UGEEventTaskRunner>(FindObjectsSortMode.None);
             if (allRunners.Length > 1)
             {
@@ -112,6 +134,13 @@ namespace UGESystem
 
         private void Start()
         {
+            // If the node status is already populated (e.g., by RestoreState called in Start of another script),
+            // skip initialization to prevent overwriting the restored state.
+            if (_nodeStatus.Count > 0)
+            {
+                return;
+            }
+
             // UGESystemController가 시작 노드를 실행하기 전에,
             // 이 러너가 담당하는 스토리보드의 모든 조건들을 활성화(구독)합니다.
             // Before UGESystemController runs the start node,
@@ -272,5 +301,121 @@ namespace UGESystem
 #endif
             }
         }
+
+        #region Save / Load API
+        /// <summary>
+        /// Captures the current status of all nodes in this storyboard for saving.
+        /// </summary>
+        /// <returns>A DTO containing the runner's ID, storyboard name, and node states.</returns>
+        public RunnerStateDto CaptureState()
+        {
+            var state = new RunnerStateDto
+            {
+                RunnerID = this.RunnerId,
+                StoryboardName = _storyboard != null ? _storyboard.name : "None",
+                NodeStates = _nodeStatus.Select(kvp => new NodeStateDto
+                {
+                    NodeID = kvp.Key,
+                    Status = kvp.Value
+                }).ToList()
+            };
+            return state;
+        }
+
+        /// <summary>
+        /// Restores the status of nodes from a saved state and resumes InProgress nodes.
+        /// </summary>
+        /// <param name="savedState">The saved state DTO to restore from.</param>
+        public void RestoreState(RunnerStateDto savedState)
+        {
+            if (_storyboard == null) return;
+
+            // 1. Validation
+            if (savedState.StoryboardName != _storyboard.name)
+            {
+#if UNITY_EDITOR
+                Debug.LogWarning($"[UGEEventTaskRunner] Storyboard name mismatch for Runner '{RunnerId}'. Saved: {savedState.StoryboardName}, Current: {_storyboard.name}. Skipping restore.");
+#endif
+                return;
+            }
+
+            // 2. Stop current subscriptions and reset
+            foreach (var node in _storyboard.EventNodes)
+            {
+                if (node == null) continue;
+                foreach (var condition in node.StartConditions)
+                {
+                    condition.Unsubscribe();
+                    condition.Reset();
+                }
+            }
+
+            // 3. Clear and re-populate status
+            _nodeStatus.Clear();
+            _nodeLookup.Clear();
+            foreach (var node in _storyboard.EventNodes)
+            {
+                if (node == null) continue;
+                _nodeStatus.Add(node.NodeID, EventStatus.NotStarted);
+                _nodeLookup.Add(node.NodeID, node);
+            }
+
+            // 4. Apply saved states
+            var inProgressNodes = new List<EventNodeData>();
+            foreach (var savedNode in savedState.NodeStates)
+            {
+                if (_nodeStatus.ContainsKey(savedNode.NodeID))
+                {
+                    _nodeStatus[savedNode.NodeID] = savedNode.Status;
+                    
+                    if (savedNode.Status == EventStatus.InProgress)
+                    {
+                        // Collect nodes to restart
+                        if (_nodeLookup.TryGetValue(savedNode.NodeID, out var nodeData))
+                        {
+                            inProgressNodes.Add(nodeData);
+                        }
+                    }
+                }
+            }
+
+            // 5. Re-evaluate and re-subscribe only for NotStarted nodes
+            foreach (var node in _storyboard.EventNodes)
+            {
+                if (node == null) continue;
+                if (_nodeStatus[node.NodeID] == EventStatus.NotStarted)
+                {
+                    foreach (var condition in node.StartConditions)
+                    {
+                        // Check if the condition is already met based on the newly restored status
+                        condition.Evaluate(this);
+                        
+                        condition.Subscribe(() => OnConditionStateChanged(node.NodeID));
+                    }
+                }
+            }
+
+            // 6. Check for nodes that can be started immediately after evaluation
+            foreach (var node in _storyboard.EventNodes)
+            {
+                if (node == null) continue;
+                if (_nodeStatus[node.NodeID] == EventStatus.NotStarted)
+                {
+                    if (node.StartConditions.Count > 0 && node.StartConditions.All(c => c.IsMet))
+                    {
+                        TryStartNode(node);
+                    }
+                }
+            }
+
+            // 7. Restart InProgress nodes (from the beginning as per policy)
+            foreach (var nodeToStart in inProgressNodes)
+            {
+                // Reset to NotStarted temporarily to allow StartNode to trigger properly
+                _nodeStatus[nodeToStart.NodeID] = EventStatus.NotStarted;
+                TryStartNode(nodeToStart);
+            }
+        }
+        #endregion
     }
 }

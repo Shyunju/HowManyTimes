@@ -1,0 +1,305 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e2aa8099716774b8ead8a5bb920782, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Start
+  _eventNodes:
+  - rid: 1249774642356028227
+  - rid: 1249774642356028228
+  - rid: 1249774642356028229
+  - rid: 1249774642356028230
+  - rid: 1249774642356028231
+  - rid: 1249774642356028232
+  - rid: 1249774642356028233
+  - rid: 1249774642356028234
+  - rid: 1249774642356028235
+  - rid: 1249774642356028236
+  - rid: 1249774642356028237
+  - rid: 1249774642356028238
+  - rid: 1249774642356028239
+  - rid: 1249774642356028240
+  - rid: 1249774642356028241
+  - rid: 1249774642356028242
+  - rid: 1249774642356028243
+  - rid: 1249774642356028244
+  - rid: 1249774642356028245
+  - rid: 1249774642356028246
+  - rid: 1249774642356028247
+  - rid: 1249774642356028248
+  references:
+    version: 2
+    RefIds:
+    - rid: 1249774642356028227
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 75d5d741-8cf9-4d60-b2ad-30234981d989
+        _name: StartDialogue
+        _type: 0
+        IsStartNode: 1
+        _isRepeatable: 0
+        _position: {x: -7694, y: -255}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 35d04d16254cb4e839a238727876eb76, type: 2}
+    - rid: 1249774642356028228
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 89fbe9cf-5605-473c-ac9b-fee7fb6785a0
+        _name: Day5
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -1999.5, y: -208}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 6e459edc97e1d4cd5a4197292d1fbec6, type: 2}
+    - rid: 1249774642356028229
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: d51acaf2-4fbd-40ce-9ad7-7a8d09f1cc1c
+        _name: Stage
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -3125, y: -231}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 27f8b6271965a4aaf92227802527e69e, type: 2}
+    - rid: 1249774642356028230
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: e1ccb541-919c-4f89-a9c7-139cff90123e
+        _name: Flower
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -1507.5, y: -208}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: e6388735e303944128451baa41eb8924, type: 2}
+    - rid: 1249774642356028231
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 868674cf-9431-48f0-9aeb-3271bea38edd
+        _name: Cafe
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -1023.5, y: -208}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: a0dfd4bb9464e42d5bdec1819c6f250e, type: 2}
+    - rid: 1249774642356028232
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: d0fcd49a-7e54-4bb5-9072-3cf275891027
+        _name: AfterSports
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -4197.5, y: -208}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 95725dafc1303418eb0c3fa45e40cce0, type: 2}
+    - rid: 1249774642356028233
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: c4300d2d-3f29-49eb-b133-708ed8776e12
+        _name: Day4
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -3628, y: -208}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: ce5cf620d7ca74d2f83047c1a87d9081, type: 2}
+    - rid: 1249774642356028234
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 27e1e366-b7a3-43f6-acfb-cd229805c1f1
+        _name: AfterStage
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -2534, y: -231}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: c46e86046ee504c2da7bf3fc044dd972, type: 2}
+    - rid: 1249774642356028235
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 9bf30ef6-0989-425e-ba05-29540a02ef7d
+        _name: Sports
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -4703, y: -208}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 883e5fba8a958433694f59fa71835879, type: 2}
+    - rid: 1249774642356028236
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 54149390-9ced-44d1-b351-0832fa5d26a2
+        _name: Day3
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -5191, y: -231}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 42572a1b7eedd407095871bbff3e97e1, type: 2}
+    - rid: 1249774642356028237
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: fdf9912d-4b94-4e13-9d35-2ba28b4420e5
+        _name: AfterMaket
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -5652.5, y: -276.5}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 6025ee39d925a44e695ba4149be7e297, type: 2}
+    - rid: 1249774642356028238
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 822ee2d5-4ac4-4552-a2e7-ffc22048cce0
+        _name: Market
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -6080.5, y: -255}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 4a733c1121d1b4f7ab03a08e3b6f024c, type: 2}
+    - rid: 1249774642356028239
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 615e64e7-fb58-4372-a912-3fe5a6e670b9
+        _name: Day2
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -6592, y: -255}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 0677b9e715175497a87fd3884d9a2c69, type: 2}
+    - rid: 1249774642356028240
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: c052a8c7-1989-4e0b-8cf5-271c89d393e7
+        _name: Library
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -7161.5, y: -255}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: c9f800e9432834cb8b89a71de4288f22, type: 2}
+    - rid: 1249774642356028241
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: e6234cb9-e92a-4766-a8af-2b22bffc5c60
+        _name: AfterCafe
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -460.5, y: -99.5}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 9e8fdc92dfa8b4fe983a2daceac6f1a9, type: 2}
+    - rid: 1249774642356028242
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: e5f81018-da2c-47f3-b9e2-c69092ba17ce
+        _name: AfterSakura
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: 1197.5, y: -14}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 4581ed8f1ed224619ac82121d5f9d6ef, type: 2}
+    - rid: 1249774642356028243
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 4a74011e-1e5d-4e1c-82f8-1891fb2fdab1
+        _name: Sakura
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: 573.5, y: -14}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 50d92a0e92ef94d15843378b8e9eb301, type: 2}
+    - rid: 1249774642356028244
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 9db90513-b55b-40c1-90f8-8ba3b356b574
+        _name: Day6
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: 59.5, y: -122.5}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 9b6bb592051be43cfb2a1c7393fd6b4a, type: 2}
+    - rid: 1249774642356028245
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 18b9b902-8812-4ee6-b2e2-44580f0f3580
+        _name: Day7
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: 2187, y: 9}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: ee7164d9928e24db6bed1b0262cc8051, type: 2}
+    - rid: 1249774642356028246
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: c15b7f9f-ee92-42f1-bd4c-7cc44efaf5d1
+        _name: Bad
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: 2970.5, y: -14}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 95b3dd91c0c0a48ffb54ec21d5cb4be7, type: 2}
+    - rid: 1249774642356028247
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: d799affe-82a2-43e6-afb8-428922503e70
+        _name: Happy
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: 2713.5, y: 549.5}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: c8c263ee2cc75412c9f25bdc3e0500a7, type: 2}
+    - rid: 1249774642356028248
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 69a08ccc-caf8-49d8-ac2e-1c16a644f148
+        _name: True
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: 3151, y: 549.5}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: b10b006ca977a4fcdbd44c718f8aac91, type: 2}

@@ -85,5 +85,12 @@ namespace UGESystem
         {
             IsMet = false;
         }
+
+        /// <summary>
+        /// Evaluates the condition state immediately based on the current context of the runner.
+        /// Useful for restoring state after loading.
+        /// </summary>
+        /// <param name="runner">The runner context to evaluate against.</param>
+        public virtual void Evaluate(UGEEventTaskRunner runner) { }
     }
 }

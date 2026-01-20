@@ -1482,7 +1482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2fac72e4100134a8ebc485c93eac98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _storyboard: {fileID: 11400000, guid: c2931d3bda4b8442895147dc473c27c6, type: 2}
+  _storyboard: {fileID: 11400000, guid: 0309ed4d888b146abb489fd35f0a8857, type: 2}
   _priority: 0
   _runnerId: 37ef4bec-5959-4c1c-ba1a-bbf454e6bdb0
 --- !u!1 &1765249227
@@ -1573,7 +1573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b09b44057f2d914897ed69cd76093e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterDatabase: {fileID: 11400000, guid: c9102af05751d4b58bab9af9ed732574, type: 2}
+  _characterDatabase: {fileID: 11400000, guid: 2425b0a175710b049b871c6db3615154, type: 2}
   _character2DSlots:
   - position: 0
     anchor: {fileID: 1495432880}

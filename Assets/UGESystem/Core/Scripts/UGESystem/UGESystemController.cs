@@ -210,10 +210,27 @@ namespace UGESystem
         #region Runner and Queue Logic
         /// <summary>
         /// Registers a UGEEventTaskRunner with the controller when it becomes active.
+        /// Checks for duplicate RunnerIds.
         /// </summary>
         /// <param name="runner">The runner to register.</param>
         public void RegisterRunner(UGEEventTaskRunner runner)
         {
+            if (string.IsNullOrEmpty(runner.RunnerId))
+            {
+                Debug.LogError($"[UGESystemController] Runner '{runner.name}' has no RunnerId assigned!", runner);
+                return;
+            }
+
+            // Check for duplicates
+            var duplicate = _activeRunners.FirstOrDefault(r => r.RunnerId == runner.RunnerId);
+            if (duplicate != null && duplicate != runner)
+            {
+                Debug.LogError($"[UGESystemController] Duplicate RunnerId detected: '{runner.RunnerId}'! " +
+                    $"Conflict between '{runner.name}' and '{duplicate.name}'. " +
+                    $"Please regenerate RunnerId for one of them via the Inspector Context Menu.", runner);
+                return;
+            }
+
             if (!_activeRunners.Contains(runner))
             {
                 _activeRunners.Add(runner);
@@ -290,6 +307,56 @@ namespace UGESystem
             _globalPendingNodes.RemoveAt(0);
 
             nextItem.runner.StartNode(nextItem.node);
+        }
+        #endregion
+
+        #region Save / Load Global API
+        /// <summary>
+        /// Captures the runtime status of all active storyboards in the scene.
+        /// This can be called by an external save system to snapshot the story progress.
+        /// </summary>
+        /// <returns>A list of state DTOs for each active runner.</returns>
+        public List<RunnerStateDto> CaptureAllStoryboardsState()
+        {
+            var states = new List<RunnerStateDto>();
+            foreach (var runner in _activeRunners)
+            {
+                states.Add(runner.CaptureState());
+            }
+            return states;
+        }
+
+        /// <summary>
+        /// Restores the runtime status of storyboards from a previously captured state.
+        /// This will re-initialize node statuses and resume any InProgress events.
+        /// </summary>
+        /// <param name="savedStates">The list of saved runner states to restore.</param>
+        public void RestoreAllStoryboardsState(List<RunnerStateDto> savedStates)
+        {
+            if (savedStates == null) return;
+
+            foreach (var state in savedStates)
+            {
+                var runner = GetRunnerById(state.RunnerID);
+                if (runner != null)
+                {
+                    runner.RestoreState(state);
+                }
+                else
+                {
+#if UNITY_EDITOR
+                    Debug.LogWarning($"[UGESystemController] Could not find runner with ID '{state.RunnerID}' for restoration. Skipping.");
+#endif
+                }
+            }
+
+            // After all restorations, if an event was resumed (InProgress), it might have entered the queue.
+            // But RestoreAllStoryboardsState is likely called before/during initialization, 
+            // so we set a flag to ensure KickstartInitialEvents doesn't conflict.
+            _initialEventsKickedOff = true; 
+            
+            // Try starting the first queued node if any were resumed.
+            TryStartNextPendingNode();
         }
         #endregion
     }

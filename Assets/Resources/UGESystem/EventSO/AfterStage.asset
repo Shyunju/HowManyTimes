@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61e9adde95d3a4418c2ca934b48d984, type: 3}
+  m_Name: AfterStage
+  m_EditorClassIdentifier: 
+  <Guid>k__BackingField: 85a845cb-6138-48a9-9897-76044a43dc52
+  _archetype: 1
+  _commands:
+  - rid: 1249774642356028087
+  - rid: 1249774642356028088
+  - rid: 1249774642356028089
+  - rid: 1249774642356028090
+  - rid: 1249774642356028091
+  - rid: 1249774642356028092
+  - rid: 1249774642356028093
+  - rid: 1249774642356028094
+  references:
+    version: 2
+    RefIds:
+    - rid: 1249774642356028087
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uC815\uB9D0 \uC0AC\uB791\uD558\uB294 \uB9C8\uC74C\uC774\uB780\uAC78
+          \uB9C8\uC74C\uB300\uB85C \uC2DC\uC791\uD560 \uC218\uB3C4 \uC811\uC744 \uC218\uB3C4
+          \uC5C6\uB2E4\uB294 \uAC83\uC774 \uC88B\uC740 \uC77C\uC778\uC9C0, \uC2AC\uD508\uC77C\uC778\uC9C0
+          \uACE0\uBBFC\uD558\uAC8C \uD558\uB294 \uB178\uB798\uC608\uC694."
+        _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
+        _expression: Default
+        _characterPosition: 2
+        _clearAllCharacters: 0
+        _showCharacter: 1
+        _cinematicAnimDuration: 0
+        _cinematicDisplayDuration: 0
+    - rid: 1249774642356028088
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uC774 \uC74C\uC545\uC744 \uC815\uB9D0 \uC88B\uC544\uD558\uC2DC\uB098\uBD10\uC694."
+        _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
+        _expression: Default
+        _characterPosition: 0
+        _clearAllCharacters: 0
+        _showCharacter: 0
+        _cinematicAnimDuration: 0
+        _cinematicDisplayDuration: 0
+    - rid: 1249774642356028089
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uB124. \uADF8\uB7F0 \uD3B8\uC774\uC5D0\uC694. "
+        _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
+        _expression: Default
+        _characterPosition: 2
+        _clearAllCharacters: 0
+        _showCharacter: 1
+        _cinematicAnimDuration: 0
+        _cinematicDisplayDuration: 0
+    - rid: 1249774642356028090
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uACF5\uC5F0\uC740 \uC5EC\uAE30\uAE4C\uC9C0 \uC778\uAC00\uBD10\uC694.
+          \uC57C\uC678\uC5D0\uC11C \uC774\uB807\uAC8C \uC74C\uC545\uB4E3\uB294\uAC70
+          \uCC38 \uC88B\uB124\uC694. \uB2F9\uC2E0\uC774\uB791 \uC990\uACA8\uC11C
+          \uB354 \uC88B\uC558\uC5B4\uC694. \uB0B4\uC77C \uB610 \uBD10\uC694. \uC5F0\uB77D\uD560\uAC8C\uC694."
+        _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
+        _expression: Default
+        _characterPosition: 2
+        _clearAllCharacters: 0
+        _showCharacter: 1
+        _cinematicAnimDuration: 0
+        _cinematicDisplayDuration: 0
+    - rid: 1249774642356028091
+      type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 1
+        _isNodeExpanded: 0
+        _characterId: f9e591d6-d9ba-4472-8d95-6083879b4513
+        _action: 1
+        _position: 2
+        _expression: Default
+    - rid: 1249774642356028092
+      type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 2
+        _isNodeExpanded: 0
+        _action: 1
+        _type: 0
+        _image: {fileID: 0}
+        _video: {fileID: 0}
+    - rid: 1249774642356028093
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uC9D1\uC73C\uB85C \uB3CC\uC544\uC640 \uADF8\uB140\uC640
+          \uB0B4\uC77C \uB9CC\uB0A0 \uC2DC\uAC04\uACFC \uC7A5\uC18C\uB97C \uC5F0\uB77D\uC744
+          \uD1B5\uD574 \uC815\uD588\uB2E4. \uADF8\uB140\uC640\uC758 \uCCAB \uB370\uC774\uD2B8\uB77C\uACE0
+          \uC0DD\uAC01\uD574\uB3C4 \uB420\uAE4C? \uC124\uB808\uB294 \uB9D8\uC744
+          \uB2E4\uC7A1\uACE0 \uC7A0\uC5D0 \uCCAD\uD588\uB2E4."
+        _characterName: 
+        _expression: 
+        _characterPosition: 0
+        _clearAllCharacters: 1
+        _showCharacter: 0
+        _cinematicAnimDuration: 0
+        _cinematicDisplayDuration: 0
+    - rid: 1249774642356028094
+      type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 7
+        _isNodeExpanded: 0
+        _rewards: []
+        _isBranching: 1
+        _targetNodeID: 89fbe9cf-5605-473c-ac9b-fee7fb6785a0

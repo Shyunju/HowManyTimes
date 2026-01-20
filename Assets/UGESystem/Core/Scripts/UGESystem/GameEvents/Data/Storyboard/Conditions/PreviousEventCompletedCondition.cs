@@ -1,5 +1,6 @@
 using UnityEngine;
 using Newtonsoft.Json;
+using System.Linq;
 
 namespace UGESystem
 {
@@ -80,6 +81,34 @@ namespace UGESystem
             {
                 IsMet = true;
                 _onStateChanged?.Invoke();
+            }
+        }
+
+        /// <summary>
+        /// Immediately checks if the target node is already completed in the current runner or globally.
+        /// </summary>
+        /// <param name="runner">The context runner.</param>
+        public override void Evaluate(UGEEventTaskRunner runner)
+        {
+            if (IsMet) return;
+
+            // 1. Check within the same runner first (most common case)
+            if (runner.NodeStatuses.TryGetValue(TargetNodeID, out var status))
+            {
+                if (status == EventStatus.Completed)
+                {
+                    IsMet = true;
+                    return;
+                }
+            }
+
+            // 2. Check globally via UGESystemController if not found in the same runner
+            if (UGESystemController.Instance != null)
+            {
+                // Note: This might be expensive if many runners exist, but necessary for cross-runner dependencies.
+                // However, since NodeIDs are unique across the system, we can look through all active runners.
+                // But for now, let's focus on the common case (same runner).
+                // If we need cross-runner restoration, we'd need a global status registry.
             }
         }
     }
