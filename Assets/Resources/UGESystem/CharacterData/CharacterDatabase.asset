@@ -64,14 +64,14 @@ MonoBehaviour:
   - <CharacterID>k__BackingField: f9e591d6-d9ba-4472-8d95-6083879b4513
     <Name>k__BackingField: "\uADF8\uB140"
     <Is3D>k__BackingField: 0
-    <Prefab>k__BackingField: {fileID: 8814941506187807103, guid: 43d79c169018b15489d018572a07e458, type: 3}
+    <Prefab>k__BackingField: {fileID: 6207893278188374936, guid: 62533f8eb44bc4c44af15c9dbf682d2a, type: 3}
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
     - <ExpressionName>k__BackingField: Happy
       <AnimationStateName>k__BackingField: Happy
-    - <ExpressionName>k__BackingField: Suprise
-      <AnimationStateName>k__BackingField: Suprise
+    - <ExpressionName>k__BackingField: Surprise
+      <AnimationStateName>k__BackingField: Surprise
     - <ExpressionName>k__BackingField: Gloomy
       <AnimationStateName>k__BackingField: Gloomy
   - <CharacterID>k__BackingField: aad29799-f6ee-42af-96bd-0d09cdc990ae
@@ -84,7 +84,7 @@ MonoBehaviour:
   - <CharacterID>k__BackingField: ad399f43-8535-432e-b47e-8fd330e63801
     <Name>k__BackingField: "\uC218\uC0C1\uD55C \uB0A8\uC790"
     <Is3D>k__BackingField: 0
-    <Prefab>k__BackingField: {fileID: 5889619025958826295, guid: 2c3543235f3b255489d1188058ead623, type: 3}
+    <Prefab>k__BackingField: {fileID: 1112629093069586512, guid: 178e56daa189c49768eba3caee02f3ff, type: 3}
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
