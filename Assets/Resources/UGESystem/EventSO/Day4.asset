@@ -73,7 +73,7 @@ MonoBehaviour:
         _isNodeExpanded: 1
         _action: 0
         _type: 0
-        _image: {fileID: 0}
+        _image: {fileID: 2800000, guid: a26e3d60cdd094643b17da15d778e9c1, type: 3}
         _video: {fileID: 0}
     - rid: 1249774642356028252
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}

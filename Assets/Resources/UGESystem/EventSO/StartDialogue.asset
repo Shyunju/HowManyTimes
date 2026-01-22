@@ -19,6 +19,7 @@ MonoBehaviour:
   - rid: 1249774642356028043
   - rid: 1249774642356028044
   - rid: 1249774642356028045
+  - rid: 1249774690121547864
   - rid: 1249774642356028046
   - rid: 1249774642356028047
   - rid: 1249774642356028048
@@ -29,8 +30,8 @@ MonoBehaviour:
   - rid: 1249774642356028053
   - rid: 1249774642356028054
   - rid: 1249774642356028055
+  - rid: 1249774690121547862
   - rid: 1249774642356028056
-  - rid: 1249774642356028057
   - rid: 1249774642356028058
   references:
     version: 2
@@ -39,7 +40,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 1
         <AudioClip>k__BackingField: {fileID: 0}
@@ -75,10 +76,10 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _action: 0
         _type: 0
-        _image: {fileID: 0}
+        _image: {fileID: 2800000, guid: a26e3d60cdd094643b17da15d778e9c1, type: 3}
         _video: {fileID: 0}
     - rid: 1249774642356028046
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
@@ -230,19 +231,10 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 0
-        _action: 0
-        _type: 0
-        _image: {fileID: 0}
-        _video: {fileID: 0}
-    - rid: 1249774642356028057
-      type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
-      data:
-        <CommandType>k__BackingField: 2
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _action: 1
         _type: 0
-        _image: {fileID: 0}
+        _image: {fileID: 2800000, guid: a26e3d60cdd094643b17da15d778e9c1, type: 3}
         _video: {fileID: 0}
     - rid: 1249774642356028058
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
@@ -252,3 +244,21 @@ MonoBehaviour:
         _rewards: []
         _isBranching: 1
         _targetNodeID: c052a8c7-1989-4e0b-8cf5-271c89d393e7
+    - rid: 1249774690121547862
+      type: {class: ScreenEffectCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 9
+        _isNodeExpanded: 0
+        <EffectType>k__BackingField: 1
+        <Duration>k__BackingField: 1
+        <TargetColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
+        _flashHoldDuration: 0.1
+    - rid: 1249774690121547864
+      type: {class: ScreenEffectCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 9
+        _isNodeExpanded: 1
+        <EffectType>k__BackingField: 0
+        <Duration>k__BackingField: 1
+        <TargetColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
+        _flashHoldDuration: 0.1

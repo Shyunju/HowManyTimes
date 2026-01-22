@@ -62,7 +62,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 1
         <AudioClip>k__BackingField: {fileID: 0}
@@ -72,10 +72,10 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _action: 0
         _type: 0
-        _image: {fileID: 0}
+        _image: {fileID: 2800000, guid: a26e3d60cdd094643b17da15d778e9c1, type: 3}
         _video: {fileID: 0}
     - rid: 1249774642356027891
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
@@ -371,7 +371,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _action: 0
         _type: 0
         _image: {fileID: 0}
@@ -380,7 +380,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 1
         <AudioClip>k__BackingField: {fileID: 0}
