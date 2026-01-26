@@ -36,6 +36,7 @@ MonoBehaviour:
   - rid: 1249774642356028246
   - rid: 1249774642356028247
   - rid: 1249774642356028248
+  - rid: 1249774778471415809
   references:
     version: 2
     RefIds:
@@ -303,3 +304,15 @@ MonoBehaviour:
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: b10b006ca977a4fcdbd44c718f8aac91, type: 2}
+    - rid: 1249774778471415809
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 1aef2b32-1f01-4efd-a6c2-5022b2cd51a7
+        _name: NewsPaper
+        _type: 0
+        IsStartNode: 0
+        _isRepeatable: 0
+        _position: {x: -7397, y: 140}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: 5c80b285f175646169e303ef07f5b52a, type: 2}

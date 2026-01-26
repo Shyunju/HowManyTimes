@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61e9adde95d3a4418c2ca934b48d984, type: 3}
+  m_Name: NewsPaper
+  m_EditorClassIdentifier: 
+  <Guid>k__BackingField: ada2a01e-c792-46aa-bd00-1752ef4b1a09
+  _archetype: 1
+  _commands:
+  - rid: 1249774778471415808
+  references:
+    version: 2
+    RefIds:
+    - rid: 1249774778471415808
+      type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 2
+        _isNodeExpanded: 1
+        _action: 0
+        _type: 0
+        _image: {fileID: 2800000, guid: 22f15b83cfb1d4c4788fe3968bde5245, type: 3}
+        _video: {fileID: 0}

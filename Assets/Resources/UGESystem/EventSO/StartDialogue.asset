@@ -240,10 +240,10 @@ MonoBehaviour:
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 7
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _rewards: []
         _isBranching: 1
-        _targetNodeID: c052a8c7-1989-4e0b-8cf5-271c89d393e7
+        _targetNodeID: 1aef2b32-1f01-4efd-a6c2-5022b2cd51a7
     - rid: 1249774690121547862
       type: {class: ScreenEffectCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
