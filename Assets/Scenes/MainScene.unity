@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1665218163061026905, guid: eb299d2487dd664448826e35fc2b7bb8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2015840970701998153, guid: eb299d2487dd664448826e35fc2b7bb8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.45
@@ -1248,10 +1252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28cbec62dfa9346d393dcd0327446d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nowNewsPaper: {fileID: 1973583965}
-  _newsPaper: []
-  _totalPageText: {fileID: 1868764369}
-  _nowPageText: {fileID: 1800738143}
 --- !u!114 &488594911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1347,6 +1347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 515969288}
   - component: {fileID: 515969289}
+  - component: {fileID: 515969290}
   m_Layer: 0
   m_Name: UGEInputManager
   m_TagString: Untagged
@@ -1381,6 +1382,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18198d05ccaaae9439631a01b0d523b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &515969290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515969287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: f8b6a4dd150a74ffc9ddcbf9d72aaa71, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &556434424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,17 +1687,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907969619}
   m_CullTransparentMesh: 1
---- !u!114 &973145406 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7637173884804301005, guid: eb299d2487dd664448826e35fc2b7bb8, type: 3}
-  m_PrefabInstance: {fileID: 43117795}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!114 &974707675 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5924684195437243403, guid: eb299d2487dd664448826e35fc2b7bb8, type: 3}
@@ -1725,7 +1745,7 @@ MonoBehaviour:
   _dialogueBox: {fileID: 99215168}
   _characterNameText: {fileID: 606612984}
   _dialogueText: {fileID: 974707675}
-  _continueButton: {fileID: 973145406}
+  _continueButton: {fileID: 0}
   _dialogueSizeAdjuster: {fileID: 0}
   _choiceBox: {fileID: 43117807}
   _choiceButtons:

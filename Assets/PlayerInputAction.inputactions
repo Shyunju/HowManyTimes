@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "PlayerInputAction",
+    "maps": [
+        {
+            "name": "NewsPaper",
+            "id": "11739d10-d3a8-4339-80e0-77f970d9c522",
+            "actions": [
+                {
+                    "name": "NewsPaper",
+                    "type": "Button",
+                    "id": "5d67d36e-dbf4-4416-9a61-f215d94b3fa6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "980a476e-9991-43ab-8d4b-d37bd74b12ce",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NewsPaper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

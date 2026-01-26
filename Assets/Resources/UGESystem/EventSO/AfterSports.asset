@@ -15,6 +15,7 @@ MonoBehaviour:
   <Guid>k__BackingField: 107cf84d-d8e4-441a-b892-b80aabff4dfe
   _archetype: 1
   _commands:
+  - rid: 1249774781513859151
   - rid: 1249774642356027664
   - rid: 1249774642356027665
   - rid: 1249774642356027666
@@ -380,3 +381,12 @@ MonoBehaviour:
         _rewards: []
         _isBranching: 1
         _targetNodeID: c4300d2d-3f29-49eb-b133-708ed8776e12
+    - rid: 1249774781513859151
+      type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 2
+        _isNodeExpanded: 1
+        _action: 0
+        _type: 0
+        _image: {fileID: 2800000, guid: 32dc394d2706d42c2aa268eaf89ec8ca, type: 3}
+        _video: {fileID: 0}

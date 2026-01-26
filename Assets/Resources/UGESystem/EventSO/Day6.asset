@@ -390,7 +390,7 @@ MonoBehaviour:
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 7
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _rewards: []
         _isBranching: 1
         _targetNodeID: 4a74011e-1e5d-4e1c-82f8-1891fb2fdab1
