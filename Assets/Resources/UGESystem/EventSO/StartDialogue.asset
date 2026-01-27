@@ -241,7 +241,8 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 7
         _isNodeExpanded: 1
-        _rewards: []
+        _rewards:
+        - rid: 1249774801935925346
         _isBranching: 1
         _targetNodeID: c052a8c7-1989-4e0b-8cf5-271c89d393e7
     - rid: 1249774690121547862
@@ -262,3 +263,7 @@ MonoBehaviour:
         <Duration>k__BackingField: 1
         <TargetColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
         _flashHoldDuration: 0.1
+    - rid: 1249774801935925346
+      type: {class: GiveReward, ns: , asm: Assembly-CSharp}
+      data:
+        <Description>k__BackingField: 

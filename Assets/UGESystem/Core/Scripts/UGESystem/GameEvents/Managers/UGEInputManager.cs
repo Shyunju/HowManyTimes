@@ -34,14 +34,14 @@ namespace UGESystem
         private void OnEnable()
         {
             _actions.UI_Event.Enable();
-            _actions.UI_Event.ContinueDialogue.performed += HandleContinueDialogue;
+            // _actions.UI_Event.ContinueDialogue.performed += HandleContinueDialogue;
             _actions.UI_Event.SkipCinematic.performed += HandleSkipCinematic;
         }
 
         private void OnDisable()
         {
             _actions.UI_Event.Disable();
-            _actions.UI_Event.ContinueDialogue.performed -= HandleContinueDialogue;
+            // _actions.UI_Event.ContinueDialogue.performed -= HandleContinueDialogue;
             _actions.UI_Event.SkipCinematic.performed -= HandleSkipCinematic;
         }
 

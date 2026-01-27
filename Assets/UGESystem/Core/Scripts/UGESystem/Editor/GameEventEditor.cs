@@ -293,7 +293,13 @@ namespace UGESystem
                 // Draw all properties except for the node expansion state
                 while (iterator.NextVisible(false) && !SerializedProperty.EqualContents(iterator, endProperty))
                 {
-                    if (iterator.name != "_isNodeExpanded")
+                    if (iterator.name == "_isNodeExpanded") continue;
+
+                    if (iterator.name == "_rewards")
+                    {
+                         EditorHelper.BuildPolymorphicListView(commandProperty.serializedObject, iterator, typeof(AbstractEventReward));
+                    }
+                    else
                     {
                         EditorGUILayout.PropertyField(iterator, true);
                     }

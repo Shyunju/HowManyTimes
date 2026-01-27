@@ -316,17 +316,17 @@ namespace UGESystem
             var finishedEvent = _currentEvent;
             var rewards = command.Rewards;
                             
-            // 분기 또는 이벤트 종료 처리를 먼저 수행
-            // Handle branching or event finishing first
+            // 1. 보상 및 이벤트 종료 알림 (항상 수행)
+            // 1. Reward and event completion notification (Always execute)
+            OnEventFinished?.Invoke(finishedEvent, rewards);
+
+            // 2. 분기 처리 (있는 경우)
+            // 2. Branching handling (if applicable)
             if (command.IsBranching)
             {
                 // 상태를 초기화하기 전에 컨텍스트를 사용하여 이벤트를 발행
                 // Publish the event using the context before resetting the state
                 UGEDelayedEventBus.Publish(new JumpToNodeEvent(_currentStoryboard, command.TargetNodeID));
-            }
-            else
-            {
-                OnEventFinished?.Invoke(finishedEvent, rewards);
             }
                 
             // 모든 처리가 끝난 후, UI 및 상태를 정리

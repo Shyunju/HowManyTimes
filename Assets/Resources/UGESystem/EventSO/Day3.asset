@@ -377,5 +377,11 @@ MonoBehaviour:
         _isNodeExpanded: 1
         _rewards:
         - rid: -2
+        - rid: 1249774801935925320
         _isBranching: 1
         _targetNodeID: 9bf30ef6-0989-425e-ba05-29540a02ef7d
+    - rid: 1249774801935925320
+      type: {class: GiveReward, ns: , asm: Assembly-CSharp}
+      data:
+        <Description>k__BackingField: 
+        <Amount>k__BackingField: 0

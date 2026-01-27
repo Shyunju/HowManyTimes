@@ -13,56 +13,8 @@ MonoBehaviour:
   m_Name: CharacterDatabase
   m_EditorClassIdentifier: Assembly-CSharp::UGESystem.CharacterDatabase
   _characters:
-  - <CharacterID>k__BackingField: e7cbf9bb-40af-4380-86c8-549267f4942f
-    <Name>k__BackingField: Player2D
-    <Is3D>k__BackingField: 0
-    <Prefab>k__BackingField: {fileID: 8814941506187807103, guid: 43d79c169018b15489d018572a07e458, type: 3}
-    <Expressions>k__BackingField:
-    - <ExpressionName>k__BackingField: Default
-      <AnimationStateName>k__BackingField: Default
-    - <ExpressionName>k__BackingField: Happy
-      <AnimationStateName>k__BackingField: Happy
-    - <ExpressionName>k__BackingField: Sad
-      <AnimationStateName>k__BackingField: Sad
-  - <CharacterID>k__BackingField: 2b262eca-84b5-4c36-95fa-c42df63faa26
-    <Name>k__BackingField: NPC2D
-    <Is3D>k__BackingField: 0
-    <Prefab>k__BackingField: {fileID: 5889619025958826295, guid: 2c3543235f3b255489d1188058ead623, type: 3}
-    <Expressions>k__BackingField:
-    - <ExpressionName>k__BackingField: Default
-      <AnimationStateName>k__BackingField: Default
-    - <ExpressionName>k__BackingField: Happy
-      <AnimationStateName>k__BackingField: Happy
-    - <ExpressionName>k__BackingField: Sad
-      <AnimationStateName>k__BackingField: Sad
-  - <CharacterID>k__BackingField: 990a2693-b415-48b4-bcf7-b0a6830925b2
-    <Name>k__BackingField: Player3D
-    <Is3D>k__BackingField: 1
-    <Prefab>k__BackingField: {fileID: 3557766966346103426, guid: 17fbf584802fa794f9d71f6081131fc7, type: 3}
-    <Expressions>k__BackingField:
-    - <ExpressionName>k__BackingField: Default
-      <AnimationStateName>k__BackingField: Default
-    - <ExpressionName>k__BackingField: Happy
-      <AnimationStateName>k__BackingField: Happy
-    - <ExpressionName>k__BackingField: Sad
-      <AnimationStateName>k__BackingField: Sad
-    - <ExpressionName>k__BackingField: Angry
-      <AnimationStateName>k__BackingField: Angry
-  - <CharacterID>k__BackingField: 21b606b7-98ec-494c-8cc0-7c0d82c0a51b
-    <Name>k__BackingField: NPC3D
-    <Is3D>k__BackingField: 1
-    <Prefab>k__BackingField: {fileID: 2166150266146513963, guid: a0116b389791a2047a57fb00f179e974, type: 3}
-    <Expressions>k__BackingField:
-    - <ExpressionName>k__BackingField: Default
-      <AnimationStateName>k__BackingField: Default
-    - <ExpressionName>k__BackingField: Happy
-      <AnimationStateName>k__BackingField: Happy
-    - <ExpressionName>k__BackingField: Sad
-      <AnimationStateName>k__BackingField: Sad
-    - <ExpressionName>k__BackingField: Angry
-      <AnimationStateName>k__BackingField: Angry
   - <CharacterID>k__BackingField: f9e591d6-d9ba-4472-8d95-6083879b4513
-    <Name>k__BackingField: "\uADF8\uB140"
+    <Name>k__BackingField: "\uC5EC\uC790"
     <Is3D>k__BackingField: 0
     <Prefab>k__BackingField: {fileID: 6207893278188374936, guid: 62533f8eb44bc4c44af15c9dbf682d2a, type: 3}
     <Expressions>k__BackingField:
@@ -70,14 +22,14 @@ MonoBehaviour:
       <AnimationStateName>k__BackingField: Default
     - <ExpressionName>k__BackingField: Happy
       <AnimationStateName>k__BackingField: Happy
-    - <ExpressionName>k__BackingField: Surprise
-      <AnimationStateName>k__BackingField: Surprise
+    - <ExpressionName>k__BackingField: Suprise
+      <AnimationStateName>k__BackingField: Suprise
     - <ExpressionName>k__BackingField: Gloomy
       <AnimationStateName>k__BackingField: Gloomy
   - <CharacterID>k__BackingField: aad29799-f6ee-42af-96bd-0d09cdc990ae
     <Name>k__BackingField: "\uB098"
     <Is3D>k__BackingField: 0
-    <Prefab>k__BackingField: {fileID: 5889619025958826295, guid: 2c3543235f3b255489d1188058ead623, type: 3}
+    <Prefab>k__BackingField: {fileID: 8913793537842080565, guid: 0c62ce0b123984effaeaf26e58b0d065, type: 3}
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
@@ -93,14 +45,14 @@ MonoBehaviour:
     - <ExpressionName>k__BackingField: Wily
       <AnimationStateName>k__BackingField: Wily
   - <CharacterID>k__BackingField: fd960eb1-f541-45d7-ba24-a9adb7bb6c2f
-    <Name>k__BackingField: Festival
+    <Name>k__BackingField: "\uC0C1\uC778"
     <Is3D>k__BackingField: 0
     <Prefab>k__BackingField: {fileID: 8913793537842080565, guid: 0c62ce0b123984effaeaf26e58b0d065, type: 3}
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
   - <CharacterID>k__BackingField: 9c6d3d25-b7a0-405a-ba78-3b498023ba0c
-    <Name>k__BackingField: CoffeeShop
+    <Name>k__BackingField: "\uC0AC\uC7A5"
     <Is3D>k__BackingField: 0
     <Prefab>k__BackingField: {fileID: 650336345777076500, guid: 11ac8c0f81fcd470c9a37576e11cc87c, type: 3}
     <Expressions>k__BackingField:
@@ -121,14 +73,14 @@ MonoBehaviour:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
   - <CharacterID>k__BackingField: 312daa85-6eae-48cb-a4d3-22c23eddb65b
-    <Name>k__BackingField: Sports
+    <Name>k__BackingField: "\uC8FC\uBBFC"
     <Is3D>k__BackingField: 0
     <Prefab>k__BackingField: {fileID: 8913793537842080565, guid: 0c62ce0b123984effaeaf26e58b0d065, type: 3}
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
   - <CharacterID>k__BackingField: 0a0e3dd6-ed47-45d8-840c-b6ba649ea969
-    <Name>k__BackingField: Nurse
+    <Name>k__BackingField: "\uAC04\uD638\uC0AC"
     <Is3D>k__BackingField: 0
     <Prefab>k__BackingField: {fileID: 8033249271465069429, guid: d1647f5a5439f493f973c0f34356516e, type: 3}
     <Expressions>k__BackingField:
