@@ -95,14 +95,14 @@ MonoBehaviour:
   - <CharacterID>k__BackingField: fd960eb1-f541-45d7-ba24-a9adb7bb6c2f
     <Name>k__BackingField: Festival
     <Is3D>k__BackingField: 0
-    <Prefab>k__BackingField: {fileID: 0}
+    <Prefab>k__BackingField: {fileID: 8913793537842080565, guid: 0c62ce0b123984effaeaf26e58b0d065, type: 3}
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
   - <CharacterID>k__BackingField: 9c6d3d25-b7a0-405a-ba78-3b498023ba0c
     <Name>k__BackingField: CoffeeShop
     <Is3D>k__BackingField: 0
-    <Prefab>k__BackingField: {fileID: 0}
+    <Prefab>k__BackingField: {fileID: 650336345777076500, guid: 11ac8c0f81fcd470c9a37576e11cc87c, type: 3}
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
@@ -123,14 +123,14 @@ MonoBehaviour:
   - <CharacterID>k__BackingField: 312daa85-6eae-48cb-a4d3-22c23eddb65b
     <Name>k__BackingField: Sports
     <Is3D>k__BackingField: 0
-    <Prefab>k__BackingField: {fileID: 0}
+    <Prefab>k__BackingField: {fileID: 8913793537842080565, guid: 0c62ce0b123984effaeaf26e58b0d065, type: 3}
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
   - <CharacterID>k__BackingField: 0a0e3dd6-ed47-45d8-840c-b6ba649ea969
     <Name>k__BackingField: Nurse
     <Is3D>k__BackingField: 0
-    <Prefab>k__BackingField: {fileID: 0}
+    <Prefab>k__BackingField: {fileID: 8033249271465069429, guid: d1647f5a5439f493f973c0f34356516e, type: 3}
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
