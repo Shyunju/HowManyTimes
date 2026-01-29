@@ -73,7 +73,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uACF5\uC5F0\uC740 \uC5EC\uAE30\uAE4C\uC9C0 \uC778\uAC00\uBD10\uC694.
           \uC57C\uC678\uC5D0\uC11C \uC774\uB807\uAC8C \uC74C\uC545\uB4E3\uB294\uAC70
           \uCC38 \uC88B\uB124\uC694. \uB2F9\uC2E0\uC774\uB791 \uC990\uACA8\uC11C
@@ -124,7 +124,7 @@ MonoBehaviour:
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 7
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _rewards: []
         _isBranching: 1
         _targetNodeID: 89fbe9cf-5605-473c-ac9b-fee7fb6785a0

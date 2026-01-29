@@ -466,7 +466,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uC6B0\uB9AC\uB294 \uADF8\uB807\uAC8C \uC545\uC138\uC0AC\uB9AC
           \uAC00\uAC8C \uC55E\uC744 \uB5A0\uB0AC\uB2E4."
         _characterName: 
@@ -1212,7 +1212,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uB098\uB2E4\uC6B4 \uD589\uB3D9\u2026"
         _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
         _expression: Default
@@ -1225,7 +1225,12 @@ MonoBehaviour:
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 7
-        _isNodeExpanded: 0
-        _rewards: []
+        _isNodeExpanded: 1
+        _rewards:
+        - rid: 1249774846414684231
         _isBranching: 1
         _targetNodeID: e5f81018-da2c-47f3-b9e2-c69092ba17ce
+    - rid: 1249774846414684231
+      type: {class: GiveReward, ns: , asm: Assembly-CSharp}
+      data:
+        <Description>k__BackingField: 

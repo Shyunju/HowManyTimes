@@ -43,7 +43,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: What brings you here?
         _characterName: 2b262eca-84b5-4c36-95fa-c42df63faa26
         _expression: Default
@@ -66,7 +66,7 @@ MonoBehaviour:
       type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 1
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _characterId: e7cbf9bb-40af-4380-86c8-549267f4942f
         _action: 0
         _position: 2
@@ -84,7 +84,7 @@ MonoBehaviour:
         _isNodeExpanded: 0
         _dialogueText: Alright. Feel free to look around.
         _characterName: 21b606b7-98ec-494c-8cc0-7c0d82c0a51b
-        _expression: Happy
+        _expression: Sad
         _characterPosition: 0
         _clearAllCharacters: 1
         _showCharacter: 1
@@ -108,10 +108,10 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: State your business, quickly!
         _characterName: 990a2693-b415-48b4-bcf7-b0a6830925b2
-        _expression: Angry
+        _expression: Happy
         _characterPosition: 0
         _clearAllCharacters: 1
         _showCharacter: 1
@@ -121,7 +121,7 @@ MonoBehaviour:
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 7
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _rewards: []
         _isBranching: 0
         _targetNodeID: 
@@ -131,8 +131,8 @@ MonoBehaviour:
         <CommandType>k__BackingField: 2
         _isNodeExpanded: 0
         _action: 0
-        _type: 1
-        _image: {fileID: 0}
+        _type: 0
+        _image: {fileID: 2800000, guid: a628be58efeaba849ad7eca06d68c004, type: 3}
         _video: {fileID: 32900000, guid: da67b16ab1e392d4683ecfcd4ed5eecd, type: 3}
     - rid: 2238037594887946309
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}

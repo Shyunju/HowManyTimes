@@ -138,7 +138,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uC2E0\uBB38\uBC30\uB2EC\uC6D0\uC785\uB2C8\uB2E4. \uC800\uB294
           \uC190\uB2D8\uB4E4 \uD558\uB8E8 \uAE30\uBD84\uC744 \uC0B4\uD53C\uB294\uAC8C
           \uCDE8\uBBF8\uB77C\uC11C\uC694~\n\uC6B0\uC120 \uC774\uAC74 \uC624\uB298

@@ -25,7 +25,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 1
+    optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
@@ -514,7 +514,7 @@ ModelImporter:
     - name: Hips
       parentName: ROOT
       position: {x: 0.0011525444, y: 0.92327946, z: 0.031144565}
-      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Spine1
       parentName: Hips
@@ -664,12 +664,12 @@ ModelImporter:
     - name: RightThumb3
       parentName: RightThumb2
       position: {x: 0.029246313, y: 0.00000053422264, z: 0.00000037747856}
-      rotation: {x: 0.000000014749145, y: -0.072774924, z: 0.0000000010762217, w: 0.9973484}
+      rotation: {x: 0.000000014749145, y: -0.072774924, z: 0.0000000010762216, w: 0.9973484}
       scale: {x: 1, y: 1, z: 1}
     - name: RightIndex1
       parentName: RightHand
       position: {x: 0.096534714, y: -0.008404303, z: -0.030418826}
-      rotation: {x: 0.0034096192, y: 0.000027389575, z: -0.000000093388564, w: 0.9999942}
+      rotation: {x: 0.0034096192, y: 0.000027389577, z: -0.000000093388564, w: 0.9999942}
       scale: {x: 1, y: 1, z: 1}
     - name: RightIndex2
       parentName: RightIndex1
@@ -729,7 +729,7 @@ ModelImporter:
     - name: LeftLeg
       parentName: Hips
       position: {x: 0.040506702, y: -0.1123617, z: 0.019476954}
-      rotation: {x: 0.07548321, y: 4.6220135e-18, z: 0.9971471, w: -6.105765e-17}
+      rotation: {x: 0.0754832, y: 4.622013e-18, z: 0.9971471, w: -6.105765e-17}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftCalf
       parentName: LeftLeg
@@ -749,7 +749,7 @@ ModelImporter:
     - name: RightLeg
       parentName: Hips
       position: {x: 0.040506467, y: 0.112361446, z: 0.019476933}
-      rotation: {x: 0.9971471, y: -0.000000039899238, z: -0.07548321, w: 0.0000000105066515}
+      rotation: {x: 0.9971471, y: -0.00000004092912, z: -0.0754832, w: -0.0000000030983003}
       scale: {x: 1, y: 1, z: 1}
     - name: RightCalf
       parentName: RightLeg

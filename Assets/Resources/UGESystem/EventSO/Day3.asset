@@ -254,7 +254,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uD558\uD56B. \uC81C \uCDE8\uBBF8\uC0DD\uD65C\uC744 \uC874\uC911\uD574
           \uC8FC\uC2DC\uB294 \uAC83 \uAC19\uC544 \uAE30\uC058\uB124\uC694."
         _characterName: ad399f43-8535-432e-b47e-8fd330e63801
@@ -384,4 +384,3 @@ MonoBehaviour:
       type: {class: GiveReward, ns: , asm: Assembly-CSharp}
       data:
         <Description>k__BackingField: 
-        <Amount>k__BackingField: 0
