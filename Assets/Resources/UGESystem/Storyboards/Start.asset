@@ -42,7 +42,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 1
         _isRepeatable: 0
-        _position: {x: 854.5, y: 496}
+        _position: {x: 816.5, y: 395.5}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: 35d04d16254cb4e839a238727876eb76, type: 2}
@@ -54,7 +54,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 870.5, y: 381.5}
+        _position: {x: 816.5, y: 87.5}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: 6e459edc97e1d4cd5a4197292d1fbec6, type: 2}
@@ -66,7 +66,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 870.5, y: 381.5}
+        _position: {x: 928.5, y: 98.5}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: 27f8b6271965a4aaf92227802527e69e, type: 2}
@@ -78,7 +78,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 870.5, y: 381.5}
+        _position: {x: 1096, y: 127.5}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: e6388735e303944128451baa41eb8924, type: 2}
@@ -90,7 +90,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 870.5, y: 381.5}
+        _position: {x: 1340, y: 127.5}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: a0dfd4bb9464e42d5bdec1819c6f250e, type: 2}
@@ -102,7 +102,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 870.5, y: 381.5}
+        _position: {x: 1152, y: 56}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: ce5cf620d7ca74d2f83047c1a87d9081, type: 2}
@@ -114,7 +114,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 870.5, y: 381.5}
+        _position: {x: 168.5, y: 196}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: 883e5fba8a958433694f59fa71835879, type: 2}
@@ -126,7 +126,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 870.5, y: 381.5}
+        _position: {x: 870.5, y: 56}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: 42572a1b7eedd407095871bbff3e97e1, type: 2}
@@ -138,7 +138,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 870.5, y: 381.5}
+        _position: {x: 1270.5, y: 196}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: 4a733c1121d1b4f7ab03a08e3b6f024c, type: 2}
@@ -150,7 +150,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 870.5, y: 381.5}
+        _position: {x: 1390, y: 207}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: 0677b9e715175497a87fd3884d9a2c69, type: 2}
@@ -162,7 +162,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 870.5, y: 381.5}
+        _position: {x: 1366.5, y: 164.5}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: c9f800e9432834cb8b89a71de4288f22, type: 2}
@@ -174,7 +174,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 821.75, y: 323.25}
+        _position: {x: 352.5, y: 56.5}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: 50d92a0e92ef94d15843378b8e9eb301, type: 2}
@@ -186,7 +186,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 821.75, y: 391.85}
+        _position: {x: 244, y: 424}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: 9b6bb592051be43cfb2a1c7393fd6b4a, type: 2}
@@ -198,7 +198,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 821.25, y: 467.85}
+        _position: {x: 506.5, y: 736.5}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: ee7164d9928e24db6bed1b0262cc8051, type: 2}
@@ -210,7 +210,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 821.25, y: 467.85}
+        _position: {x: 1590, y: 452}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: 95b3dd91c0c0a48ffb54ec21d5cb4be7, type: 2}
@@ -222,7 +222,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 820.75, y: 467.85}
+        _position: {x: 1442, y: 432}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: c8c263ee2cc75412c9f25bdc3e0500a7, type: 2}
@@ -234,7 +234,7 @@ MonoBehaviour:
         _type: 0
         IsStartNode: 0
         _isRepeatable: 0
-        _position: {x: 820.75, y: 467.85}
+        _position: {x: 1296, y: 641}
         _startConditions: []
         _nextNodeIDs: []
         GameEventAsset: {fileID: 11400000, guid: b10b006ca977a4fcdbd44c718f8aac91, type: 2}

@@ -39,6 +39,7 @@ MonoBehaviour:
   - rid: 3758369457129652495
   - rid: 3758369457129652496
   - rid: 3758369457129652497
+  - rid: 3758369457129652980
   - rid: 3758369457129652498
   references:
     version: 2
@@ -371,7 +372,18 @@ MonoBehaviour:
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 7
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _rewards: []
-        _isBranching: 1
-        _targetNodeID: 69a08ccc-caf8-49d8-ac2e-1c16a644f148
+        _isBranching: 0
+        _targetNodeID: 
+    - rid: 3758369457129652980
+      type: {class: RewardCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 11
+        _isNodeExpanded: 1
+        _rewards:
+        - rid: 3758369457129652981
+    - rid: 3758369457129652981
+      type: {class: GoToTrueEnding, ns: , asm: Assembly-CSharp}
+      data:
+        <Description>k__BackingField: 
