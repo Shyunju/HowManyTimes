@@ -16,6 +16,10 @@ namespace UGESystem
         /// Gets or sets the background type (Image/Video).
         /// </summary>
         [JsonProperty] public BackgroundType Type { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether to wait for user input after showing the background.
+        /// </summary>
+        [JsonProperty] public bool WaitUntilInput { get; set; }
 
         /// <summary>
         /// Converts this DTO into a <see cref="BackgroundCommand"/> instance.
@@ -48,6 +52,14 @@ namespace UGESystem
         /// Gets the type of background (Image/Video) to display.
         /// </summary>
         [JsonIgnore] public BackgroundType Type => _type;
+
+        [SerializeField]
+        private bool _waitUntilInput = false;
+        /// <summary>
+        /// Gets a value indicating whether to wait for user input (click/tap) after showing the background.
+        /// When true, the dialogue UI will be hidden but the 'Next' button will remain active.
+        /// </summary>
+        [JsonIgnore] public bool WaitUntilInput => _waitUntilInput;
 
         [SerializeField, JsonIgnore] // Exclude from serialization
         private Texture2D _image;
@@ -82,6 +94,7 @@ namespace UGESystem
             CommandType = CommandType.Background;
             _action = dto.Action;
             _type = dto.Type;
+            _waitUntilInput = dto.WaitUntilInput;
         }
 
         /// <summary>
@@ -93,7 +106,8 @@ namespace UGESystem
             return new BackgroundCommandDto
             {
                 Action = _action,
-                Type = _type
+                Type = _type,
+                WaitUntilInput = _waitUntilInput
             };
         }
     }

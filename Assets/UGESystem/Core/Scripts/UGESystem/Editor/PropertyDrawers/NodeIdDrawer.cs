@@ -23,6 +23,9 @@ namespace UGESystem
         /// <param name="label">The label for the property.</param>
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
+            // 1. BeginProperty establishes the property context for focus and overrides.
+            label = EditorGUI.BeginProperty(position, label, property);
+
             // Apply only to fields of string type
             if (property.propertyType != SerializedPropertyType.String)
             {
@@ -30,6 +33,7 @@ namespace UGESystem
 #if UNITY_EDITOR
                 Debug.LogWarning($"[NodeIdDrawer] {property.name} is not a string type.");
 #endif
+                EditorGUI.EndProperty();
                 return;
             }
 
@@ -44,34 +48,69 @@ namespace UGESystem
             if (currentStoryboard == null)
             {
                 EditorGUI.PropertyField(position, property, label); // If there is no Storyboard, draw the default field
+                EditorGUI.EndProperty();
                 return;
             }
 
-            List<string> nodeNames = new List<string> { "(None)" }; // Index 0 is "(None)"
-            List<string> nodeIDs = new List<string> { "" }; // Index 0 is an empty string
+            string currentID = property.stringValue;
+            string displayLabel = "(None)";
+            bool isInvalid = false;
 
-            foreach (var node in currentStoryboard.EventNodes)
+            // Find name for current ID
+            var node = currentStoryboard.EventNodes.Find(n => n.NodeID == currentID);
+            if (node != null)
             {
-                nodeNames.Add(node.Name);
-                nodeIDs.Add(node.NodeID);
+                displayLabel = node.Name;
+            }
+            else if (!string.IsNullOrEmpty(currentID))
+            {
+                isInvalid = true;
+                displayLabel = $"(Invalid) {currentID}";
             }
 
-            // Find the index corresponding to the currently saved NodeID
-            int currentIndex = nodeIDs.IndexOf(property.stringValue);
-            if (currentIndex == -1)
+            // 2. Draw Label
+            // PrefixLabel without manual ID is more stable on macOS
+            position = EditorGUI.PrefixLabel(position, label);
+
+            // 3. Prepare Button Style (Tint if invalid)
+            Color originalColor = GUI.backgroundColor;
+            if (isInvalid)
             {
-                currentIndex = 0; // If not found, "(None)"
+                GUI.backgroundColor = new Color(1f, 0.6f, 0.6f, 1f);
             }
 
-            // Draw popup field
-            int selectedIndex = EditorGUI.Popup(position, label.text, currentIndex, nodeNames.ToArray());
-
-            // When the selection changes
-            if (selectedIndex != currentIndex)
+            // 4. Draw Button
+            if (EditorGUI.DropdownButton(position, new GUIContent(displayLabel), FocusType.Keyboard))
             {
-                property.stringValue = nodeIDs[selectedIndex]; // Save the selected NodeID
-                property.serializedObject.ApplyModifiedProperties(); // Apply changes
+                GenericMenu menu = new GenericMenu();
+
+                // Add "None" option
+                menu.AddItem(new GUIContent("(None)"), string.IsNullOrEmpty(currentID), () =>
+                {
+                    property.stringValue = "";
+                    property.serializedObject.ApplyModifiedProperties();
+                });
+
+                foreach (var sbNode in currentStoryboard.EventNodes)
+                {
+                    bool isSelected = sbNode.NodeID == currentID;
+                    menu.AddItem(new GUIContent(sbNode.Name), isSelected, () =>
+                    {
+                        property.stringValue = sbNode.NodeID;
+                        property.serializedObject.ApplyModifiedProperties();
+                    });
+                }
+
+                menu.DropDown(position);
             }
+
+            // Restore color
+            if (isInvalid)
+            {
+                GUI.backgroundColor = originalColor;
+            }
+
+            EditorGUI.EndProperty();
         }
     }
 }

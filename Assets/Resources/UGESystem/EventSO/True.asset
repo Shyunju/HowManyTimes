@@ -15,40 +15,40 @@ MonoBehaviour:
   <Guid>k__BackingField: aea126e0-69a9-4219-a0f7-060ff81e21ce
   _archetype: 1
   _commands:
-  - rid: 1249774642356028197
-  - rid: 1249774642356028198
-  - rid: 1249774642356028200
-  - rid: 1249774642356028201
-  - rid: 1249774642356028202
-  - rid: 1249774642356028203
-  - rid: 1249774642356028204
-  - rid: 1249774642356028205
-  - rid: 1249774642356028199
-  - rid: 1249774642356028206
-  - rid: 1249774642356028207
-  - rid: 1249774642356028208
-  - rid: 1249774642356028209
-  - rid: 1249774642356028210
-  - rid: 1249774642356028211
-  - rid: 1249774642356028212
-  - rid: 1249774642356028213
-  - rid: 1249774642356028214
-  - rid: 1249774642356028215
-  - rid: 1249774642356028216
-  - rid: 1249774642356028217
-  - rid: 1249774642356028218
-  - rid: 1249774642356028219
-  - rid: 1249774642356028220
-  - rid: 1249774642356028221
-  - rid: 1249774642356028222
-  - rid: 1249774642356028223
-  - rid: 1249774642356028224
-  - rid: 1249774642356028225
-  - rid: 1249774642356028226
+  - rid: 3758369457129652444
+  - rid: 3758369457129652445
+  - rid: 3758369457129652446
+  - rid: 3758369457129652447
+  - rid: 3758369457129652448
+  - rid: 3758369457129652449
+  - rid: 3758369457129652450
+  - rid: 3758369457129652451
+  - rid: 3758369457129652452
+  - rid: 3758369457129652453
+  - rid: 3758369457129652454
+  - rid: 3758369457129652455
+  - rid: 3758369457129652456
+  - rid: 3758369457129652457
+  - rid: 3758369457129652458
+  - rid: 3758369457129652459
+  - rid: 3758369457129652460
+  - rid: 3758369457129652461
+  - rid: 3758369457129652462
+  - rid: 3758369457129652463
+  - rid: 3758369457129652464
+  - rid: 3758369457129652465
+  - rid: 3758369457129652466
+  - rid: 3758369457129652467
+  - rid: 3758369457129652468
+  - rid: 3758369457129652469
+  - rid: 3758369457129652470
+  - rid: 3758369457129652471
+  - rid: 3758369457129652472
+  - rid: 3758369457129652473
   references:
     version: 2
     RefIds:
-    - rid: 1249774642356028197
+    - rid: 3758369457129652444
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028198
+    - rid: 3758369457129652445
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -77,16 +77,17 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028199
+    - rid: 3758369457129652446
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
         _isNodeExpanded: 1
         _action: 0
         _type: 0
+        _waitUntilInput: 0
         _image: {fileID: 0}
         _video: {fileID: 0}
-    - rid: 1249774642356028200
+    - rid: 3758369457129652447
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -101,7 +102,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028201
+    - rid: 3758369457129652448
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -119,7 +120,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028202
+    - rid: 3758369457129652449
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -133,7 +134,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028203
+    - rid: 3758369457129652450
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -146,7 +147,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028204
+    - rid: 3758369457129652451
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -161,7 +162,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028205
+    - rid: 3758369457129652452
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -175,7 +176,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028206
+    - rid: 3758369457129652453
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -188,7 +189,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028207
+    - rid: 3758369457129652454
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -215,7 +216,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028208
+    - rid: 3758369457129652455
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -229,7 +230,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028209
+    - rid: 3758369457129652456
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -242,7 +243,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028210
+    - rid: 3758369457129652457
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -268,7 +269,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028211
+    - rid: 3758369457129652458
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -281,7 +282,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028212
+    - rid: 3758369457129652459
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -309,7 +310,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028213
+    - rid: 3758369457129652460
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -322,7 +323,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028214
+    - rid: 3758369457129652461
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -346,7 +347,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028215
+    - rid: 3758369457129652462
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -376,7 +377,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028216
+    - rid: 3758369457129652463
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -389,7 +390,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028217
+    - rid: 3758369457129652464
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -419,7 +420,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028218
+    - rid: 3758369457129652465
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -432,7 +433,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028219
+    - rid: 3758369457129652466
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -459,7 +460,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028220
+    - rid: 3758369457129652467
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -481,7 +482,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028221
+    - rid: 3758369457129652468
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -494,7 +495,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028222
+    - rid: 3758369457129652469
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -516,7 +517,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028223
+    - rid: 3758369457129652470
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -539,7 +540,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028224
+    - rid: 3758369457129652471
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -552,7 +553,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028225
+    - rid: 3758369457129652472
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -581,7 +582,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028226
+    - rid: 3758369457129652473
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 7

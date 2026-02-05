@@ -235,7 +235,7 @@ namespace UGESystem
             }
         }
 
-        private void GrantRewards(List<AbstractEventReward> rewards)
+        public void GrantRewards(List<AbstractEventReward> rewards)
         {
             foreach (var reward in rewards)
             {

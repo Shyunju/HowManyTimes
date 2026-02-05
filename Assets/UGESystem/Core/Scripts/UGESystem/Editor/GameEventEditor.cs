@@ -222,13 +222,18 @@ namespace UGESystem
             bool hasWarning = NeedsAssetWarning(commandProperty);
             Color originalGuiColor = GUI.backgroundColor;
 
+            // Establish property context for focus management on macOS
+            var rect = EditorGUILayout.BeginVertical("box");
+            EditorGUI.BeginProperty(rect, GUIContent.none, commandProperty);
+            
             if (hasWarning)
             {
                 GUI.backgroundColor = new Color(1f, 0.8f, 0.8f); // Light red tint for warning
             }
 
-            EditorGUILayout.BeginVertical("box");
-            GUI.backgroundColor = originalGuiColor; // Reset color for the content inside the box
+            // (Resetting background color for content inside the box is handled by the BeginVertical style usually, 
+            // but we keep original logic flow as much as possible)
+            GUI.backgroundColor = originalGuiColor; 
 
             EditorGUILayout.BeginHorizontal();
 
@@ -249,7 +254,7 @@ namespace UGESystem
 
             if (isExpandedProp.boolValue)
             {
-                // The existing HelpBox logic will now be visible because of the forced expansion.
+                // Help boxes and properties...
                 if (commandProperty.managedReferenceValue is PlaySoundCommand playSoundCommand)
                 {
                     if (playSoundCommand.Action != SoundAction.Stop && playSoundCommand.AudioClip == null)
@@ -297,7 +302,23 @@ namespace UGESystem
 
                     if (iterator.name == "_rewards")
                     {
-                         EditorHelper.BuildPolymorphicListView(commandProperty.serializedObject, iterator, typeof(AbstractEventReward));
+                        // Hide rewards list for EndCommand as it is deprecated and migrated to RewardCommand
+                        if (!(commandProperty.managedReferenceValue is EndCommand))
+                        {
+                            EditorHelper.BuildPolymorphicListView(commandProperty.serializedObject, iterator, typeof(AbstractEventReward));
+                        }
+                    }
+                    else if (iterator.name == "_waitUntilInput")
+                    {
+                        // Only show WaitUntilInput if the command is a BackgroundCommand and Action is Show (enum index 0)
+                        if (commandProperty.managedReferenceValue is BackgroundCommand)
+                        {
+                            var actionProp = commandProperty.FindPropertyRelative("_action");
+                            if (actionProp != null && actionProp.enumValueIndex == 0) // BackgroundAction.Show
+                            {
+                                EditorGUILayout.PropertyField(iterator, true);
+                            }
+                        }
                     }
                     else
                     {
@@ -307,6 +328,7 @@ namespace UGESystem
                 EditorGUI.indentLevel--;
             }
 
+            EditorGUI.EndProperty();
             EditorGUILayout.EndVertical();
         }
         

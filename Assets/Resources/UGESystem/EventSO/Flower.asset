@@ -15,39 +15,44 @@ MonoBehaviour:
   <Guid>k__BackingField: 4acf0c3a-ddb8-42d5-864a-492d77e412a7
   _archetype: 1
   _commands:
-  - rid: 1249774690121547874
-  - rid: 1249774642356028059
-  - rid: 1249774642356028060
-  - rid: 1249774642356028061
-  - rid: 1249774642356028062
-  - rid: 1249774642356028063
-  - rid: 1249774642356028064
-  - rid: 1249774642356028065
-  - rid: 1249774642356028066
-  - rid: 1249774642356028067
-  - rid: 1249774642356028068
-  - rid: 1249774642356028069
-  - rid: 1249774642356028070
-  - rid: 1249774642356028071
-  - rid: 1249774642356028072
-  - rid: 1249774642356028073
-  - rid: 1249774642356028074
-  - rid: 1249774642356028075
-  - rid: 1249774642356028076
-  - rid: 1249774642356028077
-  - rid: 1249774642356028078
-  - rid: 1249774642356028079
-  - rid: 1249774642356028080
-  - rid: 1249774642356028081
-  - rid: 1249774642356028082
-  - rid: 1249774642356028083
-  - rid: 1249774642356028084
-  - rid: 1249774642356028085
-  - rid: 1249774642356028086
+  - rid: 3758369457129652964
+  - rid: 3758369457129652412
+  - rid: 3758369457129652413
+  - rid: 3758369457129652414
+  - rid: 3758369457129652415
+  - rid: 3758369457129652416
+  - rid: 3758369457129652417
+  - rid: 3758369457129652418
+  - rid: 3758369457129652419
+  - rid: 3758369457129652420
+  - rid: 3758369457129652421
+  - rid: 3758369457129652422
+  - rid: 3758369457129652423
+  - rid: 3758369457129652424
+  - rid: 3758369457129652425
+  - rid: 3758369457129652426
+  - rid: 3758369457129652427
+  - rid: 3758369457129652428
+  - rid: 3758369457129652429
+  - rid: 3758369457129652430
+  - rid: 3758369457129652431
+  - rid: 3758369457129652965
+  - rid: 3758369457129652432
+  - rid: 3758369457129652433
+  - rid: 3758369457129652434
+  - rid: 3758369457129652435
+  - rid: 3758369457129652436
+  - rid: 3758369457129652437
+  - rid: 3758369457129652438
+  - rid: 3758369457129652439
+  - rid: 3758369457129652440
+  - rid: 3758369457129652441
+  - rid: 3758369457129652442
+  - rid: 3758369457129652443
   references:
     version: 2
     RefIds:
-    - rid: 1249774642356028059
+    - rid: 3758369457129652412
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -63,7 +68,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028060
+    - rid: 3758369457129652413
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -78,7 +83,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028061
+    - rid: 3758369457129652414
       type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 1
@@ -87,7 +92,7 @@ MonoBehaviour:
         _action: 0
         _position: 2
         _expression: Default
-    - rid: 1249774642356028062
+    - rid: 3758369457129652415
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -100,7 +105,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028063
+    - rid: 3758369457129652416
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -117,7 +122,7 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028064
+    - rid: 3758369457129652417
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -133,7 +138,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028065
+    - rid: 3758369457129652418
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -151,7 +156,7 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028066
+    - rid: 3758369457129652419
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -164,7 +169,7 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028067
+    - rid: 3758369457129652420
       type: {class: ChoiceCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 3
@@ -175,13 +180,13 @@ MonoBehaviour:
         - _text: "\uB2F9\uC2E0\uC5D0\uAC8C\uB294 \uD558\uC580 \uBC31\uD569\uC774
             \uC5B4\uC6B8\uB824\uC694."
           _targetLabel: Lily
-    - rid: 1249774642356028068
+    - rid: 3758369457129652421
       type: {class: LabelCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 4
         _isNodeExpanded: 0
         _labelName: Rose
-    - rid: 1249774642356028069
+    - rid: 3758369457129652422
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -195,7 +200,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028070
+    - rid: 3758369457129652423
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -210,7 +215,7 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028071
+    - rid: 3758369457129652424
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -226,7 +231,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028072
+    - rid: 3758369457129652425
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -239,7 +244,7 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028073
+    - rid: 3758369457129652426
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -253,7 +258,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028074
+    - rid: 3758369457129652427
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -267,7 +272,7 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028075
+    - rid: 3758369457129652428
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -281,21 +286,19 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028076
-      type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
+    - rid: 3758369457129652429
+      type: {class: GotoCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
-        <CommandType>k__BackingField: 7
+        <CommandType>k__BackingField: 5
         _isNodeExpanded: 0
-        _rewards: []
-        _isBranching: 1
-        _targetNodeID: 868674cf-9431-48f0-9aeb-3271bea38edd
-    - rid: 1249774642356028077
+        _targetLabel: Cafe
+    - rid: 3758369457129652430
       type: {class: LabelCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 4
         _isNodeExpanded: 0
         _labelName: Lily
-    - rid: 1249774642356028078
+    - rid: 3758369457129652431
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -309,7 +312,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028079
+    - rid: 3758369457129652432
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -322,7 +325,7 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028080
+    - rid: 3758369457129652433
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -337,7 +340,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028081
+    - rid: 3758369457129652434
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -352,7 +355,7 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028082
+    - rid: 3758369457129652435
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -367,7 +370,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028083
+    - rid: 3758369457129652436
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -380,7 +383,7 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028084
+    - rid: 3758369457129652437
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -393,7 +396,7 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028085
+    - rid: 3758369457129652438
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
@@ -407,7 +410,47 @@ MonoBehaviour:
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 1249774642356028086
+    - rid: 3758369457129652439
+      type: {class: GotoCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 5
+        _isNodeExpanded: 0
+        _targetLabel: Cafe
+    - rid: 3758369457129652440
+      type: {class: LabelCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 4
+        _isNodeExpanded: 0
+        _labelName: Cafe
+    - rid: 3758369457129652441
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uC774\uB7F0 \uC2DC\uAC04\uC774 \uBC8C\uC368 \uC774\uB807\uAC8C
+          \uB410\uB124\uC694. \uCC28 \uB9C8\uC2DC\uB7EC \uAC08\uAE4C\uC694?"
+        _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
+        _expression: Default
+        _characterPosition: 2
+        _clearAllCharacters: 0
+        _showCharacter: 1
+        _cinematicAnimDuration: 0
+        _cinematicDisplayDuration: 0
+    - rid: 3758369457129652442
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uB098\uB294 \uADF8\uB140\uAC00 \uC55E\uC7A5 \uC11C\uB294
+          \uB300\uB85C \uB530\uB77C\uAC14\uACE0, \uCEE4\uD53C\uC20D\uC5D0 \uB3C4\uCC29\uD588\uB2E4."
+        _characterName: 
+        _expression: 
+        _characterPosition: 0
+        _clearAllCharacters: 0
+        _showCharacter: 0
+        _cinematicAnimDuration: 0
+        _cinematicDisplayDuration: 0
+    - rid: 3758369457129652443
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 7
@@ -415,12 +458,24 @@ MonoBehaviour:
         _rewards: []
         _isBranching: 1
         _targetNodeID: 868674cf-9431-48f0-9aeb-3271bea38edd
-    - rid: 1249774690121547874
+    - rid: 3758369457129652964
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
         _isNodeExpanded: 1
         _action: 0
         _type: 0
+        _waitUntilInput: 0
         _image: {fileID: 2800000, guid: 134c70ba23abe4f9b92292f13a34596e, type: 3}
         _video: {fileID: 0}
+    - rid: 3758369457129652965
+      type: {class: RewardCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 11
+        _isNodeExpanded: 1
+        _rewards:
+        - rid: 3758369457129652966
+    - rid: 3758369457129652966
+      type: {class: GiveReward, ns: , asm: Assembly-CSharp}
+      data:
+        <Description>k__BackingField: 

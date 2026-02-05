@@ -13,9 +13,9 @@ namespace UGESystem
     {
         /// <summary>
         /// Fired when a GameEvent has finished its execution.
-        /// Passes the completed event and a list of rewards to be granted.
+        /// Passes the completed event.
         /// </summary>
-        public static event Action<GameEvent, List<AbstractEventReward>> OnEventFinished;
+        public static event Action<GameEvent> OnEventFinished;
 
         /// <summary>
         /// Reference to the UI Manager for displaying dialogue, choices, etc.
@@ -50,6 +50,11 @@ namespace UGESystem
         
         private GameEvent _currentEvent;
         private Storyboard _currentStoryboard; // 현재 실행중인 스토리보드 컨텍스트
+        /// <summary>
+        /// Gets the storyboard currently being executed.
+        /// </summary>
+        public Storyboard CurrentStoryboard => _currentStoryboard;
+
         private int _commandIndex;
         private GameEventType _currentEventType;
                 
@@ -82,6 +87,7 @@ namespace UGESystem
             var screenEffectHandler = new ScreenEffectCommandHandler();
             var playSoundHandler = new PlaySoundCommandHandler();
             var triggerEventHandler = new TriggerEventCommandHandler();
+            var rewardHandler = new RewardCommandHandler();
             
             // 시네마틱 전용 다이얼로그 핸들러
             var cinematicDialogueHandler = new CinematicNode_DialogueCommandHandler();
@@ -103,6 +109,7 @@ namespace UGESystem
                         { typeof(ScreenEffectCommand), screenEffectHandler },
                         { typeof(PlaySoundCommand), playSoundHandler },
                         { typeof(TriggerEventCommand), triggerEventHandler },
+                        { typeof(RewardCommand), rewardHandler },
                     }
                 },
                 {
@@ -116,6 +123,7 @@ namespace UGESystem
                         { typeof(ScreenEffectCommand), screenEffectHandler },
                         { typeof(PlaySoundCommand), playSoundHandler },
                         { typeof(TriggerEventCommand), triggerEventHandler },
+                        { typeof(RewardCommand), rewardHandler },
                     }
                 },
             };
@@ -314,11 +322,11 @@ namespace UGESystem
             _isSkipActive = false; // 스킵 플래그 초기화
                         
             var finishedEvent = _currentEvent;
-            var rewards = command.Rewards;
-                            
-            // 1. 보상 및 이벤트 종료 알림 (항상 수행)
-            // 1. Reward and event completion notification (Always execute)
-            OnEventFinished?.Invoke(finishedEvent, rewards);
+            
+            // 1. 이벤트 종료 알림 (항상 수행)
+            // 1. Event completion notification (Always execute)
+            // Rewards are no longer passed here; they are handled by RewardCommand.
+            OnEventFinished?.Invoke(finishedEvent);
 
             // 2. 분기 처리 (있는 경우)
             // 2. Branching handling (if applicable)

@@ -27,8 +27,11 @@ namespace UGESystem
                 EditorGUILayout.BeginHorizontal();
                 
                 var element = listProperty.GetArrayElementAtIndex(i);
+                
+                EditorGUI.BeginChangeCheck();
                 // Display type name using managedReferenceFullTypename
                 EditorGUILayout.PropertyField(element, new GUIContent(element.managedReferenceFullTypename.Split('.').LastOrDefault()), true);
+                EditorGUI.EndChangeCheck();
 
                 if (GUILayout.Button("X", GUILayout.Width(20)))
                 {

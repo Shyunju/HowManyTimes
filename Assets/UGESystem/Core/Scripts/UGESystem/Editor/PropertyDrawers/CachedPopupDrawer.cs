@@ -67,9 +67,13 @@ namespace UGESystem.Editor
         /// <param name="label">The label for the property.</param>
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
+            // 1. BeginProperty establishes the property context for focus and overrides.
+            label = EditorGUI.BeginProperty(position, label, property);
+
             if (property.propertyType != SerializedPropertyType.String)
             {
                 EditorGUI.LabelField(position, label.text, "This attribute can only be used on string types.");
+                EditorGUI.EndProperty();
                 return;
             }
 
@@ -100,45 +104,59 @@ namespace UGESystem.Editor
 
             var cachedOptions = cacheEntry.options;
             string currentValue = property.stringValue;
-            int currentIndex = cachedOptions.FindIndex(o => o.Value == currentValue);
-            
-            var displayNames = cachedOptions.Select(o => o.DisplayName).ToList();
 
+            // Find current selection
+            var currentOption = cachedOptions.FirstOrDefault(o => o.Value == currentValue);
+            string displayLabel = currentOption.DisplayName; 
             bool isInvalid = false;
-            if (currentIndex < 0 && !string.IsNullOrEmpty(currentValue))
+
+            // If value exists but not in options (and not empty), it's invalid
+            if (string.IsNullOrEmpty(displayLabel) && !string.IsNullOrEmpty(currentValue))
             {
                 isInvalid = true;
-                displayNames.Insert(1, $"(Invalid) {currentValue}");
-                currentIndex = 1;
+                displayLabel = $"(Invalid) {currentValue}";
             }
-            
-            EditorGUI.BeginChangeCheck();
+            else if (string.IsNullOrEmpty(displayLabel))
+            {
+                displayLabel = "None";
+            }
 
+            // 2. Draw Label
+            // PrefixLabel without manual ID is more stable on macOS
+            position = EditorGUI.PrefixLabel(position, label);
+
+            // 3. Prepare Button Style (Tint if invalid)
             Color originalColor = GUI.backgroundColor;
             if (isInvalid)
             {
                 GUI.backgroundColor = new Color(1f, 0.6f, 0.6f, 1f);
             }
 
-            int newIndex = EditorGUI.Popup(position, label.text, currentIndex, displayNames.ToArray());
+            // 4. Draw Button
+            if (EditorGUI.DropdownButton(position, new GUIContent(displayLabel), FocusType.Keyboard))
+            {
+                GenericMenu menu = new GenericMenu();
+                
+                foreach (var option in cachedOptions)
+                {
+                    bool isSelected = option.Value == currentValue;
+                    menu.AddItem(new GUIContent(option.DisplayName), isSelected, () => 
+                    {
+                        property.stringValue = option.Value;
+                        property.serializedObject.ApplyModifiedProperties();
+                    });
+                }
+                
+                menu.DropDown(position);
+            }
 
+            // Restore color
             if (isInvalid)
             {
                 GUI.backgroundColor = originalColor;
             }
-            
-            if (EditorGUI.EndChangeCheck())
-            {
-                if (isInvalid && newIndex == 1) 
-                {
-                    // User re-selected the invalid entry, do nothing.
-                }
-                else
-                {
-                    property.stringValue = cachedOptions[newIndex].Value;
-                    property.serializedObject.ApplyModifiedProperties();
-                }
-            }
+
+            EditorGUI.EndProperty();
         }
     }
 }

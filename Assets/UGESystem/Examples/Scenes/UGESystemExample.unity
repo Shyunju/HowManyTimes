@@ -218,6 +218,17 @@ MonoBehaviour:
     DissipationDistance: 100
     PropagationSpeed: 343
   DefaultVelocity: {x: 0, y: -1, z: 0}
+--- !u!114 &354715235 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5536987635253516390, guid: eb299d2487dd664448826e35fc2b7bb8, type: 3}
+  m_PrefabInstance: {fileID: 612740699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &381388003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,6 +1243,7 @@ MonoBehaviour:
   _dialogueText: {fileID: 612740702}
   _continueButton: {fileID: 612740700}
   _dialogueSizeAdjuster: {fileID: 1851042200}
+  _globalSkipButton: {fileID: 354715235}
   _choiceBox: {fileID: 612740710}
   _choiceButtons:
   - {fileID: 612740709}

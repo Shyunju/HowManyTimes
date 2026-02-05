@@ -41,12 +41,15 @@ namespace UGESystem
     [Serializable]
     public class EndCommand : EventCommand
     {
+        [System.Obsolete("Use RewardCommand instead. This field is kept for migration compatibility.")]
         [SerializeReference, SerializeField]
         private List<AbstractEventReward> _rewards = new List<AbstractEventReward>();
         /// <summary>
         /// Gets the list of <see cref="AbstractEventReward"/>s to grant when the event ends.
         /// </summary>
+#pragma warning disable 0618
         [JsonIgnore] public List<AbstractEventReward> Rewards => _rewards;
+#pragma warning restore 0618
 
         [Header("Branching")]
         [SerializeField]
@@ -78,7 +81,9 @@ namespace UGESystem
         public EndCommand(EndCommandDto dto)
         {
             CommandType = CommandType.End;
+#pragma warning disable 0618
             _rewards = dto.Rewards ?? new List<AbstractEventReward>();
+#pragma warning restore 0618
             _isBranching = dto.IsBranching;
             _targetNodeID = dto.TargetNodeID;
         }
@@ -91,7 +96,9 @@ namespace UGESystem
         {
             return new EndCommandDto
             {
+#pragma warning disable 0618
                 Rewards = _rewards,
+#pragma warning restore 0618
                 IsBranching = _isBranching,
                 TargetNodeID = _targetNodeID
             };

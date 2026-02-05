@@ -38,9 +38,15 @@ namespace UGESystem
                     controller.UIManager.HideBackground();
                     break;
             }
+
+            if (command.Action == BackgroundAction.Show && command.WaitUntilInput)
+            {
+                controller.UIManager.SetModeBackgroundWait();
+                controller.IsWaitingForChoice = true;
+            }
             
-            // BackgroundCommand는 대기할 필요 없이 바로 다음으로 진행
-            // BackgroundCommand proceeds directly without waiting
+            // BackgroundCommand는 WaitUntilInput이 true가 아니면 대기할 필요 없이 바로 다음으로 진행
+            // BackgroundCommand proceeds directly without waiting unless WaitUntilInput is true
             yield break;
         }
     }

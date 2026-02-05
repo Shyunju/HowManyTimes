@@ -34,9 +34,10 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _action: 0
         _type: 0
+        _waitUntilInput: 1
         _image: {fileID: 2800000, guid: 0c47494c1f7a2d54bb9e6058b452f700, type: 3}
         _video: {fileID: 0}
     - rid: 2238037552763502661
@@ -132,6 +133,7 @@ MonoBehaviour:
         _isNodeExpanded: 0
         _action: 0
         _type: 0
+        _waitUntilInput: 0
         _image: {fileID: 2800000, guid: a628be58efeaba849ad7eca06d68c004, type: 3}
         _video: {fileID: 32900000, guid: da67b16ab1e392d4683ecfcd4ed5eecd, type: 3}
     - rid: 2238037594887946309
@@ -141,5 +143,6 @@ MonoBehaviour:
         _isNodeExpanded: 0
         _action: 1
         _type: 0
+        _waitUntilInput: 0
         _image: {fileID: 0}
         _video: {fileID: 0}

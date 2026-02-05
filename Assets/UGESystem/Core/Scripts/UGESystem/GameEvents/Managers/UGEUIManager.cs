@@ -20,6 +20,9 @@ namespace UGESystem
         [SerializeField] private Button _continueButton;
         [Tooltip("Optional: Assign the adjuster component if you want to support text pagination.")]
         [SerializeField] private TMP_ContentSizeAdjuster _dialogueSizeAdjuster;
+        
+        [Tooltip("A standalone button for skipping/continuing events when dialogue UI is hidden.")]
+        [SerializeField] private Button _globalSkipButton;
 
         [Header("Choice Elements")]
         [SerializeField] private GameObject _choiceBox;
@@ -50,6 +53,19 @@ namespace UGESystem
                         inputManager.TriggerContinueDialogue();
                     }
                 });
+            }
+
+            if (_globalSkipButton != null)
+            {
+                _globalSkipButton.onClick.AddListener(() =>
+                {
+                    var inputManager = UGESystemController.Instance.InputManager;
+                    if (inputManager != null)
+                    {
+                        inputManager.TriggerContinueDialogue();
+                    }
+                });
+                _globalSkipButton.gameObject.SetActive(false);
             }
 
             // 초기 상태 설정
@@ -88,9 +104,15 @@ namespace UGESystem
         /// </summary>
         private void OnContinueClicked()
         {
-            // If the dialogue box is not active, do nothing. This prevents clicks from advancing events when the dialogue UI isn't visible.
-            // 대화 상자가 활성화되어 있지 않으면 아무것도 하지 않습니다. 이는 대화 UI가 보이지 않을 때 클릭으로 이벤트가 진행되는 것을 방지합니다.
-            if (_dialogueBox == null || !_dialogueBox.activeInHierarchy)
+            // Allow continue if either the dialogue box is active OR the continue button is active OR the global skip button is active.
+            // This supports the 'Background Wait' mode where the dialogue box is hidden but a button is visible.
+            // 대화 상자가 활성화되어 있거나, 계속하기 버튼 혹은 전역 스킵 버튼이 활성화되어 있으면 진행을 허용합니다.
+            
+            bool isDialogueActive = _dialogueBox != null && _dialogueBox.activeInHierarchy;
+            bool isContinueActive = _continueButton != null && _continueButton.gameObject.activeInHierarchy;
+            bool isSkipActive = _globalSkipButton != null && _globalSkipButton.gameObject.activeInHierarchy;
+
+            if (!isDialogueActive && !isContinueActive && !isSkipActive)
             {
                 return;
             }
@@ -132,6 +154,7 @@ namespace UGESystem
             if(_choiceBox != null) _choiceBox.SetActive(false);
             if(_dialogueBox != null) _dialogueBox.SetActive(true);
             if (_continueButton != null) _continueButton.gameObject.SetActive(true);
+            if (_globalSkipButton != null) _globalSkipButton.gameObject.SetActive(false);
 
             if(_characterNameText != null) _characterNameText.text = characterName;
             if(_dialogueText != null) _dialogueText.text = dialogue;
@@ -197,6 +220,7 @@ namespace UGESystem
             if(_dialogueBox != null) _dialogueBox.SetActive(false);
             if(_choiceBox != null) _choiceBox.SetActive(false);
             if (_continueButton != null) _continueButton.gameObject.SetActive(false);
+            if (_globalSkipButton != null) _globalSkipButton.gameObject.SetActive(false);
 
             _cinematicTextBox.SetActive(true);
             _cinematicTextMesh.text = text;
@@ -260,8 +284,26 @@ namespace UGESystem
             if (_dialogueBox != null) _dialogueBox.SetActive(false);
             if (_choiceBox != null) _choiceBox.SetActive(false);
             if (_continueButton != null) _continueButton.gameObject.SetActive(false);
+            if (_globalSkipButton != null) _globalSkipButton.gameObject.SetActive(false);
             if (_cinematicTextBox != null) _cinematicTextBox.SetActive(false); // Cinematic Text 숨기기 추가 // Add hiding Cinematic Text
             HideBackground();
+        }
+
+        /// <summary>
+        /// Hides dialogue and choice boxes but activates the global skip button.
+        /// Used when displaying a background and waiting for user input without dialogue.
+        /// </summary>
+        public void SetModeBackgroundWait()
+        {
+            // Do NOT call HideAllUI() here, as it hides the background too.
+            // We only want to hide the overlay UI (dialogue, choice, etc).
+            if (_dialogueBox != null) _dialogueBox.SetActive(false);
+            if (_choiceBox != null) _choiceBox.SetActive(false);
+            if (_continueButton != null) _continueButton.gameObject.SetActive(false);
+            if (_cinematicTextBox != null) _cinematicTextBox.SetActive(false);
+            
+            // Show the global skip button so the user can proceed
+            if (_globalSkipButton != null) _globalSkipButton.gameObject.SetActive(true);
         }
 
         /// <summary>

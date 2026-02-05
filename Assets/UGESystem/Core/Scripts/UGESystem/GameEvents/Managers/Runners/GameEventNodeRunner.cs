@@ -36,12 +36,13 @@ namespace UGESystem
             bool isEventDone = false;
             NodeRunResult result = new NodeRunResult();
 
-            Action<GameEvent, List<AbstractEventReward>> onFinish = null;
-            onFinish = (finishedEvent, rewards) =>
+            Action<GameEvent> onFinish = null;
+            onFinish = (finishedEvent) =>
             {
                 if (finishedEvent == node.GameEventAsset)
                 {
-                    result.Rewards = rewards;
+                    // Rewards are now granted directly by RewardCommand, so we don't need to collect them here.
+                    // result.Rewards = new List<AbstractEventReward>(); // Optional explicit empty list
                     isEventDone = true;
                 }
             };

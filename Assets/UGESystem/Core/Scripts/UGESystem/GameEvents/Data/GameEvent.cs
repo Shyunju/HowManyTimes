@@ -137,6 +137,22 @@ namespace UGESystem
                         EventCommand newCommand = commandDto.ToCommand();
                         if (newCommand != null)
                         {
+                            // Migration Logic: Automatically extract rewards from EndCommand
+                            // and create a preceding RewardCommand.
+#pragma warning disable 0618
+                            if (newCommand is EndCommand endCmd && endCmd.Rewards != null && endCmd.Rewards.Count > 0)
+                            {
+                                // Create new RewardCommandDto-like structure manually or just the command
+                                var rewardCmd = new RewardCommand();
+                                rewardCmd.Rewards.AddRange(endCmd.Rewards);
+                                
+                                // Clear rewards from the original EndCommand so they don't get executed twice/saved back
+                                endCmd.Rewards.Clear();
+                                
+                                _commands.Add(rewardCmd);
+                            }
+#pragma warning restore 0618
+
                             _commands.Add(newCommand);
                         }
                     }

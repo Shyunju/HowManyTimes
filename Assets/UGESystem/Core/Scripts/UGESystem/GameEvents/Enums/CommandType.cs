@@ -27,6 +27,8 @@ namespace UGESystem
         /// <summary>Screen effect (fade, tint, etc.)</summary>
         ScreenEffect,   
         /// <summary>Execute other GameEvent (for 2-stage graph function)</summary>
-        TriggerEvent    
+        TriggerEvent,
+        /// <summary>Grant rewards</summary>
+        Reward
     }
 }
