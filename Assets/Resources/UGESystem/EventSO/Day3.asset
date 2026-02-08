@@ -376,5 +376,5 @@ MonoBehaviour:
         _action: 0
         _type: 0
         _waitUntilInput: 1
-        _image: {fileID: 0}
+        _image: {fileID: 2800000, guid: da70c8fa8ea99d24c92905ca4a3ad8a3, type: 3}
         _video: {fileID: 0}

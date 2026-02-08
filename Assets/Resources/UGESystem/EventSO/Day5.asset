@@ -236,7 +236,7 @@ MonoBehaviour:
         _action: 0
         _type: 0
         _waitUntilInput: 1
-        _image: {fileID: 0}
+        _image: {fileID: 2800000, guid: f38276ce97696c04aac87d218edb18f3, type: 3}
         _video: {fileID: 0}
     - rid: 3758369457129652885
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
