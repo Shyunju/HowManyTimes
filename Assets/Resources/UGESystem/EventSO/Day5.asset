@@ -15,9 +15,11 @@ MonoBehaviour:
   <Guid>k__BackingField: 51ec0650-f489-48c1-9f9e-064b834844e7
   _archetype: 1
   _commands:
+  - rid: 3758369568633127034
   - rid: 3758369457129652870
   - rid: 3758369457129652871
   - rid: 3758369457129652872
+  - rid: 3758369568633126918
   - rid: 3758369457129652873
   - rid: 3758369457129652874
   - rid: 3758369457129652875
@@ -28,6 +30,7 @@ MonoBehaviour:
   - rid: 3758369457129652880
   - rid: 3758369457129652881
   - rid: 3758369457129652882
+  - rid: 3758369568633127033
   - rid: 3758369457129652883
   - rid: 3758369457129652884
   - rid: 3758369457129652885
@@ -51,7 +54,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 1
         <AudioClip>k__BackingField: {fileID: 8300000, guid: 594bd2dce3a2d9f46b3be05dadab2280, type: 3}
@@ -61,7 +64,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _action: 0
         _type: 0
         _waitUntilInput: 0
@@ -222,7 +225,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 1
         <AudioClip>k__BackingField: {fileID: 8300000, guid: 6d33042131c5abd489f3eca05d0ea960, type: 3}
@@ -232,7 +235,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _action: 0
         _type: 0
         _waitUntilInput: 1
@@ -246,3 +249,36 @@ MonoBehaviour:
         _rewards: []
         _isBranching: 1
         _targetNodeID: e1ccb541-919c-4f89-a9c7-139cff90123e
+    - rid: 3758369568633126918
+      type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 6
+        _isNodeExpanded: 0
+        <Action>k__BackingField: 0
+        <SoundType>k__BackingField: 0
+        <AudioClip>k__BackingField: {fileID: 8300000, guid: 1027bed8a8fa24b409476f1dd4b77953, type: 3}
+        <Volume>k__BackingField: 0.5
+        <Loop>k__BackingField: 1
+    - rid: 3758369568633127033
+      type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 6
+        _isNodeExpanded: 0
+        <Action>k__BackingField: 1
+        <SoundType>k__BackingField: 0
+        <AudioClip>k__BackingField: {fileID: 0}
+        <Volume>k__BackingField: 1
+        <Loop>k__BackingField: 0
+    - rid: 3758369568633127034
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 1
+        _dialogueText: '[Day 5]'
+        _characterName: 
+        _expression: 
+        _characterPosition: 0
+        _clearAllCharacters: 0
+        _showCharacter: 0
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3

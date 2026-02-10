@@ -585,6 +585,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &773905081 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7186548655788048737, guid: fb59ceb8cf1064565869a3c7769e5d7a, type: 3}
+  m_PrefabInstance: {fileID: 3002167934211933012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +786,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2127565957719488179, guid: fb59ceb8cf1064565869a3c7769e5d7a, type: 3}
+      propertyPath: _bgmAudioSource
+      value: 
+      objectReference: {fileID: 773905081}
+    - target: {fileID: 2127565957719488179, guid: fb59ceb8cf1064565869a3c7769e5d7a, type: 3}
+      propertyPath: _sfxAudioSource
+      value: 
+      objectReference: {fileID: 773905081}
     - target: {fileID: 2657478317667749800, guid: fb59ceb8cf1064565869a3c7769e5d7a, type: 3}
       propertyPath: _choiceBox
       value: 
@@ -996,6 +1009,14 @@ PrefabInstance:
     - target: {fileID: 330672312122203236, guid: 89c7c401107f24c09af40cc0968aa5b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658319838579527188, guid: 89c7c401107f24c09af40cc0968aa5b1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484579529735359215, guid: 89c7c401107f24c09af40cc0968aa5b1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 46.999756
       objectReference: {fileID: 0}
     - target: {fileID: 7992687447450805587, guid: 89c7c401107f24c09af40cc0968aa5b1, type: 3}
       propertyPath: m_Name

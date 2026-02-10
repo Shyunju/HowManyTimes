@@ -15,7 +15,9 @@ MonoBehaviour:
   <Guid>k__BackingField: 741376d4-1e6d-4586-960f-32c3e7338373
   _archetype: 1
   _commands:
+  - rid: 3758369568633127037
   - rid: 3758369457129652780
+  - rid: 3758369568633126913
   - rid: 3758369457129652781
   - rid: 3758369457129652782
   - rid: 3758369457129652783
@@ -80,6 +82,8 @@ MonoBehaviour:
   - rid: 3758369457129652841
   - rid: 3758369457129652842
   - rid: 3758369457129652843
+  - rid: 3758369568633127038
+  - rid: 3758369568633127039
   - rid: 3758369457129652844
   references:
     version: 2
@@ -88,7 +92,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _action: 0
         _type: 0
         _waitUntilInput: 0
@@ -984,3 +988,41 @@ MonoBehaviour:
       type: {class: GiveReward, ns: , asm: Assembly-CSharp}
       data:
         <Description>k__BackingField: 
+    - rid: 3758369568633126913
+      type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 6
+        _isNodeExpanded: 1
+        <Action>k__BackingField: 0
+        <SoundType>k__BackingField: 0
+        <AudioClip>k__BackingField: {fileID: 8300000, guid: a8b16534806bf9044bde1a98e64eb9a0, type: 3}
+        <Volume>k__BackingField: 1
+        <Loop>k__BackingField: 1
+    - rid: 3758369568633127037
+      type: {class: ScreenEffectCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 9
+        _isNodeExpanded: 0
+        <EffectType>k__BackingField: 0
+        <Duration>k__BackingField: 3
+        <TargetColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
+        _flashHoldDuration: 0.1
+    - rid: 3758369568633127038
+      type: {class: ScreenEffectCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 9
+        _isNodeExpanded: 0
+        <EffectType>k__BackingField: 1
+        <Duration>k__BackingField: 5
+        <TargetColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
+        _flashHoldDuration: 0.1
+    - rid: 3758369568633127039
+      type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 6
+        _isNodeExpanded: 0
+        <Action>k__BackingField: 1
+        <SoundType>k__BackingField: 0
+        <AudioClip>k__BackingField: {fileID: 0}
+        <Volume>k__BackingField: 1
+        <Loop>k__BackingField: 0

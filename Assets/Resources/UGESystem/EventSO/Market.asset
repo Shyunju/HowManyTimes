@@ -16,6 +16,7 @@ MonoBehaviour:
   _archetype: 1
   _commands:
   - rid: 3758369457129652886
+  - rid: 3758369568633126924
   - rid: 3758369457129652887
   - rid: 3758369457129652888
   - rid: 3758369457129652889
@@ -60,6 +61,8 @@ MonoBehaviour:
   - rid: 3758369457129652927
   - rid: 3758369457129652928
   - rid: 3758369457129652929
+  - rid: 3758369568633127023
+  - rid: 3758369568633127024
   - rid: 3758369457129652930
   references:
     version: 2
@@ -68,7 +71,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _action: 0
         _type: 0
         _waitUntilInput: 0
@@ -597,7 +600,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uC6B0\uB9AC\uB294 \uADF8\uB807\uAC8C \uC778\uC0AC\uB97C
           \uB098\uB204\uACE0 \uD5E4\uC5B4\uC84C\uACE0 \uB098\uB294 \uADF8\uB140\uAC00
           \uC54C\uB824\uC900 \uC7AC\uB8CC\uB4E4\uC744 \uAD6C\uB9E4\uD574 \uC9D1\uC73C\uB85C
@@ -605,7 +608,7 @@ MonoBehaviour:
         _characterName: 
         _expression: 
         _characterPosition: 0
-        _clearAllCharacters: 0
+        _clearAllCharacters: 1
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
@@ -655,3 +658,32 @@ MonoBehaviour:
       type: {class: GiveReward, ns: , asm: Assembly-CSharp}
       data:
         <Description>k__BackingField: 
+    - rid: 3758369568633126924
+      type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 6
+        _isNodeExpanded: 0
+        <Action>k__BackingField: 0
+        <SoundType>k__BackingField: 0
+        <AudioClip>k__BackingField: {fileID: 8300000, guid: cc2d78874b5277344a0e8eb7f7041184, type: 3}
+        <Volume>k__BackingField: 1
+        <Loop>k__BackingField: 1
+    - rid: 3758369568633127023
+      type: {class: ScreenEffectCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 9
+        _isNodeExpanded: 0
+        <EffectType>k__BackingField: 1
+        <Duration>k__BackingField: 5
+        <TargetColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
+        _flashHoldDuration: 0.1
+    - rid: 3758369568633127024
+      type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 6
+        _isNodeExpanded: 0
+        <Action>k__BackingField: 1
+        <SoundType>k__BackingField: 0
+        <AudioClip>k__BackingField: {fileID: 0}
+        <Volume>k__BackingField: 1
+        <Loop>k__BackingField: 0

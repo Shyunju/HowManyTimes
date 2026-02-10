@@ -24,6 +24,7 @@ MonoBehaviour:
   - rid: 3758369457129652450
   - rid: 3758369457129652451
   - rid: 3758369457129652452
+  - rid: 3758369568633126928
   - rid: 3758369457129652453
   - rid: 3758369457129652454
   - rid: 3758369457129652455
@@ -590,3 +591,13 @@ MonoBehaviour:
         _rewards: []
         _isBranching: 0
         _targetNodeID: 
+    - rid: 3758369568633126928
+      type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 6
+        _isNodeExpanded: 1
+        <Action>k__BackingField: 0
+        <SoundType>k__BackingField: 0
+        <AudioClip>k__BackingField: {fileID: 8300000, guid: 063e6f88034e9d241a4673fb1bbd3d56, type: 3}
+        <Volume>k__BackingField: 0.5
+        <Loop>k__BackingField: 1
