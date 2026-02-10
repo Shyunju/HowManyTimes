@@ -16,6 +16,7 @@ MonoBehaviour:
   _archetype: 1
   _commands:
   - rid: 3758369457129652376
+  - rid: 3758369568633126912
   - rid: 3758369457129652377
   - rid: 3758369457129652378
   - rid: 3758369457129652379
@@ -39,7 +40,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 1
         <AudioClip>k__BackingField: {fileID: 8300000, guid: 594bd2dce3a2d9f46b3be05dadab2280, type: 3}
@@ -216,7 +217,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "(\uBB50\uAC00 \uC9C0\uB098\uAC04\uAC70\uC9C0..? \uBB50 \uC5B4\uC9DC\uD53C
           \uC544\uBB34 \uACC4\uD68D\uB3C4 \uC5C6\uACE0, \uCC45\uC774\uB098 \uC77D\uC73C\uB7EC
           \uAC00\uBCFC\uAE4C?)"
@@ -231,7 +232,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _action: 0
         _type: 0
         _waitUntilInput: 1
@@ -255,3 +256,13 @@ MonoBehaviour:
         _rewards: []
         _isBranching: 1
         _targetNodeID: c052a8c7-1989-4e0b-8cf5-271c89d393e7
+    - rid: 3758369568633126912
+      type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 6
+        _isNodeExpanded: 1
+        <Action>k__BackingField: 0
+        <SoundType>k__BackingField: 0
+        <AudioClip>k__BackingField: {fileID: 0}
+        <Volume>k__BackingField: 1
+        <Loop>k__BackingField: 1
