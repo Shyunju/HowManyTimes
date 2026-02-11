@@ -235,7 +235,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uC544 \uC800\uB294 \uAD1C\uCC2E\uC544\uC694. \uB2E4\uC74C\uC5D0
+        _dialogueText: "\uC544 \uB098\uB294 \uAD1C\uCC2E\uC544\uC694. \uB2E4\uC74C\uC5D0
           \uC0AC\uBA74\uB3FC\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default
@@ -587,7 +587,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uB124. \uB9DB\uC788\uB294 \uC2DD\uC0AC \uB418\uAE38 \uBC14\uB798\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default
