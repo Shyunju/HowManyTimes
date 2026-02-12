@@ -25,7 +25,9 @@ MonoBehaviour:
   - rid: 3758369457129652505
   - rid: 3758369457129652506
   - rid: 3758369457129652507
+  - rid: 3758369617658511360
   - rid: 3758369457129652508
+  - rid: 3758369617658511439
   - rid: 3758369457129652509
   - rid: 3758369457129652510
   - rid: 3758369457129652511
@@ -65,9 +67,11 @@ MonoBehaviour:
   - rid: 3758369457129652544
   - rid: 3758369457129652545
   - rid: 3758369457129652546
+  - rid: 3758369617658511435
   - rid: 3758369457129652547
   - rid: 3758369457129652548
   - rid: 3758369457129652549
+  - rid: 3758369617658511436
   - rid: 3758369457129652550
   - rid: 3758369457129652551
   - rid: 3758369568633127027
@@ -80,7 +84,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _action: 0
         _type: 0
         _waitUntilInput: 0
@@ -194,7 +198,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "\uB2E8\uCCB4\uC904\uB118\uAE30 2\uC870 \uCC38\uC5EC\uC790\uBD84\uB4E4\uC740
           \uC774\uCABD\uC73C\uB85C \uBAA8\uC5EC\uC8FC\uC138\uC694~!"
         _characterName: 312daa85-6eae-48cb-a4d3-22c23eddb65b
@@ -352,7 +356,7 @@ MonoBehaviour:
         _dialogueText: "\uB124? \uC815\uB9D0 \uADF8\uB798\uB3C4 \uAD1C\uCC2E\uC73C\uC2DC\uACA0\uC5B4\uC694?
           \uBD88\uD3B8\uD558\uC2E4\uD150\uB370..."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Suprise
+        _expression: Surprise
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -439,7 +443,7 @@ MonoBehaviour:
           \uAC00\uC7A5 \uAE34\uC7A5\uB418\uC9C0\uB9CC, \uB9DE\uC544\uC694. \uD3B8\uD558\uAC8C
           \uC0DD\uAC01\uD560\uAC8C\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Gloomy
+        _expression: Default
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -488,10 +492,10 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "\uC544, \uADF8\uAC8C\u2026 "
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Suprise
+        _expression: Surprise
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -501,7 +505,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "\uB2E8\uCCB4\uC904\uB118\uAE30 \uC2DC\uC791\uD558\uACA0\uC2B5\uB2C8\uB2E4.
           \uBAA8\uB450 \uC774\uB9AC \uC640\uC8FC\uC138\uC694! "
         _characterName: 312daa85-6eae-48cb-a4d3-22c23eddb65b
@@ -650,8 +654,8 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uCE5C\uAD6C\uAC00 \uB418\uBA74  \uB354 \uC798\uC544\uAC08\uC218
-          \uC788\uC744\uD150\uB370. \uC6B0\uB9AC \uCE5C\uAD6C\uD560\uB798\uC694?
+        _dialogueText: "\uCE5C\uAD6C\uAC00 \uB418\uBA74  \uB354 \uC798 \uC54C\uC544\uAC08\uC218
+          \uC788\uC744\uD150\uB370... \uC6B0\uB9AC \uCE5C\uAD6C\uD560\uAE4C\uC694?
           \uC6B0\uC5F0\uD788 3\uBC88\uC774\uB098 \uB9CC\uB098\uACE0, \uB2F9\uC2E0\uC774\uB77C\uBA74
           \uC88B\uC740 \uCE5C\uAD6C\uAC00 \uB418\uC5B4\uC904\uAC83\uAC19\uC544\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
@@ -696,13 +700,13 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uD558\uD558 \uBC1B\uC544\uC8FC\uC154\uC11C \uACE0\uB9C8\uC6CC\uC694.
+        _dialogueText: "\uD558\uD558 \uBC1B\uC544\uC8FC\uC154\uC11C \uAE30\uBED0\uC694.
           \uD734\uB300\uD3F0 \uC8FC\uC2DC\uACA0\uC5B4\uC694? \uC81C \uBC88\uD638
-          \uC785\uB825\uD574 \uB4DC\uB9B4\uAC8C\uC694. \uB610 \uB9CC\uB098\uC11C
-          \uB180\uACE0 \uD574\uC694, \uC6B0\uB9AC."
+          \uC785\uB825\uD574 \uB4DC\uB9B4\uAC8C\uC694. \uB610 \uB9CC\uB098\uC694,
+          \uC6B0\uB9AC."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Happy
-        _characterPosition: 0
+        _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
         _cinematicAnimDuration: 0
@@ -755,7 +759,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uB124, \uC800\uB450\uC694. \uC624\uB298\uC740 \uC774\uB9CC
+        _dialogueText: "\uB124, \uC800\uB3C4\uC694. \uC624\uB298\uC740 \uC774\uB9CC
           \uAC00\uBCF4\uACA0\uC2B5\uB2C8\uB2E4. \uB2E4\uC74C\uC5D0 \uBD10\uC694."
         _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
         _expression: Default
@@ -811,7 +815,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 0
         <AudioClip>k__BackingField: {fileID: 8300000, guid: aa23a51a477935b4cb9bcb207e3d4633, type: 3}
@@ -836,3 +840,45 @@ MonoBehaviour:
         <AudioClip>k__BackingField: {fileID: 0}
         <Volume>k__BackingField: 0.198
         <Loop>k__BackingField: 0
+    - rid: 3758369617658511360
+      type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 1
+        _isNodeExpanded: 0
+        _characterId: 312daa85-6eae-48cb-a4d3-22c23eddb65b
+        _action: 1
+        _position: 0
+        _expression: Default
+    - rid: 3758369617658511435
+      type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 1
+        _isNodeExpanded: 0
+        _characterId: f9e591d6-d9ba-4472-8d95-6083879b4513
+        _action: 2
+        _position: 2
+        _expression: Default
+    - rid: 3758369617658511436
+      type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 1
+        _isNodeExpanded: 0
+        _characterId: f9e591d6-d9ba-4472-8d95-6083879b4513
+        _action: 1
+        _position: 2
+        _expression: Default
+    - rid: 3758369617658511439
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uACBD\uAE30\uC5D0 \uCC38\uC5EC\uD558\uAE30 \uC704\uD574
+          \uBAA8\uC5EC\uB4DC\uB294 \uC0AC\uB78C\uB4E4 \uC0AC\uC774\uC5D0\uC11C \uADF8\uB140\uB97C
+          \uBC1C\uACAC\uD588\uB2E4."
+        _characterName: 
+        _expression: 
+        _characterPosition: 0
+        _clearAllCharacters: 0
+        _showCharacter: 0
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3

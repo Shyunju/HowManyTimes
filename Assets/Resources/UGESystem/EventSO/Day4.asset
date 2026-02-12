@@ -17,9 +17,9 @@ MonoBehaviour:
   _commands:
   - rid: 3758369568633127029
   - rid: 3758369457129652291
-  - rid: 3758369457129652292
   - rid: 3758369457129652293
   - rid: 3758369568633126917
+  - rid: 3758369457129652292
   - rid: 3758369457129652294
   - rid: 3758369457129652295
   - rid: 3758369457129652296
@@ -98,7 +98,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uC548\uB155\uD558\uC138\uC694. \uC5B4\uC81C \uC624\uB798\uB9CC\uC5D0
+        _dialogueText: "\uC548\uB155\uD558\uC138\uC694. \uC5B4\uC81C \uC624\uB79C\uB9CC\uC5D0
           \uBAB8\uC744 \uC6C0\uC9C1\uC600\uB354\uB2C8 \uBAB8\uC774 \uAC00\uBCBC\uC6CC\uC9C4
           \uB290\uB08C\uC774\uC5D0\uC694."
         _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
@@ -127,7 +127,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uB2E8\uCCB4\uC904\uB118\uAE30\uB97C \uD588\uB294\uB370 \uC6B0\uC2B9\uC548
+        _dialogueText: "\uB2E8\uCCB4\uC904\uB118\uAE30\uB97C \uD588\uB294\uB370 \uC6B0\uC2B9\uC740
           \uD558\uC9C0 \uBABB\uD588\uC5B4\uC694. \uD558\uC9C0\uB9CC \uC88B\uC740
           \uCE5C\uAD6C\uB97C \uC0AC\uADC0\uC5C8\uC8E0."
         _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
@@ -316,9 +316,9 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uD6C4\uD6C4\uD6C4. \uBC30\uB824\uAC00 \uB118\uCE58\uC2DC\uAD70\uC694.
-          \uADF8\uB7FC \uBD80\uB514 \uC88B\uC740 \uC2DC\uAC04 \uBCF4\uB124\uC2DC\uACE0,
+          \uADF8\uB7FC \uBD80\uB514 \uC88B\uC740 \uC2DC\uAC04 \uBCF4\uB0B4\uC2DC\uACE0,
           \uC774\uAC74 \uC624\uB298 \uC2E0\uBB38\uC785\uB2C8\uB2E4. \uC774\uB9CC~
           \uCE5C\uAD6C."
         _characterName: ad399f43-8535-432e-b47e-8fd330e63801
@@ -396,7 +396,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: '[Day 4]'
         _characterName: 
         _expression: 

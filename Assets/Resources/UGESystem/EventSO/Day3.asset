@@ -17,9 +17,9 @@ MonoBehaviour:
   _commands:
   - rid: 3758369568633127025
   - rid: 3758369457129652845
-  - rid: 3758369457129652846
   - rid: 3758369457129652847
   - rid: 3758369568633126916
+  - rid: 3758369457129652846
   - rid: 3758369457129652848
   - rid: 3758369457129652849
   - rid: 3758369457129652850
@@ -145,9 +145,9 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uC624 \uC5F0\uC18D\uC73C\uB85C \uC6B0\uC5F0\uD788 \uB9C8\uC8FC\uCE58\uB2E4\uB2C8
-          \uADF8\uAC70 \uC815\uB9D0 \uC2E0\uAE30\uD55C \uC77C\uC774\uC9C0\uB3C4 \uBAA8\uB974\uACA0\uB124\uC694?
+          \uADF8\uAC70 \uC815\uB9D0 \uC2E0\uAE30\uD55C \uC77C\uC774\uC9C0\uB3C4 \uBAA8\uB974\uACA0\uB124\uC694.
           \uB9CC\uC57D \uC624\uB298\uB3C4 \uADF8 \uC0AC\uB78C\uC744 \uB9CC\uB098\uAC8C
-          \uB41C\uB2E4\uBA74 \uCE5C\uAD6C\uAC00 \uB3C4\uB9AC\uC9C0\uB3C4 \uBAA8\uB974\uACA0\uB124\uC694."
+          \uB41C\uB2E4\uBA74 \uCE5C\uAD6C\uAC00 \uB420\uC9C0\uB3C4 \uBAA8\uB974\uB294\uC77C\uC774\uC8E0."
         _characterName: ad399f43-8535-432e-b47e-8fd330e63801
         _expression: Default
         _characterPosition: 1
@@ -229,7 +229,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uD558\uD558 \uB18D\uB2F4\uC785\uB2C8\uB2E4. \uC774\uAC74
+        _dialogueText: "\uD558\uD558. \uB18D\uB2F4\uC785\uB2C8\uB2E4. \uC774\uAC74
           \uC624\uB298 \uC2E0\uBB38\uC774\uACE0\uC694. \uC624\uB298\uC740 \uACC4\uD68D\uC774
           \uC788\uC73C\uC2E0\uAC00\uC694?"
         _characterName: ad399f43-8535-432e-b47e-8fd330e63801
@@ -300,15 +300,15 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
-        _dialogueText: "\uCC38 \uC624\uB298\uC740 \uC774 \uB3D9\uB124\uC5D0 \uC8FC\uBBFC
+        _isNodeExpanded: 1
+        _dialogueText: "\uCC38, \uC624\uB298\uC740 \uC774 \uB3D9\uB124\uC5D0 \uC8FC\uBBFC
           \uCCB4\uC721\uB300\uD68C\uAC00 \uC788\uB2E4\uB098\uBD10\uC694. \uAC00\uB054\uC529\uC740
           \uBAB8\uC744 \uC6C0\uC9C1\uC5EC\uC8FC\uB294\uAC8C \uC0DD\uD65C\uAC74\uAC15\uC5D0
           \uCC38 \uC88B\uB2E4\uACE0 \uD569\uB2C8\uB2E4. \uB610 \uC8FC\uBBFC\uB4E4\uC774
           \uB9CE\uC774 \uBAA8\uC774\uB294 \uD589\uC0AC\uC774\uB2C8 \uB9CC\uD07C \uADF8\uB140\uB97C
           \uB610 \uB9CC\uB0A0\uC218\uB3C4 \uC788\uC9C0 \uC54A\uC744\uAE4C\uC694?
           \uB204\uAD6C\uB4E0\uC9C0 \uC6D0\uD558\uBA74 \uCC38\uC5EC\uB3C4 \uAC00\uB2A5\uD558\uB2E4\uACE0
-          \uD558\uB2C8 \uC624\uB298\uC744 \uC774 \uACF3\uC744 \uCD94\uCC9C\uB4DC\uB9AC\uC8E0!"
+          \uD558\uB2C8 \uC624\uB298\uC740 \uC774 \uACF3\uC744 \uCD94\uCC9C\uB4DC\uB9AC\uC8E0!"
         _characterName: ad399f43-8535-432e-b47e-8fd330e63801
         _expression: Default
         _characterPosition: 1
@@ -395,7 +395,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: '[Day 3]'
         _characterName: 
         _expression: 

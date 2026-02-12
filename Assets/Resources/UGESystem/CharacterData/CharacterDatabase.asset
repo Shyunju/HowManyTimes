@@ -22,8 +22,8 @@ MonoBehaviour:
       <AnimationStateName>k__BackingField: Default
     - <ExpressionName>k__BackingField: Happy
       <AnimationStateName>k__BackingField: Happy
-    - <ExpressionName>k__BackingField: Suprise
-      <AnimationStateName>k__BackingField: Suprise
+    - <ExpressionName>k__BackingField: Surprise
+      <AnimationStateName>k__BackingField: Surprise
     - <ExpressionName>k__BackingField: Gloomy
       <AnimationStateName>k__BackingField: Gloomy
   - <CharacterID>k__BackingField: aad29799-f6ee-42af-96bd-0d09cdc990ae

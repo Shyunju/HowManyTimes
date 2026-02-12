@@ -446,8 +446,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uAD1C\uCC2E\uC73C\uC2DC\uBA74 \uC81C\uAC00 \uD558\uB098
-          \uC81C\uC548\uD574\uB4DC\uB9B4\uAE4C\uC694?"
+        _dialogueText: "\uAD1C\uCC2E\uC73C\uC2DC\uBA74 \uD558\uB098 \uC81C\uC548\uD574\uB4DC\uB9B4\uAE4C\uC694?"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default
         _characterPosition: 2
@@ -474,7 +473,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uC624\uBE10\uC2A4\uD30C\uAC8C\uD2F0\uB77C\uB294 \uC694\uB9AC\uC778\uB370\uC694.
+        _dialogueText: "'\uC624\uBE10\uC2A4\uD30C\uAC8C\uD2F0'\uB77C\uB294 \uC694\uB9AC\uC778\uB370\uC694.
           \uC870\uB9AC\uB3C4 \uB9CE\uC774 \uC5B4\uB835\uC9C0 \uC54A\uACE0, \uADF8\uB0E5
           \uC2A4\uD30C\uAC8C\uD2F0\uBCF4\uB2E4 \uB354 \uB530\uB73B\uD568\uC744 \uC624\uB798
           \uC720\uC9C0\uD558\uBA74\uC11C \uBA39\uC744 \uC218 \uC788\uC5B4\uC694."

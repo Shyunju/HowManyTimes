@@ -78,7 +78,7 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uB098\uB294 \uC120\uBC18\uC5D0 \uAC00\uC9C0\uB7F0\uD788
-          \uAF42\uD600\uC9C4 \uCC45\uB4E4\uC744 \uCC9C\uCC9C\uD788 \uC0B4\uD3B4\uBCF4\uBA70
+          \uAF42\uD78C \uCC45\uB4E4\uC744 \uCC9C\uCC9C\uD788 \uC0B4\uD3B4\uBCF4\uBA70
           \uD765\uBBF8\uB85C\uC6CC\uBCF4\uC774\uB294 \uCC45\uB4E4\uC744 \uBAA8\uB450
           \uAEBC\uB0C8\uB2E4."
         _characterName: 
@@ -241,7 +241,7 @@ MonoBehaviour:
         _expression: Default
         _characterPosition: 2
         _clearAllCharacters: 0
-        _showCharacter: 0
+        _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
     - rid: 3758369457129652330

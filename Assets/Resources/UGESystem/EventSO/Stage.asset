@@ -69,6 +69,7 @@ MonoBehaviour:
   - rid: 3758369457129652672
   - rid: 3758369457129652673
   - rid: 3758369457129652674
+  - rid: 3758369617658511440
   - rid: 3758369457129652675
   - rid: 3758369457129652676
   - rid: 3758369568633127031
@@ -106,7 +107,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "(\uD558\uC9C0\uB9CC \uB610 \uC774\uB7F0 \uC791\uC740 \uACE1\uC138\uC11C
+        _dialogueText: "(\uD558\uC9C0\uB9CC \uB610 \uC774\uB7F0 \uC791\uC740 \uACF3\uC5D0\uC11C
           \uB300\uC2A4\uD0C0\uAC00 \uD0C4\uC0DD\uD560\uC9C0\uB3C4 \uBAA8\uB974\uB294
           \uC77C\uC774\uC9C0.)"
         _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
@@ -642,7 +643,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uAC00\uC2B4\uC5D0 \uC640\uB2FF\uB294 \uC88B\uC740 \uC870\uB798\uB77C\uACE0
+        _dialogueText: "\uAC00\uC2B4\uC5D0 \uC640\uB2FF\uB294 \uC88B\uC740 \uB178\uB798\uB77C\uACE0
           \uC0DD\uAC01\uD574\uC694."
         _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
         _expression: Default
@@ -839,7 +840,7 @@ MonoBehaviour:
       type: {class: ScreenEffectCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 9
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <EffectType>k__BackingField: 1
         <Duration>k__BackingField: 5
         <TargetColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
@@ -848,9 +849,18 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <Action>k__BackingField: 1
         <SoundType>k__BackingField: 0
         <AudioClip>k__BackingField: {fileID: 0}
         <Volume>k__BackingField: 1
         <Loop>k__BackingField: 0
+    - rid: 3758369617658511440
+      type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 1
+        _isNodeExpanded: 1
+        _characterId: f9e591d6-d9ba-4472-8d95-6083879b4513
+        _action: 1
+        _position: 2
+        _expression: Default

@@ -17,9 +17,9 @@ MonoBehaviour:
   _commands:
   - rid: 3758369568633127034
   - rid: 3758369457129652870
-  - rid: 3758369457129652871
   - rid: 3758369457129652872
   - rid: 3758369568633126918
+  - rid: 3758369457129652871
   - rid: 3758369457129652873
   - rid: 3758369457129652874
   - rid: 3758369457129652875
@@ -273,7 +273,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: '[Day 5]'
         _characterName: 
         _expression: 

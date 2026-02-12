@@ -176,9 +176,10 @@ MonoBehaviour:
       type: {class: ChoiceCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 3
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _choices:
-        - _text: "\uC2E0\uC5D0\uAC8C\uB294 \uBE68\uAC04 \uC7A5\uBBF8\uAC00 \uC5B4\uC6B8\uB824\uC694."
+        - _text: "\uB2F9\uC2E0\uC5D0\uAC8C\uB294 \uBE68\uAC04 \uC7A5\uBBF8\uAC00
+            \uC5B4\uC6B8\uB824\uC694."
           _targetLabel: Rose
         - _text: "\uB2F9\uC2E0\uC5D0\uAC8C\uB294 \uD558\uC580 \uBC31\uD569\uC774
             \uC5B4\uC6B8\uB824\uC694."
