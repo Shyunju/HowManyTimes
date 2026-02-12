@@ -316,7 +316,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "\uD6C4\uD6C4\uD6C4. \uBC30\uB824\uAC00 \uB118\uCE58\uC2DC\uAD70\uC694.
           \uADF8\uB7FC \uBD80\uB514 \uC88B\uC740 \uC2DC\uAC04 \uBCF4\uB0B4\uC2DC\uACE0,
           \uC774\uAC74 \uC624\uB298 \uC2E0\uBB38\uC785\uB2C8\uB2E4. \uC774\uB9CC~

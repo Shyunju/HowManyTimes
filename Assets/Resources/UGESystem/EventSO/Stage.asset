@@ -620,7 +620,7 @@ MonoBehaviour:
           \uC88B\uC8E0. \uADF8\uB798\uB3C4 \uC774 \uB178\uB798\uC758 \uAC00\uC0AC\uB9D0\uC744
           \uACF1\uC539\uB2E4 \uBCF4\uBA74"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Suprise
+        _expression: Surprise
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -704,7 +704,7 @@ MonoBehaviour:
         _dialogueText: "\uC557, \uC544\uB2C8\uC694. \uADF8\uB0E5\u2026 \uADF8\uB7F4\uAC83
           \uAC19\uC544\uC694\u2026 \uD558\uD558\u2026"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Suprise
+        _expression: Surprise
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -859,7 +859,7 @@ MonoBehaviour:
       type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 1
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _characterId: f9e591d6-d9ba-4472-8d95-6083879b4513
         _action: 1
         _position: 2

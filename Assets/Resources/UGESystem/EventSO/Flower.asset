@@ -213,7 +213,7 @@ MonoBehaviour:
           \uC0C9\uC740 \uC5B4\uC6B8\uB9B4\uAC70\uB77C \uC0DD\uAC01\uD574 \uBCF4\uC9C0
           \uBABB\uD588\uB294\uB370\u2026"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Suprise
+        _expression: Surprise
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -323,7 +323,7 @@ MonoBehaviour:
         _isNodeExpanded: 0
         _dialogueText: "\uC5C7\u2026 \uC5B4\u2026 \uADF8\uB7F0\uAC00\uC694? \uC65C\uC694?"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Suprise
+        _expression: Surprise
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -450,7 +450,7 @@ MonoBehaviour:
         _characterName: 
         _expression: 
         _characterPosition: 0
-        _clearAllCharacters: 0
+        _clearAllCharacters: 1
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
