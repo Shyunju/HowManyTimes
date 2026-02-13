@@ -18,8 +18,8 @@ MonoBehaviour:
   - rid: 3758369457129652964
   - rid: 3758369568633126921
   - rid: 3758369457129652412
-  - rid: 3758369457129652413
   - rid: 3758369457129652414
+  - rid: 3758369457129652413
   - rid: 3758369457129652415
   - rid: 3758369457129652416
   - rid: 3758369457129652417
@@ -284,7 +284,7 @@ MonoBehaviour:
         _dialogueText: "\uC7A5\uBBF8\uB294 \uD655\uC2E4\uD788 \uC608\uC05C\uAF43\uC774\uC8E0.
           \uC5B4\uC6B8\uB9B0\uB2E4\uACE0 \uD574\uC918\uC11C \uACE0\uB9C8\uC6CC\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Default
+        _expression: Happy
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -404,8 +404,8 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
-        _dialogueText: "\uBB50\uAC00 \uB354 \uC788\uC5C8\uB294\uB370 \uAE30\uC5B5\uC774
+        _isNodeExpanded: 1
+        _dialogueText: "...\uBB50\uAC00 \uB354 \uC788\uC5C8\uB294\uB370 \uAE30\uC5B5\uC774
           \uC798 \uC548\uB098\uB124\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default

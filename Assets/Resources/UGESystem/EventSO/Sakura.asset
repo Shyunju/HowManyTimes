@@ -32,6 +32,7 @@ MonoBehaviour:
   - rid: 3758369457129652691
   - rid: 3758369457129652692
   - rid: 3758369457129652693
+  - rid: 4614097548740919299
   - rid: 3758369457129652694
   - rid: 3758369457129652695
   - rid: 3758369457129652696
@@ -254,7 +255,7 @@ MonoBehaviour:
           \uACE7 \uC798 \uD558\uB294 \uD3B8\uC740 \uC544\uB2CC\uB370, \uADF8\uB798\uB3C4
           \uC758\uBBF8\uAC00 \uB2F4\uAE34 \uACBD\uC6B0\uB77C\uBA74 \uC88B\uC544\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Default
+        _expression: Happy
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -348,7 +349,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: " \uC5B4\u2026. \uB124, \uB9DE\uC544\uC694."
+        _dialogueText: "\uB124, \uB9DE\uC544\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default
         _characterPosition: 2
@@ -1509,7 +1510,7 @@ MonoBehaviour:
       type: {class: RewardCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 11
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _rewards:
         - rid: 3758369457129652970
     - rid: 3758369457129652970
@@ -1536,3 +1537,16 @@ MonoBehaviour:
         <AudioClip>k__BackingField: {fileID: 0}
         <Volume>k__BackingField: 1
         <Loop>k__BackingField: 0
+    - rid: 4614097548740919299
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uC5B4...."
+        _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
+        _expression: Surprise
+        _characterPosition: 2
+        _clearAllCharacters: 0
+        _showCharacter: 1
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3

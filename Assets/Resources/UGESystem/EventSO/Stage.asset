@@ -339,7 +339,7 @@ MonoBehaviour:
         _isNodeExpanded: 0
         _dialogueText: "\uB124. \uCD94\uC5B5\uC774 \uB9CE\uC774 \uC313\uC778 \uACF3\uC774\uC8E0."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Gloomy
+        _expression: Default
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -352,7 +352,7 @@ MonoBehaviour:
         _isNodeExpanded: 0
         _dialogueText: ...
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Default
+        _expression: Gloomy
         _characterPosition: 2
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -392,9 +392,9 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uB0B4\uC77C \uC2DC\uAC04 \uAD1C\uCC2E\uC73C\uC138\uC694?
-          \uB9C8\uCE68 \uADF8 \uCEE4\uD53C\uC20D\uC5D0\uC11C \uB0B4\uC77C \uC0C8\uB85C\uC6B4
-          \uCF00\uC774\uD06C\uB97C \uD310\uB9E4\uD560\uAC70\uB77C\uACE0 \uD588\uAC70\uB4E0\uC694."
+        _dialogueText: "\uB0B4\uC77C\uC740 \uC5B4\uB54C\uC694? \uB9C8\uCE68 \uADF8
+          \uCEE4\uD53C\uC20D\uC5D0\uC11C \uB0B4\uC77C \uC0C8\uB85C\uC6B4 \uCF00\uC774\uD06C\uB97C
+          \uD310\uB9E4\uD560\uAC70\uB77C\uACE0 \uD588\uAC70\uB4E0\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default
         _characterPosition: 2
@@ -573,7 +573,7 @@ MonoBehaviour:
         _dialogueText: "\uC6B0\uC6B8\uD55C \uB178\uB798\uB294 \uCDE8\uD5A5\uC774
           \uC544\uB2C8\uC5D0\uC694. \uB098\uAE4C\uC9C0 \uAE30\uBD84\uC774 \uB2E4\uC6B4\uB418\uB294\uAC83
           \uAC19\uC544\uC694. \uB178\uB798\uB294 \uC5ED\uC2DC \uBE60\uB978 \uD15C\uD3EC\uC758
-          \uB77D\uC774 \uCD5C\uACE0\uC8E0."
+          \uC2E0\uB098\uB294 \uB178\uB798\uAC00 \uCD5C\uACE0\uC8E0."
         _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
         _expression: Default
         _characterPosition: 0
