@@ -375,11 +375,11 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _action: 0
         _type: 0
         _waitUntilInput: 1
-        _image: {fileID: 2800000, guid: f38276ce97696c04aac87d218edb18f3, type: 3}
+        _image: {fileID: 2800000, guid: d70d7adf6708a6545a4794746f797524, type: 3}
         _video: {fileID: 0}
     - rid: 3758369457129652621
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
