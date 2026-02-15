@@ -79,6 +79,8 @@ MonoBehaviour:
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
+    - <ExpressionName>k__BackingField: Sport
+      <AnimationStateName>k__BackingField: Sport
   - <CharacterID>k__BackingField: 0a0e3dd6-ed47-45d8-840c-b6ba649ea969
     <Name>k__BackingField: "\uAC04\uD638\uC0AC"
     <Is3D>k__BackingField: 0
