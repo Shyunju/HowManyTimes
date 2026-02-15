@@ -21,6 +21,7 @@ MonoBehaviour:
   - rid: 3758369457129652345
   - rid: 3758369457129652346
   - rid: 3758369457129652347
+  - rid: 4614097599742607360
   - rid: 3758369457129652348
   - rid: 3758369457129652349
   - rid: 3758369457129652350
@@ -58,7 +59,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _action: 0
         _type: 0
         _waitUntilInput: 0
@@ -141,7 +142,7 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uB124~ \uC774\uACF3\uC5D0 \uC131\uD568\uACFC \uC8FC\uBBFC\uBC88\uD638
-          \uC801\uC5B4\uC8FC\uC2DC\uACE0\uC694, \uC21C\uC11C\uAC00 \uB418\uBA74 \uB098\uC774\uC640
+          \uC801\uC5B4\uC8FC\uC2DC\uACE0\uC694. \uC21C\uC11C\uAC00 \uB418\uBA74 \uB098\uC774\uC640
           \uC131\uD568\uC73C\uB85C \uC548\uB0B4\uD574 \uB4DC\uB9AC\uACA0\uC2B5\uB2C8\uB2E4. "
         _characterName: 0a0e3dd6-ed47-45d8-840c-b6ba649ea969
         _expression: Default
@@ -171,7 +172,7 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uB098\uB294 \uC2E0\uCCAD\uC744 \uB9C8\uCE58\uACE0 \uC8FC\uBCC0\uC744
-          \uC11C\uC131\uC774\uBA70 \uC11C\uC801\uC744 \uC0B4\uD3B4\uBCF4\uC558\uB2E4."
+          \uC11C\uC131\uC774\uBA70 \uCC45\uB4E4\uC744 \uC0B4\uD3B4\uBCF4\uC558\uB2E4."
         _characterName: 
         _expression: 
         _characterPosition: 0
@@ -567,7 +568,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 0
         <AudioClip>k__BackingField: {fileID: 8300000, guid: eaff5c76997277e47887d244db3b1005, type: 3}
@@ -583,3 +584,12 @@ MonoBehaviour:
         <AudioClip>k__BackingField: {fileID: 0}
         <Volume>k__BackingField: 1
         <Loop>k__BackingField: 0
+    - rid: 4614097599742607360
+      type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 1
+        _isNodeExpanded: 0
+        _characterId: 0a0e3dd6-ed47-45d8-840c-b6ba649ea969
+        _action: 0
+        _position: 0
+        _expression: Default

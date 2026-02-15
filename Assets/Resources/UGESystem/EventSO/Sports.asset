@@ -202,7 +202,7 @@ MonoBehaviour:
         _dialogueText: "\uB2E8\uCCB4\uC904\uB118\uAE30 2\uC870 \uCC38\uC5EC\uC790\uBD84\uB4E4\uC740
           \uC774\uCABD\uC73C\uB85C \uBAA8\uC5EC\uC8FC\uC138\uC694~!"
         _characterName: 312daa85-6eae-48cb-a4d3-22c23eddb65b
-        _expression: Default
+        _expression: Sport
         _characterPosition: 0
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -352,7 +352,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "\uB124? \uC815\uB9D0 \uADF8\uB798\uB3C4 \uAD1C\uCC2E\uC73C\uC2DC\uACA0\uC5B4\uC694?
           \uBD88\uD3B8\uD558\uC2E4\uD150\uB370..."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
@@ -492,7 +492,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "\uC544, \uADF8\uAC8C\u2026 "
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Surprise
@@ -509,7 +509,7 @@ MonoBehaviour:
         _dialogueText: "\uB2E8\uCCB4\uC904\uB118\uAE30 \uC2DC\uC791\uD558\uACA0\uC2B5\uB2C8\uB2E4.
           \uBAA8\uB450 \uC774\uB9AC \uC640\uC8FC\uC138\uC694! "
         _characterName: 312daa85-6eae-48cb-a4d3-22c23eddb65b
-        _expression: Default
+        _expression: Sport
         _characterPosition: 0
         _clearAllCharacters: 0
         _showCharacter: 1
@@ -519,7 +519,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "\uC5B4\uC11C \uAC00\uC694! \uC5F4\uC2EC\uD788 \uD574\uBD10\uC694
           \uC6B0\uB9AC!"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
