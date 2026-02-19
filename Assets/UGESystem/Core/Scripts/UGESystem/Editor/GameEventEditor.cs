@@ -59,15 +59,12 @@ namespace UGESystem
         }
 
         /// <summary>
-        /// Draws the custom inspector GUI for the <see cref="GameEvent"/> asset,
-        /// including fields for GUID and Archetype, a list of commands with reordering and deletion,
-        /// and JSON import/export functionality.
+        /// Draws the custom inspector GUI for the <see cref="GameEvent"/> asset.
         /// </summary>
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
 
-            // Draw the GUID field as read-only
             GUI.enabled = false;
             EditorGUILayout.PropertyField(_guidProperty, new GUIContent("GUID"));
             GUI.enabled = true;
@@ -134,18 +131,9 @@ namespace UGESystem
                 var availableInAttr = type.GetCustomAttribute<AvailableIn>();
                 bool isAvailable = false;
 
-                if (availableInAttr == null)
-                {
-                    isAvailable = true;
-                }
-                else if (currentArchetype == GameEventArchetype.Generic)
-                {
-                    isAvailable = true;
-                }
-                else if (availableInAttr.SupportedTypes.Any(supportedType => supportedType.ToString() == currentArchetype.ToString()))
-                {
-                     isAvailable = true;
-                }
+                if (availableInAttr == null) isAvailable = true;
+                else if (currentArchetype == GameEventArchetype.Generic) isAvailable = true;
+                else if (availableInAttr.SupportedTypes.Any(supportedType => supportedType.ToString() == currentArchetype.ToString())) isAvailable = true;
 
                 if (isAvailable)
                 {
@@ -165,54 +153,30 @@ namespace UGESystem
             var newElement = _commandsProperty.GetArrayElementAtIndex(_commandsProperty.arraySize-1);
             newElement.managedReferenceValue = newCommand;
 
-            string[] guids = AssetDatabase.FindAssets("t:CharacterDatabase");
-            if (guids.Length > 0)
-            {
-                string path = AssetDatabase.GUIDToAssetPath(guids[0]);
-                CharacterDatabase database = AssetDatabase.LoadAssetAtPath<CharacterDatabase>(path);
-                if (database != null && database.Characters.Count > 0)
-                {
-                    string defaultId = database.Characters[0].CharacterID;
-
-                    if (newCommand is CharacterCommand characterCommand)
-                    {
-                        characterCommand.EDITOR_SetDefaultCharacter(defaultId);
-                    }
-                    else if (newCommand is DialogueCommand dialogueCommand)
-                    {
-                        dialogueCommand.EDITOR_SetDefaultCharacter(defaultId);
-                    }
-                }
-            }
-
             serializedObject.ApplyModifiedProperties();
         }
 
         private bool NeedsAssetWarning(SerializedProperty commandProperty)
         {
-            if (commandProperty.managedReferenceValue is PlaySoundCommand playSoundCommand)
-            {
-                // For PlaySound, only warn if the action is NOT Stop and the clip is missing.
+            object cmd = commandProperty.managedReferenceValue;
+            if (cmd is PlaySoundCommand playSoundCommand)
                 return playSoundCommand.Action != SoundAction.Stop && playSoundCommand.AudioClip == null;
-            }
             
-            if (commandProperty.managedReferenceValue is BackgroundCommand bgCommand)
+            if (cmd is BackgroundCommand bgCommand)
             {
-                // For Background, only warn if the action is Show and the corresponding asset is missing.
                 if (bgCommand.Action == BackgroundAction.Show)
-                {
                     return (bgCommand.Type == BackgroundType.Image && bgCommand.Image == null) ||
                            (bgCommand.Type == BackgroundType.Video && bgCommand.Video == null);
-                }
             }
 
-            if (commandProperty.managedReferenceValue is UGECameraCommand cameraCommand)
-            {
-                // Warn if the camera name is not set.
+            if (cmd is UGECameraCommand cameraCommand)
                 return string.IsNullOrEmpty(cameraCommand.TargetCameraName);
-            }
 
-            // Add other command checks here if needed in the future.
+            if (cmd is CharacterUpdateCommand updateCommand)
+            {
+                if (string.IsNullOrEmpty(updateCommand.TargetCharacterId)) return true;
+                if (updateCommand.UpdateType == CharacterUpdateType.Full && string.IsNullOrEmpty(updateCommand.SourceTemplateId)) return true;
+            }
 
             return false;
         }
@@ -222,108 +186,64 @@ namespace UGESystem
             bool hasWarning = NeedsAssetWarning(commandProperty);
             Color originalGuiColor = GUI.backgroundColor;
 
-            // Establish property context for focus management on macOS
             var rect = EditorGUILayout.BeginVertical("box");
             EditorGUI.BeginProperty(rect, GUIContent.none, commandProperty);
             
-            if (hasWarning)
-            {
-                GUI.backgroundColor = new Color(1f, 0.8f, 0.8f); // Light red tint for warning
-            }
-
-            // (Resetting background color for content inside the box is handled by the BeginVertical style usually, 
-            // but we keep original logic flow as much as possible)
+            if (hasWarning) GUI.backgroundColor = new Color(1f, 0.8f, 0.8f); 
             GUI.backgroundColor = originalGuiColor; 
 
             EditorGUILayout.BeginHorizontal();
-
             var isExpandedProp = commandProperty.FindPropertyRelative("_isNodeExpanded");
-            
-            if (hasWarning)
-            {
-                isExpandedProp.boolValue = true; // Force expand if there is a warning
-            }
+            if (hasWarning) isExpandedProp.boolValue = true; 
 
             isExpandedProp.boolValue = EditorGUILayout.Foldout(isExpandedProp.boolValue, GetCommandSummary(commandProperty), true);
 
             if (GUILayout.Button("▲", GUILayout.Width(25))) _commandToMove = (index, index - 1);
             if (GUILayout.Button("▼", GUILayout.Width(25))) _commandToMove = (index, index + 1);
             if (GUILayout.Button("X", GUILayout.Width(25))) _commandToDelete = index;
-
             EditorGUILayout.EndHorizontal();
 
             if (isExpandedProp.boolValue)
             {
-                // Help boxes and properties...
-                if (commandProperty.managedReferenceValue is PlaySoundCommand playSoundCommand)
-                {
-                    if (playSoundCommand.Action != SoundAction.Stop && playSoundCommand.AudioClip == null)
-                    {
-                        EditorGUILayout.HelpBox("AudioClip must be assigned for this action.", MessageType.Warning);
-                    }
-                }
-                else if (commandProperty.managedReferenceValue is BackgroundCommand bgCommand)
-                {
-                    if (bgCommand.Action == BackgroundAction.Show)
-                    {
-                        if (bgCommand.Type == BackgroundType.Image && bgCommand.Image == null)
-                        {
-                            EditorGUILayout.HelpBox("Background Image must be assigned for 'Show' action.", MessageType.Warning);
-                        }
-                        else if (bgCommand.Type == BackgroundType.Video && bgCommand.Video == null)
-                        {
-                            EditorGUILayout.HelpBox("Background Video must be assigned for 'Show' action.", MessageType.Warning);
-                        }
-                    }
-                }
-                else if (commandProperty.managedReferenceValue is UGECameraCommand cameraCommand)
-                {
-                    if (string.IsNullOrEmpty(cameraCommand.TargetCameraName))
-                    {
-                        EditorGUILayout.HelpBox("Target Camera Name must be assigned.", MessageType.Warning);
-                    }
-                }
+                DrawCommandHelpBox(commandProperty.managedReferenceValue);
 
                 EditorGUI.indentLevel++;
-
                 var iterator = commandProperty.Copy();
                 var endProperty = iterator.GetEndProperty();
                 iterator.NextVisible(true); 
 
-                if (iterator.name == "m_Script" && iterator.type == "PPtr<MonoScript>")
-                {
-                    iterator.NextVisible(false);
-                }
+                if (iterator.name == "m_Script") iterator.NextVisible(false);
                 
-                // Draw all properties except for the node expansion state
                 while (iterator.NextVisible(false) && !SerializedProperty.EqualContents(iterator, endProperty))
                 {
                     if (iterator.name == "_isNodeExpanded") continue;
 
                     if (iterator.name == "_rewards")
                     {
-                        // Hide rewards list for EndCommand as it is deprecated and migrated to RewardCommand
                         if (!(commandProperty.managedReferenceValue is EndCommand))
-                        {
                             EditorHelper.BuildPolymorphicListView(commandProperty.serializedObject, iterator, typeof(AbstractEventReward));
-                        }
                     }
                     else if (iterator.name == "_waitUntilInput")
                     {
-                        // Only show WaitUntilInput if the command is a BackgroundCommand and Action is Show (enum index 0)
                         if (commandProperty.managedReferenceValue is BackgroundCommand)
                         {
                             var actionProp = commandProperty.FindPropertyRelative("_action");
-                            if (actionProp != null && actionProp.enumValueIndex == 0) // BackgroundAction.Show
-                            {
-                                EditorGUILayout.PropertyField(iterator, true);
-                            }
+                            if (actionProp != null && actionProp.enumValueIndex == 0) EditorGUILayout.PropertyField(iterator, true);
                         }
                     }
-                    else
+                    else if (iterator.name == "_sourceTemplateId")
                     {
-                        EditorGUILayout.PropertyField(iterator, true);
+                        var updateTypeProp = commandProperty.FindPropertyRelative("_updateType");
+                        if (updateTypeProp != null && updateTypeProp.enumValueIndex == 0) // Full
+                            EditorGUILayout.PropertyField(iterator, true);
                     }
+                    else if (iterator.name == "_overrideName")
+                    {
+                        var updateTypeProp = commandProperty.FindPropertyRelative("_updateType");
+                        if (updateTypeProp != null && updateTypeProp.enumValueIndex == 1) // Partial
+                            EditorGUILayout.PropertyField(iterator, true);
+                    }
+                    else EditorGUILayout.PropertyField(iterator, true);
                 }
                 EditorGUI.indentLevel--;
             }
@@ -331,21 +251,31 @@ namespace UGESystem
             EditorGUI.EndProperty();
             EditorGUILayout.EndVertical();
         }
+
+        private void DrawCommandHelpBox(object cmd)
+        {
+            if (cmd is PlaySoundCommand ps && ps.Action != SoundAction.Stop && ps.AudioClip == null)
+                EditorGUILayout.HelpBox("AudioClip must be assigned for this action.", MessageType.Warning);
+            else if (cmd is BackgroundCommand bg && bg.Action == BackgroundAction.Show)
+            {
+                if (bg.Type == BackgroundType.Image && bg.Image == null) EditorGUILayout.HelpBox("Background Image must be assigned.", MessageType.Warning);
+                else if (bg.Type == BackgroundType.Video && bg.Video == null) EditorGUILayout.HelpBox("Background Video must be assigned.", MessageType.Warning);
+            }
+            else if (cmd is UGECameraCommand cam && string.IsNullOrEmpty(cam.TargetCameraName))
+                EditorGUILayout.HelpBox("Target Camera Name must be assigned.", MessageType.Warning);
+            else if (cmd is CharacterUpdateCommand update)
+            {
+                if (string.IsNullOrEmpty(update.TargetCharacterId)) EditorGUILayout.HelpBox("Target Character ID must be assigned.", MessageType.Warning);
+                if (update.UpdateType == CharacterUpdateType.Full && string.IsNullOrEmpty(update.SourceTemplateId)) 
+                    EditorGUILayout.HelpBox("Source Template Character ID must be assigned for Full update.", MessageType.Warning);
+            }
+        }
         
         private string GetCharacterName(string guid)
         {
             if (string.IsNullOrEmpty(guid)) return "None";
-            if (_characterNameCache != null && _characterNameCache.TryGetValue(guid, out var name) && !string.IsNullOrEmpty(name))
-            {
-                return name;
-            }
-
-            // If the guid is not in the cache, it's an invalid/old ID.
-            // Display it safely by checking its length before trying to create a substring.
-            if (guid.Length > 8)
-            {
-                return $"(Invalid ID: {guid.Substring(0, 8)}...)";
-            }
+            if (_characterNameCache != null && _characterNameCache.TryGetValue(guid, out var name) && !string.IsNullOrEmpty(name)) return name;
+            if (guid.Length > 8) return $"(Invalid ID: {guid.Substring(0, 8)}...)";
             return $"(Invalid ID: {guid})";
         }
 
@@ -365,23 +295,17 @@ namespace UGESystem
                         return "Choice: " + (command as ChoiceCommand).Choices.Count + " options";
                     case CommandType.Background:
                         var bgCommand = command as BackgroundCommand;
-                        if (bgCommand.Action == BackgroundAction.Show)
-                        {
-                            return $"Background: Show ({bgCommand.Type})";
-                        }
-                        else 
-                        {
-                            return "Background: Hide";
-                        }
+                        return bgCommand.Action == BackgroundAction.Show ? $"Background: Show ({bgCommand.Type})" : "Background: Hide";
                     case CommandType.Label:
-                        var labelCommand = command as LabelCommand;
-                        return $"Label: {labelCommand.LabelName}";
+                        return $"Label: {(command as LabelCommand).LabelName}";
                     case CommandType.Camera:
                         var camera = command as UGECameraCommand;
-                        string cameraName = string.IsNullOrEmpty(camera.TargetCameraName) ? "None" : camera.TargetCameraName;
-                        return $"Camera: {camera.ActionType} on '{cameraName}'";
+                        return $"Camera: {camera.ActionType} on '{(string.IsNullOrEmpty(camera.TargetCameraName) ? "None" : camera.TargetCameraName)}'";
                     case CommandType.End:
-                        return $"---" + " END EVENT " + "---";
+                        return $"--- END EVENT ---";
+                    case CommandType.CharacterUpdate:
+                        var update = command as CharacterUpdateCommand;
+                        return $"Update Character: {GetCharacterName(update.TargetCharacterId)} ({update.UpdateType})";
                     default:
                         return command.CommandType.ToString();
                 }
@@ -399,21 +323,15 @@ namespace UGESystem
         {
             string path = EditorUtility.SaveFilePanel("Export Game Event to JSON", "", _gameEvent.name + ".json", "json");
             if (string.IsNullOrEmpty(path)) return;
-
-            string json = _gameEvent.ToJson();
-            File.WriteAllText(path, json);
+            File.WriteAllText(path, _gameEvent.ToJson());
         }
 
         private void ImportFromJson()
         {
             string path = EditorUtility.OpenFilePanel("Import Game Event from JSON", "", "json");
             if (string.IsNullOrEmpty(path)) return;
-            
             Undo.RecordObject(_gameEvent, "Import Game Event from JSON");
-            
-            string json = File.ReadAllText(path);
-            _gameEvent.FromJson(json);
-
+            _gameEvent.FromJson(File.ReadAllText(path));
             serializedObject.Update();
         }
     }

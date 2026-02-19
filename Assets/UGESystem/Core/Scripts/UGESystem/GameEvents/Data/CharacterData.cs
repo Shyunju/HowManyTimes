@@ -45,5 +45,36 @@ namespace UGESystem
             // Initialization is now handled by CharacterDatabaseEditor to robustly deal with
             // Unity's serialization behavior (e.g., duplicating elements instead of calling constructors).
         }
+
+        /// <summary>
+        /// Updates the character's properties, keeping the CharacterID unchanged.
+        /// /// (Korean) CharacterID는 유지한 채 캐릭터의 속성을 업데이트합니다.
+        /// </summary>
+        public void UpdateData(string name, bool is3D, GameObject prefab, List<CharacterExpression> expressions)
+        {
+            Name = name;
+            Is3D = is3D;
+            Prefab = prefab;
+            
+            Expressions.Clear();
+            if (expressions != null)
+            {
+                foreach (var exp in expressions)
+                {
+                    var newExp = new CharacterExpression();
+                    newExp.SetData(exp.ExpressionName, exp.AnimationStateName);
+                    Expressions.Add(newExp);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Sets the CharacterID. Should be used primarily during initialization or cloning.
+        /// /// (Korean) CharacterID를 설정합니다. 주로 초기화나 클로닝 중에 사용해야 합니다.
+        /// </summary>
+        public void SetID(string id)
+        {
+            CharacterID = id;
+        }
     }
 }

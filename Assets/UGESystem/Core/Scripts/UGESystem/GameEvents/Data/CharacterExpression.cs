@@ -18,6 +18,15 @@ namespace UGESystem
         /// The name of the animation state in the character's Animator controller that corresponds to this expression.
         /// </summary>
         [field: SerializeField] public string AnimationStateName { get; private set; } = "Default";
-        // TODO: You can add Animator State Name etc. for 3D characters.
+
+        /// <summary>
+        /// Updates the expression data.
+        /// /// (Korean) 표정 데이터를 업데이트합니다.
+        /// </summary>
+        public void SetData(string expressionName, string animationStateName)
+        {
+            ExpressionName = expressionName;
+            AnimationStateName = animationStateName;
+        }
     }
 }

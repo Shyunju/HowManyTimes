@@ -368,7 +368,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _action: 0
         _type: 0
         _waitUntilInput: 1

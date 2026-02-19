@@ -29,6 +29,8 @@ namespace UGESystem
         /// <summary>Execute other GameEvent (for 2-stage graph function)</summary>
         TriggerEvent,
         /// <summary>Grant rewards</summary>
-        Reward
+        Reward,
+        /// <summary>Update character data in the database (Hot-swap)</summary>
+        CharacterUpdate
     }
 }

@@ -29,14 +29,22 @@ namespace UGESystem
     /// <summary>
     /// Manages the lifecycle of 2D and 3D characters during events.
     /// Handles instantiation, placement, animation, and cleanup of character GameObjects based on commands.
+    /// It maintains a runtime clone of the character database to allow safe modifications.
     /// </summary>
     public class UGECharacterManager : MonoBehaviour
     {
         [SerializeField] private CharacterDatabase _characterDatabase;
+        
         /// <summary>
-        /// Gets the reference to the project's central character database.
+        /// Gets the runtime clone of the character database. All modifications should be made here.
+        /// /// (Korean) 캐릭터 데이터베이스의 런타임 복제본입니다. 모든 수정사항은 여기서 이루어져야 합니다.
         /// </summary>
-        public CharacterDatabase CharacterDB => _characterDatabase;
+        public CharacterDatabase RuntimeCharacterDB { get; private set; }
+
+        /// <summary>
+        /// Gets the reference to the active character database (either runtime clone or original asset).
+        /// </summary>
+        public CharacterDatabase CharacterDB => RuntimeCharacterDB != null ? RuntimeCharacterDB : _characterDatabase;
         
         /// <summary>
         /// A list of UI slots for positioning 2D characters.
@@ -53,25 +61,33 @@ namespace UGESystem
         [SerializeField] private List<Character3DPositionSlot> _character3DSlots = new List<Character3DPositionSlot>();
         
         /// <summary>
-        /// A dictionary tracking active 2D character instances, keyed by their screen position.
-        /// /// (Korean) 현재 활성화된 2D 캐릭터 인스턴스를 화면 위치를 키로 하여 추적하는 딕셔너리입니다.
+        /// Internal class to track the state of an active character instance.
+        /// /// (Korean) 활성화된 캐릭터 인스턴스의 상태를 추적하기 위한 내부 클래스입니다.
         /// </summary>
-        private Dictionary<CharacterPosition, GameObject> _active2DCharacters = new Dictionary<CharacterPosition, GameObject>();
-        
-        /// <summary>
-        /// A dictionary tracking active 3D character instances, keyed by their screen position.
-        /// /// (Korean) 현재 활성화된 3D 캐릭터 인스턴스를 화면 위치를 키로 하여 추적하는 딕셔너리입니다.
-        /// </summary>
-        private Dictionary<CharacterPosition, GameObject> _active3DCharacters = new Dictionary<CharacterPosition, GameObject>();
+        private class ActiveCharacterInfo
+        {
+            public string CharacterId;
+            public CharacterPosition Position;
+            public GameObject Instance;
+            public bool Is3D;
+        }
+
+        private Dictionary<string, ActiveCharacterInfo> _idToCharacter = new Dictionary<string, ActiveCharacterInfo>();
+        private Dictionary<CharacterPosition, ActiveCharacterInfo> _posToCharacter = new Dictionary<CharacterPosition, ActiveCharacterInfo>();
         
         /// <summary>
         /// The layer index for 3D characters, used to isolate them for rendering.
-        /// /// (Korean) 3D 캐릭터를 렌더링을 위해 격리하는 데 사용되는 레이어 인덱스입니다.
         /// </summary>
         private int _character3DLayer;
 
         private void Awake()
         {
+            // Create a runtime clone of the database to prevent accidental asset modification in editor.
+            if (_characterDatabase != null)
+            {
+                RuntimeCharacterDB = Instantiate(_characterDatabase);
+            }
+
             _character3DLayer = LayerMask.NameToLayer("Character3D");
             if (_character3DLayer == -1)
             {
@@ -99,235 +115,250 @@ namespace UGESystem
         }
 #endif
 
-        /// <summary>
-        /// Destroys all active character GameObjects and clears the display.
-        /// </summary>
         public void HideAllCharacters()
         {
-            foreach (var character in _active2DCharacters.Values)
+            foreach (var info in _idToCharacter.Values)
             {
-                Destroy(character);
+                if (info.Instance != null) Destroy(info.Instance);
             }
-            _active2DCharacters.Clear();
+            _idToCharacter.Clear();
+            _posToCharacter.Clear();
 
             foreach (var slot in _character3DSlots)
             {
                 if(slot.displayImage) slot.displayImage.gameObject.SetActive(false);
             }
-            
-            foreach (var character in _active3DCharacters.Values)
+        }
+
+        private void RegisterActiveCharacter(string characterId, CharacterPosition position, GameObject instance, bool is3D)
+        {
+            var info = new ActiveCharacterInfo
             {
-                Destroy(character);
+                CharacterId = characterId,
+                Position = position,
+                Instance = instance,
+                Is3D = is3D
+            };
+            _idToCharacter[characterId] = info;
+            _posToCharacter[position] = info;
+        }
+
+        private void UnregisterByPosition(CharacterPosition position)
+        {
+            if (_posToCharacter.TryGetValue(position, out var info))
+            {
+                _idToCharacter.Remove(info.CharacterId);
+                _posToCharacter.Remove(position);
+                if (info.Instance != null) Destroy(info.Instance);
             }
-            _active3DCharacters.Clear();
+        }
+
+        private void UnregisterById(string characterId)
+        {
+            if (_idToCharacter.TryGetValue(characterId, out var info))
+            {
+                _idToCharacter.Remove(characterId);
+                _posToCharacter.Remove(info.Position);
+                if (info.Instance != null) Destroy(info.Instance);
+            }
         }
 
         /// <summary>
-        /// Processes a CharacterCommand, handling the logic for showing, hiding, or changing expressions for both 2D and 3D characters.
+        /// Updates a character's data in the runtime database and performs a hot-swap if the character is active.
+        /// /// (Korean) 런타임 데이터베이스에서 캐릭터 데이터를 업데이트하고, 활성화된 캐릭터인 경우 핫스왑을 수행합니다.
         /// </summary>
-        /// <param name="command">The CharacterCommand to execute.</param>
+        public void UpdateCharacterData(CharacterUpdateCommand command)
+        {
+            if (RuntimeCharacterDB == null) return;
+
+            var targetData = RuntimeCharacterDB.GetCharacterData(command.TargetCharacterId);
+            if (targetData == null) return;
+
+            // 1. Update the database
+            switch (command.UpdateType)
+            {
+                case CharacterUpdateType.Full:
+                    var templateData = RuntimeCharacterDB.GetCharacterData(command.SourceTemplateId);
+                    if (templateData != null)
+                    {
+                        RuntimeCharacterDB.UpdateCharacter(command.TargetCharacterId, templateData);
+                    }
+                    break;
+                case CharacterUpdateType.Partial:
+                    if (!string.IsNullOrEmpty(GameManager.Instance.UserName))
+                    {
+                        //targetData.UpdateData(command.OverrideName, targetData.Is3D, targetData.Prefab, targetData.Expressions);
+                        targetData.UpdateData(GameManager.Instance.UserName, targetData.Is3D, targetData.Prefab, targetData.Expressions);
+
+                    }
+                    break;
+                case CharacterUpdateType.ResetToOriginal:
+                    var originalData = _characterDatabase.GetCharacterData(command.TargetCharacterId);
+                    if (originalData != null)
+                    {
+                        RuntimeCharacterDB.UpdateCharacter(command.TargetCharacterId, originalData);
+                    }
+                    break;
+            }
+
+            // 2. Hot-swap if the character is currently active in the scene
+            if (_idToCharacter.TryGetValue(command.TargetCharacterId, out var info))
+            {
+                SwapCharacterVisuals(info);
+            }
+        }
+
+        private void SwapCharacterVisuals(ActiveCharacterInfo info)
+        {
+            var updatedData = CharacterDB.GetCharacterData(info.CharacterId);
+            if (updatedData == null || info.Instance == null) return;
+
+            // Capture current state
+            Animator oldAnimator = info.Instance.GetComponent<Animator>();
+            if (oldAnimator == null) oldAnimator = info.Instance.GetComponentInChildren<Animator>();
+            
+            string currentStateName = "";
+            float currentNormalizedTime = 0f;
+            if (oldAnimator != null)
+            {
+                var stateInfo = oldAnimator.GetCurrentAnimatorStateInfo(0);
+                currentStateName = stateInfo.fullPathHash != 0 ? "" : ""; // fullPathHash fallback is tricky, use short name if possible
+                // For simplicity in this version, we will re-apply the last expression later.
+                currentNormalizedTime = stateInfo.normalizedTime;
+            }
+
+            CharacterPosition pos = info.Position;
+            bool was3D = info.Is3D;
+
+            // Destroy old instance
+            if (info.Instance != null) Destroy(info.Instance);
+
+            // Re-instantiate based on new data
+            GameObject newInstance = null;
+            if (updatedData.Is3D)
+            {
+                Character3DPositionSlot slot = _character3DSlots.FirstOrDefault(s => s.position == pos);
+                if (slot != null && slot.anchor != null)
+                {
+                    newInstance = Instantiate(updatedData.Prefab, slot.anchor.position, slot.anchor.rotation);
+                    SetLayerRecursively(newInstance, _character3DLayer);
+                }
+            }
+            else
+            {
+                Character2DPositionSlot slot = _character2DSlots.FirstOrDefault(s => s.position == pos);
+                if (slot != null && slot.anchor != null)
+                {
+                    newInstance = Instantiate(updatedData.Prefab, slot.anchor);
+                }
+            }
+
+            if (newInstance != null)
+            {
+                info.Instance = newInstance;
+                info.Is3D = updatedData.Is3D;
+                // Re-apply "default" or last known expression if possible
+                ApplyExpression(newInstance, updatedData, "default");
+            }
+        }
+
         public void HandleCharacterCommand(CharacterCommand command)
         {
             if(CharacterDB == null) return;
             CharacterData characterData = CharacterDB.GetCharacterData(command.CharacterId);
-            if (characterData == null)
-            {
-#if UNITY_EDITOR
-                Debug.LogWarning($"Character with ID '{command.CharacterId}' not found in database.");
-#endif
-                return;
-            }
+            if (characterData == null) return;
 
-            if (characterData.Is3D)
-            {
-                Handle3DCharacter(command, characterData);
-            }
-            else
-            {
-                Handle2DCharacter(command, characterData);
-            }
+            if (characterData.Is3D) Handle3DCharacter(command, characterData);
+            else Handle2DCharacter(command, characterData);
         }
 
-        /// <summary>
-        /// A helper method to handle character display logic from within a DialogueCommand.
-        /// </summary>
         public void ShowCharacterForDialogue(DialogueCommand dialogueCommand)
         {
-            if (dialogueCommand.ClearAllCharacters)
-            {
-                HideAllCharacters();
-            }
-
+            if (dialogueCommand.ClearAllCharacters) HideAllCharacters();
             if (dialogueCommand.ShowCharacter)
             {
-                var tempCharCommand = new CharacterCommand(
-                    dialogueCommand.CharacterName, 
-                    CharacterAction.Show, 
-                    dialogueCommand.CharacterPosition, 
-                    dialogueCommand.Expression
-                );
+                var tempCharCommand = new CharacterCommand(dialogueCommand.CharacterName, CharacterAction.Show, dialogueCommand.CharacterPosition, dialogueCommand.Expression);
                 HandleCharacterCommand(tempCharCommand);
             }
         }
 
-        /// <summary>
-        /// Manages the lifecycle of a 2D character based on the received command.
-        /// Handles showing, hiding, and changing expressions by instantiating prefabs and controlling their animators.
-        /// /// (Korean) 수신된 명령에 따라 2D 캐릭터의 생명주기를 관리합니다.
-        /// /// 프리팹을 인스턴스화하고 애니메이터를 제어하여 표시, 숨기기, 표정 변경을 처리합니다.
-        /// </summary>
-        /// <param name="command">The character command to process. /// (Korean) 처리할 캐릭터 명령입니다.</param>
-        /// <param name="characterData">The database entry for the character. /// (Korean) 캐릭터의 데이터베이스 항목입니다.</param>
         private void Handle2DCharacter(CharacterCommand command, CharacterData characterData)
         {
             Character2DPositionSlot slot = _character2DSlots.FirstOrDefault(s => s.position == command.Position);
-            if (slot == null || slot.anchor == null)
-            {
-#if UNITY_EDITOR
-                Debug.LogError($"2D slot for position '{command.Position}' is not configured in CharacterManager.");
-#endif
-                return;
-            }
+            if (slot == null || slot.anchor == null) return;
             
             if (command.Action == CharacterAction.Show || command.Action == CharacterAction.ChangeExpression)
             {
-                GameObject characterInstance;
-                if (!_active2DCharacters.TryGetValue(command.Position, out characterInstance) || characterInstance.name != characterData.Prefab.name + "(Clone)")
+                if (_idToCharacter.TryGetValue(command.CharacterId, out var existingById) && existingById.Position != command.Position)
+                    UnregisterById(command.CharacterId);
+
+                if (_posToCharacter.TryGetValue(command.Position, out var existingAtPos) && existingAtPos.CharacterId != command.CharacterId)
+                    UnregisterByPosition(command.Position);
+
+                GameObject characterInstance = null;
+                if (_idToCharacter.TryGetValue(command.CharacterId, out var currentInfo)) characterInstance = currentInfo.Instance;
+
+                if (characterInstance == null || characterInstance.name != characterData.Prefab.name + "(Clone)")
                 {
-                    if (characterInstance != null)
-                    {
-                        Destroy(characterInstance);
-                    }
+                    if (characterInstance != null) UnregisterById(command.CharacterId);
                     characterInstance = Instantiate(characterData.Prefab, slot.anchor);
-                    _active2DCharacters[command.Position] = characterInstance;
+                    RegisterActiveCharacter(command.CharacterId, command.Position, characterInstance, false);
                 }
-
-                Animator animator = characterInstance.GetComponent<Animator>();
-                if (animator == null)
-                {
-                    animator = characterInstance.GetComponentInChildren<Animator>();
-                }
-                if (animator == null)
-                {
-#if UNITY_EDITOR
-                    Debug.LogError($"Animator component is missing on the 2D character prefab for: {characterData.CharacterID}");
-#endif
-                    return;
-                }
-
-                string expressionName = string.IsNullOrEmpty(command.Expression) ? "default" : command.Expression;
-                CharacterExpression expression = characterData.Expressions.FirstOrDefault(e => e.ExpressionName == expressionName);
-                if (expression != null && !string.IsNullOrEmpty(expression.AnimationStateName))
-                {
-                    animator.Play(expression.AnimationStateName);
-                }
-                else
-                {
-#if UNITY_EDITOR
-                    Debug.LogWarning($"Expression '{expressionName}' or its AnimationStateName not found for character '{command.CharacterId}'.");
-#endif
-                }
+                ApplyExpression(characterInstance, characterData, command.Expression);
             }
-            else if (command.Action == CharacterAction.Hide)
-            {
-                if (_active2DCharacters.TryGetValue(command.Position, out GameObject characterToHide))
-                {
-                    Destroy(characterToHide);
-                    _active2DCharacters.Remove(command.Position);
-                }
-            }
+            else if (command.Action == CharacterAction.Hide) UnregisterByPosition(command.Position);
         }
 
-        /// <summary>
-        /// Manages the lifecycle of a 3D character based on the received command.
-        /// Handles showing, hiding, and changing expressions by instantiating prefabs, controlling their animators, and managing their display via RawImage.
-        /// /// (Korean) 수신된 명령에 따라 3D 캐릭터의 생명주기를 관리합니다.
-        /// /// 프리팹 인스턴스화, 애니메이터 제어, RawImage를 통한 표시 관리를 통해 표시, 숨기기, 표정 변경을 처리합니다.
-        /// </summary>
-        /// <param name="command">The character command to process. /// (Korean) 처리할 캐릭터 명령입니다.</param>
-        /// <param name="characterData">The database entry for the character. /// (Korean) 캐릭터의 데이터베이스 항목입니다.</param>
         private void Handle3DCharacter(CharacterCommand command, CharacterData characterData)
         {
             Character3DPositionSlot slot = _character3DSlots.FirstOrDefault(s => s.position == command.Position);
-            if (slot == null || slot.anchor == null || slot.displayImage == null)
-            {
-#if UNITY_EDITOR
-                Debug.LogError($"3D slot for position '{command.Position}' is not configured in CharacterManager.");
-#endif
-                return;
-            }
+            if (slot == null || slot.anchor == null || slot.displayImage == null) return;
 
             switch (command.Action)
             {
                 case CharacterAction.Show:
-                    if (_active3DCharacters.TryGetValue(command.Position, out GameObject existingCharacter))
-                    {
-                        Destroy(existingCharacter);
-                    }
+                    if (_idToCharacter.TryGetValue(command.CharacterId, out var existingById) && existingById.Position != command.Position)
+                        UnregisterById(command.CharacterId);
+                    
+                    if (_posToCharacter.TryGetValue(command.Position, out var existingAtPos))
+                        UnregisterByPosition(command.Position);
 
                     GameObject newCharacter = Instantiate(characterData.Prefab, slot.anchor.position, slot.anchor.rotation);
                     SetLayerRecursively(newCharacter, _character3DLayer);
-                    _active3DCharacters[command.Position] = newCharacter;
+                    RegisterActiveCharacter(command.CharacterId, command.Position, newCharacter, true);
                     slot.displayImage.gameObject.SetActive(true);
-                    
                     goto case CharacterAction.ChangeExpression;
 
                 case CharacterAction.ChangeExpression:
-                    if (_active3DCharacters.TryGetValue(command.Position, out GameObject activeCharacter))
-                    {
-                        Animator animator = activeCharacter.GetComponent<Animator>();
-                        if (animator == null)
-                        {
-                            animator = activeCharacter.GetComponentInChildren<Animator>();
-                        }
-                        if (animator == null)
-                        {
-#if UNITY_EDITOR
-                            Debug.LogError($"Animator component is missing on the 3D character prefab for: {characterData.CharacterID}");
-#endif
-                            return;
-                        }
-                        
-                        string expressionName = string.IsNullOrEmpty(command.Expression) ? "default" : command.Expression;
-                        CharacterExpression expression = characterData.Expressions.FirstOrDefault(e => e.ExpressionName == expressionName);
-                        if (expression != null && !string.IsNullOrEmpty(expression.AnimationStateName))
-                        {
-                            animator.Play(expression.AnimationStateName);
-                        }
-                        else
-                        {
-#if UNITY_EDITOR
-                            Debug.LogWarning($"Expression '{expressionName}' or its AnimationStateName not found for character '{command.CharacterId}'.");
-#endif
-                        }
-                    }
+                    if (_idToCharacter.TryGetValue(command.CharacterId, out var info))
+                        ApplyExpression(info.Instance, characterData, command.Expression);
                     break;
 
                 case CharacterAction.Hide:
-                    if (_active3DCharacters.TryGetValue(command.Position, out GameObject characterToHide))
-                    {
-                        Destroy(characterToHide);
-                        _active3DCharacters.Remove(command.Position);
-                        slot.displayImage.gameObject.SetActive(false);
-                    }
+                    UnregisterByPosition(command.Position);
+                    slot.displayImage.gameObject.SetActive(false);
                     break;
             }
         }
 
-        /// <summary>
-        /// Recursively sets the layer for a GameObject and all of its children.
-        /// /// (Korean) GameObject와 모든 자식 객체의 레이어를 재귀적으로 설정합니다.
-        /// </summary>
-        /// <param name="obj">The root GameObject. /// (Korean) 루트 GameObject입니다.</param>
-        /// <param name="layer">The layer index to set. /// (Korean) 설정할 레이어 인덱스입니다.</param>
+        private void ApplyExpression(GameObject instance, CharacterData data, string expressionName)
+        {
+            if (instance == null) return;
+            Animator animator = instance.GetComponent<Animator>();
+            if (animator == null) animator = instance.GetComponentInChildren<Animator>();
+            if (animator == null) return;
+
+            string targetExp = string.IsNullOrEmpty(expressionName) ? "default" : expressionName;
+            CharacterExpression expression = data.Expressions.FirstOrDefault(e => e.ExpressionName == targetExp);
+            if (expression != null && !string.IsNullOrEmpty(expression.AnimationStateName))
+                animator.Play(expression.AnimationStateName);
+        }
+
         private void SetLayerRecursively(GameObject obj, int layer)
         {
             if(layer == -1) return;
             obj.layer = layer;
-            foreach (Transform child in obj.transform)
-            {
-                SetLayerRecursively(child.gameObject, layer);
-            }
+            foreach (Transform child in obj.transform) SetLayerRecursively(child.gameObject, layer);
         }
     }
 }

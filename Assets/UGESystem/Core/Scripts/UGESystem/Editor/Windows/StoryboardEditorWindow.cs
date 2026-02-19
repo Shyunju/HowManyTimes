@@ -46,11 +46,14 @@ namespace UGESystem
         [OnOpenAsset]
         public static bool OnOpenStoryboard(int instanceID, int line)
         {
-            var asset = EditorUtility.InstanceIDToObject(instanceID) as Storyboard;
-            if (asset != null)
+            // Use the recommended method EntityIdToObject to address the obsolete warning in newer Unity versions.
+            // 최신 유니티 버전에서 발생하는 obsolete 경고를 해결하기 위해 권장되는 EntityIdToObject를 사용합니다.
+            Object obj = EditorUtility.EntityIdToObject(instanceID);
+            
+            if (obj is Storyboard storyboard)
             {
                 StoryboardEditorWindow window = GetWindow<StoryboardEditorWindow>("Storyboard Editor");
-                window.SetStoryboard(asset);
+                window.SetStoryboard(storyboard);
                 return true;
             }
             return false;

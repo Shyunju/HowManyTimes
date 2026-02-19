@@ -20,6 +20,8 @@ MonoBehaviour:
   - rid: 2238037552763502663
   - rid: 2238037552763502662
   - rid: 2238037552763502664
+  - rid: 1753921481524641861
+  - rid: 1753921481524641862
   - rid: 2238037552763502665
   - rid: 2238037552763502666
   - rid: 2238037552763502667
@@ -30,6 +32,26 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 1753921481524641861
+      type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 2
+        _isNodeExpanded: 0
+        _action: 1
+        _type: 0
+        _waitUntilInput: 0
+        _image: {fileID: 0}
+        _video: {fileID: 0}
+    - rid: 1753921481524641862
+      type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 2
+        _isNodeExpanded: 0
+        _action: 0
+        _type: 0
+        _waitUntilInput: 0
+        _image: {fileID: 2800000, guid: 1dfa379d040011d4a8b19a3522cb3bad, type: 3}
+        _video: {fileID: 0}
     - rid: 2238037552763502660
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
@@ -38,7 +60,7 @@ MonoBehaviour:
         _action: 0
         _type: 0
         _waitUntilInput: 1
-        _image: {fileID: 2800000, guid: 0c47494c1f7a2d54bb9e6058b452f700, type: 3}
+        _image: {fileID: 2800000, guid: c9ec6dc79e71da74391c4dc7cb156e00, type: 3}
         _video: {fileID: 0}
     - rid: 2238037552763502661
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
@@ -67,7 +89,7 @@ MonoBehaviour:
       type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 1
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _characterId: e7cbf9bb-40af-4380-86c8-549267f4942f
         _action: 0
         _position: 2
@@ -86,7 +108,7 @@ MonoBehaviour:
         _dialogueText: Alright. Feel free to look around.
         _characterName: 21b606b7-98ec-494c-8cc0-7c0d82c0a51b
         _expression: Sad
-        _characterPosition: 0
+        _characterPosition: 2
         _clearAllCharacters: 1
         _showCharacter: 1
         _cinematicAnimDuration: 1
@@ -109,7 +131,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: State your business, quickly!
         _characterName: 990a2693-b415-48b4-bcf7-b0a6830925b2
         _expression: Happy
@@ -122,7 +144,7 @@ MonoBehaviour:
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 7
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _rewards: []
         _isBranching: 0
         _targetNodeID: 
@@ -134,7 +156,7 @@ MonoBehaviour:
         _action: 0
         _type: 0
         _waitUntilInput: 0
-        _image: {fileID: 2800000, guid: a628be58efeaba849ad7eca06d68c004, type: 3}
+        _image: {fileID: 2800000, guid: a47ad30aafda96640823a844c90f6a80, type: 3}
         _video: {fileID: 32900000, guid: da67b16ab1e392d4683ecfcd4ed5eecd, type: 3}
     - rid: 2238037594887946309
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}

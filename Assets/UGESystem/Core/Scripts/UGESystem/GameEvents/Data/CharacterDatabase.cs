@@ -54,6 +54,21 @@ namespace UGESystem
         }
 
         /// <summary>
+        /// Fully updates a target character's data using information from another character data object.
+        /// /// (Korean) 다른 캐릭터 데이터 객체의 정보를 사용하여 대상 캐릭터의 데이터를 완전히 업데이트합니다.
+        /// </summary>
+        /// <param name="targetID">The ID of the character to update. /// (Korean) 업데이트할 캐릭터의 ID입니다.</param>
+        /// <param name="sourceData">The source data to copy from. /// (Korean) 복사해올 원본 데이터입니다.</param>
+        public void UpdateCharacter(string targetID, CharacterData sourceData)
+        {
+            var target = GetCharacterData(targetID);
+            if (target != null && sourceData != null)
+            {
+                target.UpdateData(sourceData.Name, sourceData.Is3D, sourceData.Prefab, sourceData.Expressions);
+            }
+        }
+
+        /// <summary>
         /// Serializes the entire <see cref="CharacterDatabase"/> content into a JSON string.
         /// </summary>
         /// <returns>A JSON string representation of the character database.</returns>
@@ -88,43 +103,29 @@ namespace UGESystem
             {
                 var existingCharacter = _characters.FirstOrDefault(c => c.CharacterID == dto.CharacterID);
 
+                // Convert DTO expressions to CharacterExpression list for update
+                List<CharacterExpression> newExpressions = new List<CharacterExpression>();
+                if (dto.Expressions != null)
+                {
+                    foreach (var expDto in dto.Expressions)
+                    {
+                        var exp = new CharacterExpression();
+                        exp.SetData(expDto.ExpressionName, expDto.AnimationStateName);
+                        newExpressions.Add(exp);
+                    }
+                }
+
                 if (existingCharacter != null)
                 {
-                    // Update existing character using Reflection to respect private setters
-                    typeof(CharacterData).GetProperty("Name").SetValue(existingCharacter, dto.Name);
-                    typeof(CharacterData).GetProperty("Is3D").SetValue(existingCharacter, dto.Is3D);
-
-                    existingCharacter.Expressions.Clear();
-                    if(dto.Expressions != null)
-                    {
-                        foreach (var expDto in dto.Expressions)
-                        {
-                            var newExp = new CharacterExpression();
-                            typeof(CharacterExpression).GetProperty("ExpressionName").SetValue(newExp, expDto.ExpressionName);
-                            typeof(CharacterExpression).GetProperty("AnimationStateName").SetValue(newExp, expDto.AnimationStateName);
-                            existingCharacter.Expressions.Add(newExp);
-                        }
-                    }
+                    // Update existing character using type-safe method
+                    existingCharacter.UpdateData(dto.Name, dto.Is3D, existingCharacter.Prefab, newExpressions);
                 }
                 else
                 {
                     // Create new character
                     var newCharacter = new CharacterData();
-                    typeof(CharacterData).GetProperty("CharacterID").SetValue(newCharacter, dto.CharacterID);
-                    typeof(CharacterData).GetProperty("Name").SetValue(newCharacter, dto.Name);
-                    typeof(CharacterData).GetProperty("Is3D").SetValue(newCharacter, dto.Is3D);
-                    
-                    newCharacter.Expressions.Clear(); // Constructor adds one, so clear it first.
-                    if(dto.Expressions != null)
-                    {
-                        foreach (var expDto in dto.Expressions)
-                        {
-                            var newExp = new CharacterExpression();
-                            typeof(CharacterExpression).GetProperty("ExpressionName").SetValue(newExp, expDto.ExpressionName);
-                            typeof(CharacterExpression).GetProperty("AnimationStateName").SetValue(newExp, expDto.AnimationStateName);
-                            newCharacter.Expressions.Add(newExp);
-                        }
-                    }
+                    newCharacter.SetID(dto.CharacterID);
+                    newCharacter.UpdateData(dto.Name, dto.Is3D, null, newExpressions);
                     _characters.Add(newCharacter);
                 }
             }

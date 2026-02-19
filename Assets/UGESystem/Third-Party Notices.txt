@@ -1,0 +1,17 @@
+This package contains third-party software components governed by the license(s) indicated below:
+
+-------------------------------------------------------------------
+Component Name: KayKit : Adventurers Character Pack (2.0)
+Author: Kay Lousberg
+Source: https://www.kaylousberg.com/
+License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Description: Low poly character assets used in example scenes.
+-------------------------------------------------------------------
+
+-------------------------------------------------------------------
+Component Name: SunSet Backgrounds
+Author: wipics (OpenGameArt.org)
+Source: https://opengameart.org/content/sunset-backgrounds-pack
+License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Description: Background images used in example scenes.
+-------------------------------------------------------------------

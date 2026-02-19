@@ -12,9 +12,6 @@ namespace UGESystem
     public class UGESystemController : Singleton<UGESystemController>
     {
         private UGEUIManager _uiManager;
-        /// <summary>
-        /// Manages all UI elements related to events (dialogue boxes, choices, etc.).
-        /// </summary>
         public UGEUIManager UIManager
         {
             get
@@ -25,9 +22,6 @@ namespace UGESystem
         }
 
         private UGECharacterManager _characterManager;
-        /// <summary>
-        /// Manages character instantiation, placement, and animations.
-        /// </summary>
         public UGECharacterManager CharacterManager
         {
             get
@@ -38,9 +32,6 @@ namespace UGESystem
         }
 
         private UGEGameEventController _gameEventController;
-        /// <summary>
-        /// Executes the command sequence within a single GameEvent.
-        /// </summary>
         public UGEGameEventController GameEventController
         {
             get
@@ -51,9 +42,6 @@ namespace UGESystem
         }
 
         private UGECameraManager _cameraManager;
-        /// <summary>
-        /// Manages all Cinemachine-based camera operations during events.
-        /// </summary>
         public UGECameraManager CameraManager
         {
             get
@@ -64,9 +52,6 @@ namespace UGESystem
         }
 
         private UGEDelayedEventInvoker _delayedEventInvoker;
-        /// <summary>
-        /// Manages the delayed invocation of events from the event bus to prevent race conditions.
-        /// </summary>
         public UGEDelayedEventInvoker DelayedEventInvoker
         {
             get
@@ -77,9 +62,6 @@ namespace UGESystem
         }
 
         private UGESoundManager _soundManager;
-        /// <summary>
-        /// Manages background music (BGM) and sound effects (SFX).
-        /// </summary>
         public UGESoundManager SoundManager
         {
             get
@@ -90,9 +72,6 @@ namespace UGESystem
         }
 
         private UGEInputManager _inputManager;
-        /// <summary>
-        /// Manages event-specific user inputs (e.g., continue, skip).
-        /// </summary>
         public UGEInputManager InputManager
         {
             get
@@ -103,9 +82,6 @@ namespace UGESystem
         }
 
         private UGEScreenEffectManager _screenEffectManager;
-        /// <summary>
-        /// Manages full-screen effects like fades and tints.
-        /// </summary>
         public UGEScreenEffectManager ScreenEffectManager
         {
             get
@@ -115,7 +91,6 @@ namespace UGESystem
             }
         }
 
-        // Runner and Queue Management
         private List<UGEEventTaskRunner> _activeRunners = new List<UGEEventTaskRunner>();
         private List<(UGEEventTaskRunner runner, EventNodeData node, int insertionOrder)> _globalPendingNodes = new List<(UGEEventTaskRunner, EventNodeData, int)>();
         private int _insertionCounter = 0;
@@ -126,8 +101,6 @@ namespace UGESystem
         {
             base.OnAwake();
 
-            // Inject dependencies.
-            // Accessing the properties ensures they are initialized via FindOrCreateManager.
             if (GameEventController != null)
             {
                 GameEventController.UIManager = UIManager;
@@ -140,10 +113,6 @@ namespace UGESystem
 
         private T FindOrCreateManager<T>() where T : Component
         {
-            // 먼저 이미 생성된 필드에 있는지 확인 (Lazy Init 중복 호출 방지용)
-            // First check if it's already in the created field (to prevent redundant Lazy Init calls)
-            // (이 메서드는 프로퍼티 내부에서 호출되므로 이 체크는 사실상 프로퍼티의 null 체크와 동일하지만, 안전을 위해 유지)
-
             T manager = GetComponentInChildren<T>(true);
             if (manager == null)
             {
@@ -156,7 +125,6 @@ namespace UGESystem
 
         private void LateUpdate()
         {
-            // Execute initial event kickstart logic only once after game start.
             if (!_initialEventsKickedOff)
             {
                 KickstartInitialEvents();
@@ -168,195 +136,154 @@ namespace UGESystem
         {
             if (_activeRunners.Count == 0) return;
 
-            // Find the highest priority (lowest number).
             int highestPriority = _activeRunners.Min(r => r.Priority);
-
-            // Find all runners with that priority.
             var highestPriorityRunners = _activeRunners.Where(r => r.Priority == highestPriority).ToList();
 
             if (highestPriority == 0)
             {
-                // If priority is 0, attempt to start nodes for all priority 0 runners (they will enter the queue sequentially).
-                // Order by name to ensure deterministic execution order.
                 foreach (var runner in highestPriorityRunners.OrderBy(r => r.name))
                 {
                     if (runner.Storyboard != null)
                     {
                         var startNode = runner.Storyboard.EventNodes.FirstOrDefault(n => n.IsStartNode);
-                        if (startNode != null)
-                        {
-                            runner.TryStartNode(startNode);
-                        }
+                        if (startNode != null) runner.TryStartNode(startNode);
                     }
                 }
             }
-            else // highestPriority > 0
+            else
             {
-                // If priority is greater than 0, only one of the highest priority runners will execute.
-                // Select the first runner by name to ensure deterministic execution order.
                 var runnerToStart = highestPriorityRunners.OrderBy(r => r.name).FirstOrDefault();
                 if (runnerToStart != null && runnerToStart.Storyboard != null)
                 {
                     var startNode = runnerToStart.Storyboard.EventNodes.FirstOrDefault(n => n.IsStartNode);
-                    if (startNode != null)
-                    {
-                        runnerToStart.TryStartNode(startNode);
-                    }
+                    if (startNode != null) runnerToStart.TryStartNode(startNode);
                 }
             }
         }
 
 
         #region Runner and Queue Logic
-        /// <summary>
-        /// Registers a UGEEventTaskRunner with the controller when it becomes active.
-        /// Checks for duplicate RunnerIds.
-        /// </summary>
-        /// <param name="runner">The runner to register.</param>
         public void RegisterRunner(UGEEventTaskRunner runner)
         {
-            if (string.IsNullOrEmpty(runner.RunnerId))
-            {
-                Debug.LogError($"[UGESystemController] Runner '{runner.name}' has no RunnerId assigned!", runner);
-                return;
-            }
+            if (string.IsNullOrEmpty(runner.RunnerId)) return;
 
-            // Check for duplicates
             var duplicate = _activeRunners.FirstOrDefault(r => r.RunnerId == runner.RunnerId);
-            if (duplicate != null && duplicate != runner)
-            {
-                Debug.LogError($"[UGESystemController] Duplicate RunnerId detected: '{runner.RunnerId}'! " +
-                    $"Conflict between '{runner.name}' and '{duplicate.name}'. " +
-                    $"Please regenerate RunnerId for one of them via the Inspector Context Menu.", runner);
-                return;
-            }
+            if (duplicate != null && duplicate != runner) return;
 
-            if (!_activeRunners.Contains(runner))
-            {
-                _activeRunners.Add(runner);
-            }
+            if (!_activeRunners.Contains(runner)) _activeRunners.Add(runner);
         }
 
-        /// <summary>
-        /// Unregisters a UGEEventTaskRunner from the controller when it becomes inactive.
-        /// </summary>
-        /// <param name="runner">The runner to unregister.</param>
         public void UnregisterRunner(UGEEventTaskRunner runner)
         {
-            if (_activeRunners.Contains(runner))
-            {
-                _activeRunners.Remove(runner);
-            }
+            if (_activeRunners.Contains(runner)) _activeRunners.Remove(runner);
         }
 
-        /// <summary>
-        /// Gets the first active runner associated with a specific Storyboard asset.
-        /// </summary>
-        /// <param name="storyboard">The storyboard to find the runner for.</param>
-        /// <returns>The found UGEEventTaskRunner, or null if not found.</returns>
         public UGEEventTaskRunner GetRunnerForStoryboard(Storyboard storyboard)
         {
             if (storyboard == null) return null;
             return _activeRunners.FirstOrDefault(r => r.Storyboard == storyboard);
         }
 
-        /// <summary>
-        /// Finds an active UGEEventTaskRunner in the scene by its unique ID.
-        /// </summary>
-        /// <param name="runnerId">The unique ID of the runner.</param>
-        /// <returns>The found UGEEventTaskRunner, or null if not found.</returns>
         public UGEEventTaskRunner GetRunnerById(string runnerId)
         {
             if (string.IsNullOrEmpty(runnerId)) return null;
             return _activeRunners.FirstOrDefault(r => r.RunnerId == runnerId);
         }
 
-        /// <summary>
-        /// Adds a node to the global pending queue to be executed when the system is ready.
-        /// </summary>
-        /// <param name="runner">The runner responsible for the node.</param>
-        /// <param name="node">The event node to enqueue.</param>
         public void EnqueueNode(UGEEventTaskRunner runner, EventNodeData node)
         {
             _globalPendingNodes.Add((runner, node, _insertionCounter++));
         }
 
-        /// <summary>
-        /// Attempts to execute the next highest-priority node from the global pending queue if no other event is running.
-        /// </summary>
         public void TryStartNextPendingNode()
         {
-            if (GameEventController.IsEventRunning || _globalPendingNodes.Count == 0)
-            {
-                return;
-            }
+            if (GameEventController.IsEventRunning || _globalPendingNodes.Count == 0) return;
 
-            // Use List.Sort for in-place, stable sorting.
             _globalPendingNodes.Sort((item1, item2) =>
             {
                 int priorityComparison = item1.runner.Priority.CompareTo(item2.runner.Priority);
-                if (priorityComparison != 0)
-                {
-                    return priorityComparison; // Sort by priority (ascending, lower number is higher priority)
-                }
-                // If priorities are equal, sort by insertion order to maintain FIFO
+                if (priorityComparison != 0) return priorityComparison;
                 return item1.insertionOrder.CompareTo(item2.insertionOrder);
             });
 
             var nextItem = _globalPendingNodes[0];
             _globalPendingNodes.RemoveAt(0);
-
             nextItem.runner.StartNode(nextItem.node);
         }
         #endregion
 
         #region Save / Load Global API
         /// <summary>
-        /// Captures the runtime status of all active storyboards in the scene.
-        /// This can be called by an external save system to snapshot the story progress.
+        /// Captures the entire system state, including character data and story progress.
         /// </summary>
-        /// <returns>A list of state DTOs for each active runner.</returns>
-        public List<RunnerStateDto> CaptureAllStoryboardsState()
+        public UGESystemStateDto CaptureSystemState()
         {
-            var states = new List<RunnerStateDto>();
+            var systemState = new UGESystemStateDto();
+
+            // 1. Capture Story Progress (Runners)
             foreach (var runner in _activeRunners)
             {
-                states.Add(runner.CaptureState());
+                systemState.RunnerStates.Add(runner.CaptureState());
             }
-            return states;
+
+            // 2. Capture Modified Character Data
+            if (CharacterManager != null && CharacterManager.RuntimeCharacterDB != null)
+            {
+                foreach (var charData in CharacterManager.RuntimeCharacterDB.Characters)
+                {
+                    systemState.CharacterStates.Add(new CharacterStateDto
+                    {
+                        CharacterID = charData.CharacterID,
+                        Name = charData.Name,
+                        // Visual/Template restoration could be added here later if needed.
+                    });
+                }
+            }
+
+            return systemState;
         }
 
         /// <summary>
-        /// Restores the runtime status of storyboards from a previously captured state.
-        /// This will re-initialize node statuses and resume any InProgress events.
+        /// Restores the entire system state. 
+        /// Crucially, it restores character data FIRST before resuming storyboards.
         /// </summary>
-        /// <param name="savedStates">The list of saved runner states to restore.</param>
-        public void RestoreAllStoryboardsState(List<RunnerStateDto> savedStates)
+        public void RestoreSystemState(UGESystemStateDto savedState)
         {
-            if (savedStates == null) return;
+            if (savedState == null) return;
 
-            foreach (var state in savedStates)
+            // 1. Restore Character Data FIRST
+            if (CharacterManager != null && CharacterManager.RuntimeCharacterDB != null)
             {
-                var runner = GetRunnerById(state.RunnerID);
-                if (runner != null)
+                foreach (var charState in savedState.CharacterStates)
                 {
-                    runner.RestoreState(state);
-                }
-                else
-                {
-#if UNITY_EDITOR
-                    Debug.LogWarning($"[UGESystemController] Could not find runner with ID '{state.RunnerID}' for restoration. Skipping.");
-#endif
+                    var target = CharacterManager.RuntimeCharacterDB.GetCharacterData(charState.CharacterID);
+                    if (target != null)
+                    {
+                        target.UpdateData(charState.Name, target.Is3D, target.Prefab, target.Expressions);
+                    }
                 }
             }
 
-            // After all restorations, if an event was resumed (InProgress), it might have entered the queue.
-            // But RestoreAllStoryboardsState is likely called before/during initialization, 
-            // so we set a flag to ensure KickstartInitialEvents doesn't conflict.
+            // 2. Restore Storyboard Progress
+            foreach (var runnerState in savedState.RunnerStates)
+            {
+                var runner = GetRunnerById(runnerState.RunnerID);
+                if (runner != null)
+                {
+                    runner.RestoreState(runnerState);
+                }
+            }
+
             _initialEventsKickedOff = true; 
-            
-            // Try starting the first queued node if any were resumed.
             TryStartNextPendingNode();
+        }
+
+        // Backward compatibility wrappers
+        public List<RunnerStateDto> CaptureAllStoryboardsState() => CaptureSystemState().RunnerStates;
+        public void RestoreAllStoryboardsState(List<RunnerStateDto> savedStates) 
+        {
+            var dto = new UGESystemStateDto { RunnerStates = savedStates };
+            RestoreSystemState(dto);
         }
         #endregion
     }
