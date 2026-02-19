@@ -67,6 +67,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 3758369457129652886
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
@@ -652,11 +654,8 @@ MonoBehaviour:
         <CommandType>k__BackingField: 11
         _isNodeExpanded: 0
         _rewards:
-        - rid: 3758369457129652961
-    - rid: 3758369457129652961
-      type: {class: GiveReward, ns: , asm: Assembly-CSharp}
-      data:
-        <Description>k__BackingField: 
+        - rid: -2
+        - rid: 3758369776340566108
     - rid: 3758369568633126924
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
@@ -686,3 +685,7 @@ MonoBehaviour:
         <AudioClip>k__BackingField: {fileID: 0}
         <Volume>k__BackingField: 1
         <Loop>k__BackingField: 0
+    - rid: 3758369776340566108
+      type: {class: GiveReward, ns: , asm: Assembly-CSharp}
+      data:
+        <Description>k__BackingField: 
