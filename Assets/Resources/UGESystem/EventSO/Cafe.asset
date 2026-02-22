@@ -32,6 +32,7 @@ MonoBehaviour:
   - rid: 3758369457129652791
   - rid: 3758369457129652792
   - rid: 3758369457129652793
+  - rid: 4614097759118819328
   - rid: 3758369457129652794
   - rid: 3758369457129652795
   - rid: 3758369457129652796
@@ -125,7 +126,7 @@ MonoBehaviour:
         _dialogueText: "\uC640~ \uC774\uACF3 \uC815\uACA8\uC6B4 \uB290\uB08C\uC774
           \uC815\uB9D0 \uC88B\uC740\uB370\uC694? \uC5C6\uB358 \uCD94\uC5B5\uB3C4
           \uC0DD\uAE38\uAC83 \uAC19\uC544\uC694. \uC660\uC9C0 \uADF8\uB9AC\uC6B4
-          \uB290\uB08C\uC774\uC5D0\uC694."
+          \uB290\uB08C\uB3C4 \uB4E4\uACE0."
         _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
         _expression: Default
         _characterPosition: 0
@@ -170,9 +171,9 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uADF8\uB807\uB2E4\uBA74 \uC2A4\uCE74\uCE58 \uB77C\uB5BC\uB294
-          \uC5B4\uB5A0\uC138\uC694? \uD06C\uB9BC\uC774 \uC788\uC9C0\uB9CC \uB9CE\uC774
+          \uC5B4\uB54C\uC694? \uD06C\uB9BC\uC774 \uC788\uC9C0\uB9CC \uB9CE\uC774
           \uB2EC\uC9C0 \uC54A\uACE0 \uBD80\uB4DC\uB7FD\uACE0 \uD2B9\uC720\uC758 \uD48D\uBBF8\uAC00
-          \uC88B\uC740 \uCEE4\uD53C\uC5D0\uC694. \uBD84\uBA85 \uC88B\uC544\uD560\uAC70\uC5D0\uC694."
+          \uC88B\uC740 \uCEE4\uD53C\uC5D0\uC694. \uBD84\uBA85\uD788 \uC88B\uC544\uD560\uAC70\uC5D0\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default
         _characterPosition: 2
@@ -274,7 +275,7 @@ MonoBehaviour:
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Surprise
         _characterPosition: 2
-        _clearAllCharacters: 0
+        _clearAllCharacters: 1
         _showCharacter: 1
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
@@ -297,8 +298,8 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uC544,\uC544\uB1E8. \uADF8\u2026 \uC5B4\u2026 \uC774 \uCE58\uC988\uCF00\uC774\uD06C\uB294
-          \uC5B4\uB54C\uC694? \uC774\uAC83\uB3C4 \uCC38 \uB9DB\uC788\uC5B4\uBCF4\uC5EC\uC694!"
+        _dialogueText: "\uC774 \uCE58\uC988\uCF00\uC774\uD06C\uB294 \uC5B4\uB54C\uC694?
+          \uC774\uAC83\uB3C4 \uB9DB\uC788\uC5B4\uBCF4\uC774\uC9C0 \uC54A\uC544\uC694?"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default
         _characterPosition: 2
@@ -408,7 +409,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uC5B4\uB518\uAC00 \uC774\uC0C1\uD55C \uAE30\uBD84\uC774
+        _dialogueText: "\uC5B4\uB518\uAC00 \uCC1C\uCC1C\uD55C \uAE30\uBD84\uC774
           \uB4E4\uC5C8\uC9C0\uB9CC \uB098\uB294 \uBCC4 \uB9D0 \uD558\uC9C0 \uC54A\uACE0
           \uADF8\uB140\uC640 \uD568\uAED8 \uCEE4\uD53C\uC640 \uCF00\uC774\uD06C\uAC00
           \uB098\uC624\uAE38 \uAE30\uB2E4\uB838\uB2E4."
@@ -467,7 +468,7 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uB098\uB294 \uB530\uB73B\uD55C \uC2A4\uCE74\uCE58 \uB77C\uB5BC\uB97C
-          \uC870\uC2EC\uC2A4\uB7FD\uAC8C \uC785\uC5D0\uAC00\uC838\uAC00 \uD55C\uBAA8\uAE08
+          \uC870\uC2EC\uC2A4\uB7FD\uAC8C \uC785\uC5D0\uAC00\uC838\uAC00 \uD55C \uBAA8\uAE08
           \uB4E4\uC774\uCF30\uB2E4."
         _characterName: 
         _expression: 
@@ -481,7 +482,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "(\uB9DB \uBCF4\uB2E4\uB294 \uD5A5\uC774 \uB354 \uB2EC\uB2EC\uD574\uC11C
+        _dialogueText: "(\uB9DB \uBCF4\uB2E4\uB294 \uD5A5\uC774 \uB354 \uB2EC\uCF64\uD574\uC11C
           \uC0DD\uAC01\uB9CC\uD07C \uBD80\uB2F4\uC2A4\uB7EC\uC6B4 \uB2E8\uB9DB\uC740
           \uC544\uB2C8\uC57C. \uC624\uD788\uB824 \uBD80\uB4DC\uB7EC\uC6B4 \uB290\uB08C\uC774
           \uC309\uC0B4\uD55C \uCEE4\uD53C\uBCF4\uB2E4 \uAD6C\uBBF8\uB97C \uB354 \uB2F9\uAE30\uAC8C
@@ -540,7 +541,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uC544\u2026! \uB180\uB798\uCF1C\uB4DC\uB838\uB098\uC694?
+        _dialogueText: "\uC544\u2026! \uB0B4\uAC00 \uB180\uB798\uCF30\uB098\uC694?
           \uC800\uB3C4 \uBAA8\uB974\uAC8C \uADF8\uB9CC\u2026 \uD558\uD558\u2026"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default
@@ -585,7 +586,7 @@ MonoBehaviour:
         _isNodeExpanded: 0
         _dialogueText: "\uADF8\uB140\uB294 \uC5BC\uAD74\uC744 \uBD89\uD788\uBA70
           \uB300\uB2F5\uD588\uB2E4. \uBD80\uB044\uB7EC\uC6CC\uD558\uB294 \uADF8\uB140\uC5D0\uAC8C
-          \uB098\uB294 \uAD73\uC774 \uB300\uAFB8\uD558\uC9C0 \uC54A\uC558\uB2E4."
+          \uB098\uB294 \uAD73\uC774 \uB354 \uB300\uAFB8\uD558\uC9C0 \uC54A\uC558\uB2E4."
         _characterName: 
         _expression: 
         _characterPosition: 0
@@ -598,7 +599,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uCEE4\uD53C \uB9DB\uC740 \uC5B4\uB54C\uC694? \uC81C \uB9D0\uC774
+        _dialogueText: "\uCEE4\uD53C \uB9DB\uC740 \uC5B4\uB54C\uC694? \uB0B4 \uB9D0\uC774
           \uB9DE\uC8E0? \uB9DB\uC788\uC8E0?"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default
@@ -687,11 +688,10 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uC544\u2026 \uADF8\uB0E5\u2026 \uC81C\uAC00 \uC88B\uC544\uD558\uB294
+        _dialogueText: "\uC544\u2026 \uADF8\uB0E5\u2026 \uC88B\uC544\uD558\uB294
           \uAC83\uB4E4\uC744 \uCD94\uCC9C\uD55C\uAC83 \uBFD0\uC778\uB370, \uC6B0\uB9AC
           \uB458\uC774 \uCDE8\uD5A5\uC774 \uBE44\uC2B7\uD55C\uAC00\uBD10\uC694. \uB0B4\uAC00
-          \uC88B\uC544\uD558\uB294 \uAC78 \uC88B\uC544\uD574\uC8FC\uC154\uC11C \uC800\uB3C4
-          \uAE30\uBED0\uC694."
+          \uC88B\uC544\uD558\uB294 \uAC78 \uC88B\uC544\uD574\uC918\uC11C \uAE30\uBED0\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Surprise
         _characterPosition: 2
@@ -743,10 +743,10 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uB2EC\uCF64\uD55C \uD5A5\uC774 \uCEE4\uD53C\uD5A5\uC744
-          \uB36E\uB294 \uB290\uB08C\uC774\uACE0\uB3C4 \uD558\uACE0, \uC0AC\uC2E4
+          \uB36E\uB294 \uB290\uB08C\uC774\uAE30\uB3C4 \uD558\uACE0, \uC0AC\uC2E4
           \uB2E8\uB9DB\uC758 \uCEE4\uD53C\uB294 \uBCC4\uB85C \uC88B\uC544\uD558\uC9C0
           \uC54A\uAC70\uB4E0\uC694. \uC5ED\uC2DC \uC800\uB294 \uC309\uC300\uD55C
-          \uB9DB\uC758 \uCEE4\uD53C\uAC00 \uB354 \uC785\uB9DB\uC5D0 \uB9DE\uB124\uC694."
+          \uB9DB\uC758 \uCEE4\uD53C\uAC00 \uB354 \uC785\uC5D0 \uB9DE\uB124\uC694."
         _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
         _expression: Default
         _characterPosition: 0
@@ -905,7 +905,7 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uB124, \uADF8\uB798\uC694. \uCC38, \uB0B4\uC77C \uBD80\uD130
-          \uBC9A\uAF43 \uCD95\uC81C\uAC00 \uC2DC\uC791\uB41C\uB370\uC694. \uD50C\uB9AC\uB9C8\uCF13\uC774\uB098
+          \uBC9A\uAF43 \uCD95\uC81C\uAC00 \uC2DC\uC791\uB41C\uB300\uC694. \uD50C\uB9AC\uB9C8\uCF13\uC774\uB098
           \uC5EC\uB7EC \uC57C\uC678\uC0C1\uB4E4\uC774 \uC5F4\uB9AC\uB098\uBD10\uC694.
           \uAC19\uC774 \uAC00\uBCFC\uB798\uC694?"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
@@ -994,7 +994,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 0
         <AudioClip>k__BackingField: {fileID: 8300000, guid: a8b16534806bf9044bde1a98e64eb9a0, type: 3}
@@ -1046,3 +1046,16 @@ MonoBehaviour:
         _action: 1
         _position: 2
         _expression: Default
+    - rid: 4614097759118819328
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uC544,\uC544\uB1E8. \uADF8\u2026 \uC5B4\u2026 "
+        _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
+        _expression: Surprise
+        _characterPosition: 2
+        _clearAllCharacters: 0
+        _showCharacter: 1
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3
