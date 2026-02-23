@@ -88,3 +88,14 @@ MonoBehaviour:
     <Expressions>k__BackingField:
     - <ExpressionName>k__BackingField: Default
       <AnimationStateName>k__BackingField: Default
+  - <CharacterID>k__BackingField: 35865b82-2d68-4685-ba5a-49d063ce83e0
+    <Name>k__BackingField: "\uC2E0\uBB38\uBC30\uB2EC\uC6D0"
+    <Is3D>k__BackingField: 0
+    <Prefab>k__BackingField: {fileID: 1112629093069586512, guid: 178e56daa189c49768eba3caee02f3ff, type: 3}
+    <Expressions>k__BackingField:
+    - <ExpressionName>k__BackingField: Default
+      <AnimationStateName>k__BackingField: Default
+    - <ExpressionName>k__BackingField: Thinking
+      <AnimationStateName>k__BackingField: Thinking
+    - <ExpressionName>k__BackingField: Wily
+      <AnimationStateName>k__BackingField: Wily

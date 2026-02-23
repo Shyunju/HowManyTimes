@@ -28,6 +28,7 @@ MonoBehaviour:
   - rid: 3758369457129652382
   - rid: 3758369457129652383
   - rid: 3758369457129652384
+  - rid: 3758369864458436706
   - rid: 3758369457129652385
   - rid: 3758369457129652386
   - rid: 3758369457129652387
@@ -302,6 +303,15 @@ MonoBehaviour:
         _updateType: 1
         _sourceTemplateId: 
         _overrideName: asdf
+    - rid: 3758369864458436706
+      type: {class: CharacterUpdateCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 12
+        _isNodeExpanded: 1
+        _targetCharacterId: ad399f43-8535-432e-b47e-8fd330e63801
+        _updateType: 0
+        _sourceTemplateId: 35865b82-2d68-4685-ba5a-49d063ce83e0
+        _overrideName: "\uC2E0\uBB38\uBC30\uB2EC\uC6D0"
     - rid: 4614097758933483520
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
