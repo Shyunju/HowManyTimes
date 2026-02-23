@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e2aa8099716774b8ead8a5bb920782, type: 3}
+  m_Name: EndingCredit
+  m_EditorClassIdentifier: Assembly-CSharp::UGESystem.Storyboard
+  <Name>k__BackingField: 
+  _eventNodes:
+  - rid: 3758369864458436615
+  references:
+    version: 2
+    RefIds:
+    - rid: 3758369864458436615
+      type: {class: EventNodeData, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        _nodeID: 0fbc14e1-5c05-41ff-a00a-0b66c253876a
+        _name: Credit
+        _type: 1
+        IsStartNode: 1
+        _isRepeatable: 0
+        _position: {x: 430.5, y: -253.5}
+        _startConditions: []
+        _nextNodeIDs: []
+        GameEventAsset: {fileID: 11400000, guid: aceef2149e82c4d7cbe567f30b082bb7, type: 2}

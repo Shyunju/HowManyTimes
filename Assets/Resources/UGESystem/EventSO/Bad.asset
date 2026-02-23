@@ -51,7 +51,7 @@ MonoBehaviour:
   - rid: 3758369457129652373
   - rid: 3758369457129652374
   - rid: 3758369568633127048
-  - rid: 3758369457129652375
+  - rid: 3758369864458436621
   references:
     version: 2
     RefIds:
@@ -546,14 +546,6 @@ MonoBehaviour:
         _showCharacter: 0
         _cinematicAnimDuration: 0
         _cinematicDisplayDuration: 0
-    - rid: 3758369457129652375
-      type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
-      data:
-        <CommandType>k__BackingField: 7
-        _isNodeExpanded: 0
-        _rewards: []
-        _isBranching: 0
-        _targetNodeID: 
     - rid: 3758369457129652973
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
@@ -584,6 +576,12 @@ MonoBehaviour:
         <AudioClip>k__BackingField: {fileID: 0}
         <Volume>k__BackingField: 1
         <Loop>k__BackingField: 0
+    - rid: 3758369864458436621
+      type: {class: TriggerEventCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 10
+        _isNodeExpanded: 1
+        _targetRunnerId: 20859154-40a2-4023-91bc-6d5cdf71d3eb
     - rid: 4614097599742607360
       type: {class: CharacterCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
