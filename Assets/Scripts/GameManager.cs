@@ -26,6 +26,7 @@ public class GameManager : Singleton<GameManager>
     public void AddLikeablility(GameObject descriptText)
     {
         Likeability += _amount;
+        Debug.Log(Likeability);
         StartCoroutine(DescriptLikeablilityCO(descriptText));
     }
     private IEnumerator DescriptLikeablilityCO(GameObject descriptText)

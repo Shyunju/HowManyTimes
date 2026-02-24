@@ -46,6 +46,7 @@ MonoBehaviour:
   - rid: 3758369457129652471
   - rid: 3758369457129652472
   - rid: 3758369885830250581
+  - rid: 3758369885830250584
   - rid: 3758369864458436620
   references:
     version: 2
@@ -336,7 +337,7 @@ MonoBehaviour:
           \uC778\uC0AC\uB97C \uAC74\uB124\uC8FC\uC5C8\uACE0, \uC5EC\uB7EC \uC774\uC57C\uAE30\uB97C\uD588\uB2E4.
           \uADF8\uAC00 \uB098\uC5D0\uAC8C \uD558\uC580 \uBC31\uD569\uC774 \uC5B4\uC6B8\uB9B0\uB2E4\uACE0
           \uD574\uC8FC\uC5C8\uB2E4. \uC608\uC804\uC5D0\uB3C4 \uAC19\uC740 \uB9D0\uC744
-          \uD574\uC8FC\uC801\uC774 \uC788\uC5C8\uB2E4. \uACB0\uD63C\uC2DD \uBD80\uCF00\uB294
+          \uD574\uC900\uC801\uC774 \uC788\uC5C8\uB2E4. \uACB0\uD63C\uC2DD \uBD80\uCF00\uB294
           \uD558\uC580 \uBC31\uD569\uC774 \uC88B\uACA0\uB2E4\uBA74\uC11C\u2026 \uADF8\uAC00
           \uBC31\uD569\uC758 \uAF43\uB9D0\uC744 \uBB3C\uC5B4\uBD24\uC9C0\uB9CC \uC544\uB294\uAC78
           \uB2E4 \uB300\uB2F5\uD574\uC8FC\uC9C0\uB294 \uC54A\uC558\uB2E4. \uBC31\uD569\uC758
@@ -576,7 +577,8 @@ MonoBehaviour:
           \uB208\uBB3C\uC774 \uB0A0\uAC83 \uAC19\uC544\uC11C \uACB0\uAD6D \uC9D1\uC73C\uB85C
           \uB3CC\uC544\uC640 \uBC84\uB838\uB2E4. \uC774 \uAC10\uC815\uC740 \uC808\uB300
           \uC775\uC219\uD574\uC9C0\uC9C8 \uC54A\uB294\uAD6C\uB098\u2026 \uADF8\uB798\uB3C4
-          \uB2E4\uC2DC\uD55C\uBC88 \uBA87\uBC88\uC774\uB77C\uB3C4\u2026\u201D"
+          \uB2E4\uC2DC\uD55C\uBC88 \uBA87\uBC88\uC774\uB77C\uB3C4\u2026 \uB2F9\uC2E0\uC744
+          \uB9CC\uB098\uB7EC \uAC08\uAC8C.\u201D"
         _characterName: 
         _expression: 
         _characterPosition: 0
@@ -611,5 +613,18 @@ MonoBehaviour:
         _characterPosition: 0
         _clearAllCharacters: 0
         _showCharacter: 0
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3
+    - rid: 3758369885830250584
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "Ending 3 - \uBC18\uB824\uC790"
+        _characterName: 
+        _expression: 
+        _characterPosition: 0
+        _clearAllCharacters: 0
+        _showCharacter: 1
         _cinematicAnimDuration: 1
         _cinematicDisplayDuration: 3

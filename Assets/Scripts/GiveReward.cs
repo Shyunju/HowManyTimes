@@ -1,7 +1,7 @@
 using UnityEngine;
 using UGESystem;
 using System.Collections;
-
+using System;
 public class GiveReward : AbstractEventReward
 {
     

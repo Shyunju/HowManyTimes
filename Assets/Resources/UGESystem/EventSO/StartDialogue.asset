@@ -174,13 +174,13 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uADF8\uB098\uC800\uB098 \uC624\uB298\uC740 \uC5B4\uB5BB\uAC8C
           \uBCF4\uB0B4\uC2E4 \uC608\uC815\uC774\uC2E0\uAC00\uC694? \uAD1C\uCC2E\uC73C\uC2DC\uBA74
           \uC81C\uAC00 \uAC00\uBCFC\uB9CC\uD55C \uACF3\uC744 \uCD94\uCC9C\uD574\uB4DC\uB9B4\uAE4C\uC694?\n\uC774\uAC83\uB3C4
-          \uC81C \uCDE8\uBBF8\uAC70\uB4E0\uC694. \uC2E0\uBB38\uBC30\uB2EC\uD558\uBA74\uC11C
-          \uC5EC\uB7EC\uACF3\uC744 \uB3CC\uC544\uB2E4\uB140\uBCF4\uBA70 \uD765\uBBF8\uB85C\uC6B4
-          \uACF3\uC744 \uC54C\uB824\uB4DC\uB9B0\uB2F5\uB2C8\uB2E4."
+          \uC81C \uCDE8\uBBF8\uAC70\uB4E0\uC694. \uC2E0\uBB38\uBC30\uB2EC\uB85C \uC774\uACF3\uC800\uACF3\uC744
+          \uB3CC\uC544\uB2E4\uB140 \uBCF4\uBA70 \uD765\uBBF8\uB85C\uC6B4 \uACF3\uC744
+          \uC54C\uB824\uB4DC\uB9B0\uB2F5\uB2C8\uB2E4."
         _characterName: ad399f43-8535-432e-b47e-8fd330e63801
         _expression: Default
         _characterPosition: 1

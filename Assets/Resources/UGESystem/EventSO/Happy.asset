@@ -42,6 +42,7 @@ MonoBehaviour:
   - rid: 3758369457129652497
   - rid: 3758369568633127049
   - rid: 3758369457129652980
+  - rid: 3758369885830250583
   - rid: 3758369864458436622
   references:
     version: 2
@@ -52,7 +53,7 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uB098\uB294 \uD3C9\uC18C\uBCF4\uB2E4 \uCC28\uB9BC\uC138\uB97C
-          \uB2E8\uC815\uD558\uAC8C \uD558\uACE0 \uCEE4\uD53C\uC20D\uC744 \uD5A5\uD588\uB2E4."
+          \uB2E8\uC815\uD558\uAC8C \uD558\uACE0 \uCEE4\uD53C\uC20D\uC73C\uB85C \uD5A5\uD588\uB2E4."
         _characterName: 
         _expression: 
         _characterPosition: 0
@@ -76,7 +77,7 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uADF8\uB140\uB294 \uC57D\uC18D\uB300\uB85C \uCC3D\uAC00\uC790\uB9AC\uC5D0
-          \uD640\uB85C \uC549\uC544 \uB098\uB294 \uAE30\uB2E4\uB9AC\uACE0 \uC788\uC5C8\uB2E4."
+          \uD640\uB85C \uC549\uC544 \uB098\uB97C \uAE30\uB2E4\uB9AC\uACE0 \uC788\uC5C8\uB2E4."
         _characterName: 
         _expression: 
         _characterPosition: 0
@@ -241,9 +242,10 @@ MonoBehaviour:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
         _dialogueText: "\uB098\uB294 \uB2F9\uC2E0\uACFC \uC9C0\uAE08\uBD80\uD130
-          \uC5F0\uC778\uC73C\uB85C \uB9CC\uB098\uACE0 \uC2F6\uC740\uB370, \uB0B4\uAC00
-          \uC774 \uCEE4\uD53C\uB97C \uB2E4 \uB9C8\uC2E4\uB54C\uAE4C\uC9C0 \uADF8\uC790\uB9AC\uC5D0
-          \uC549\uC544\uACC4\uC2DC\uBA74 \u201C\uC608\uC2A4\u201D\uB77C\uACE0 \uC0DD\uAC01\uD558\uACA0\uC2B5\uB2C8\uB2E4."
+          \uC5F0\uC778\uC73C\uB85C \uB9CC\uB098\uACE0 \uC2F6\uAC70\uB4E0\uC694. \uB9CC\uC57D\uC5D0
+          \uB2F9\uC2E0\uC774 \uB0B4\uAC00 \uC774 \uCEE4\uD53C\uB97C \uB2E4 \uB9C8\uC2E4\uB54C\uAE4C\uC9C0
+          \uADF8\uC790\uB9AC\uC5D0 \uC549\uC544\uACC4\uC2DC\uBA74 \uB2F9\uC2E0\uB3C4
+          \uC88B\uB2E4\uB294 \uB73B\uC73C\uB85C \uC0DD\uAC01\uD558\uACA0\uC2B5\uB2C8\uB2E4."
         _characterName: aad29799-f6ee-42af-96bd-0d09cdc990ae
         _expression: Default
         _characterPosition: 0
@@ -407,3 +409,16 @@ MonoBehaviour:
         <CommandType>k__BackingField: 10
         _isNodeExpanded: 1
         _targetRunnerId: 20859154-40a2-4023-91bc-6d5cdf71d3eb
+    - rid: 3758369885830250583
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "Ending 1 - \uBC31\uD569\uC758 \uAF43\uB9D0"
+        _characterName: 
+        _expression: 
+        _characterPosition: 0
+        _clearAllCharacters: 0
+        _showCharacter: 1
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3

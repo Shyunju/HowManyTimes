@@ -7,7 +7,7 @@ namespace UGESystem
     /// defining the <see cref="GrantReward"/> method that must be implemented by all concrete reward types.
     /// </summary>
     [System.Serializable]
-    public abstract class AbstractEventReward //: MonoBehaviour
+    public abstract class AbstractEventReward 
     {
         [field: SerializeField]
         /// <summary>

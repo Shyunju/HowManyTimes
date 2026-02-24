@@ -131,10 +131,10 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uD55C \uC544\uB984\uB2E4\uC6B4 \uC5EC\uC131\uC774 \uB4E4\uACE0\uC788\uB358
-          \uCC45\uC758 \uBC18\uC744 \uB9D0\uC5C6\uC774 \uB4E4\uC5B4\uC8FC\uC5C8\uB2E4."
+        _dialogueText: "\uADF8\uB54C, \uD55C \uC544\uB984\uB2E4\uC6B4 \uC5EC\uC131\uC774
+          \uB4E4\uACE0\uC788\uB358 \uCC45\uC758 \uBC18\uC744 \uB9D0\uC5C6\uC774 \uB4E4\uC5B4\uC8FC\uC5C8\uB2E4."
         _characterName: 
-        _expression: Default
+        _expression: 
         _characterPosition: 0
         _clearAllCharacters: 0
         _showCharacter: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <Action>k__BackingField: 1
         <SoundType>k__BackingField: 0
         <AudioClip>k__BackingField: {fileID: 0}
