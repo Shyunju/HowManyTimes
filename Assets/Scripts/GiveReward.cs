@@ -4,8 +4,6 @@ using System.Collections;
 
 public class GiveReward : AbstractEventReward
 {
-    // [SerializeField]
-    // private GameObject _descriptText;
     
         // [핵심] 실제 보상을 지급하는 함수
         // 이벤트가 종료(EndCommand)될 때 시스템에 의해 자동으로 호출됩니다.

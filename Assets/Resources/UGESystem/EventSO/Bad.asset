@@ -51,7 +51,7 @@ MonoBehaviour:
   - rid: 3758369457129652373
   - rid: 3758369457129652374
   - rid: 3758369568633127048
-  - rid: 3758369864458436621
+  - rid: 3758369885830250579
   references:
     version: 2
     RefIds:
@@ -470,9 +470,9 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
-        _dialogueText: "\uD558\uD504\uC5D8\uD504 86\uC138 \uC2E0\uCCAD\uC790\uBD84~
-          \uCC28\uB840 \uB300\uAE30\uD574\uC8FC\uC138\uC694~"
+        _isNodeExpanded: 1
+        _dialogueText: "\uD558\uD504\uC5D8\uD504 86\uC138 $$$\uB2D8~ \uCC28\uB840
+          \uB300\uAE30\uD574\uC8FC\uC138\uC694~"
         _characterName: 0a0e3dd6-ed47-45d8-840c-b6ba649ea969
         _expression: Default
         _characterPosition: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
         <AudioClip>k__BackingField: {fileID: 0}
         <Volume>k__BackingField: 1
         <Loop>k__BackingField: 0
-    - rid: 3758369864458436621
+    - rid: 3758369885830250579
       type: {class: TriggerEventCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 10

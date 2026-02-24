@@ -34,7 +34,9 @@ namespace UGESystem
                         displayName = data.Name;
                     }
                 }
-                controller.UIManager.ShowDialogue(displayName, command.DialogueText);
+                string re = command.DialogueText.Replace("$$$", GameManager.Instance.UserName);
+                //controller.UIManager.ShowDialogue(displayName, command.DialogueText);
+                controller.UIManager.ShowDialogue(displayName, re);
     
                 controller.IsWaitingForChoice = true; // 사용자의 입력을 기다리도록 설정 // Set to wait for user input
                 yield break;

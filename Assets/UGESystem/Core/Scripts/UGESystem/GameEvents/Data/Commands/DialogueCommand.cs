@@ -135,6 +135,7 @@ namespace UGESystem
             CommandType = CommandType.Dialogue;
             _characterName = characterName;
             _dialogueText = dialogueText;
+            //string re = dto.DialogueText.Replace("$$$", GameManager.Instance.UserName);
             _expression = expression;
         }
 
@@ -145,7 +146,9 @@ namespace UGESystem
         public DialogueCommand(DialogueCommandDto dto)
         {
             CommandType = CommandType.Dialogue;
+            
             _dialogueText = dto.DialogueText;
+            //_dialogueText = dto;
             _characterName = dto.CharacterName;
             _expression = dto.Expression;
             _characterPosition = dto.CharacterPosition;

@@ -45,6 +45,7 @@ MonoBehaviour:
   - rid: 3758369457129652470
   - rid: 3758369457129652471
   - rid: 3758369457129652472
+  - rid: 3758369885830250581
   - rid: 3758369864458436620
   references:
     version: 2
@@ -82,7 +83,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _action: 0
         _type: 0
         _waitUntilInput: 0
@@ -587,7 +588,7 @@ MonoBehaviour:
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 0
         <AudioClip>k__BackingField: {fileID: 8300000, guid: 063e6f88034e9d241a4673fb1bbd3d56, type: 3}
@@ -598,4 +599,17 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 10
         _isNodeExpanded: 1
-        _targetRunnerId: df57ce07-ecaf-4927-b5e0-45c82bb6d79a
+        _targetRunnerId: 20859154-40a2-4023-91bc-6d5cdf71d3eb
+    - rid: 3758369885830250581
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\"\uC601\uC6D0\uD55C \uB098\uC758 \uC0AC\uB791 $$$...\""
+        _characterName: 
+        _expression: 
+        _characterPosition: 0
+        _clearAllCharacters: 0
+        _showCharacter: 0
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3

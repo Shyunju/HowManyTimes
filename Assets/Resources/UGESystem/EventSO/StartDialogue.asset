@@ -15,6 +15,7 @@ MonoBehaviour:
   <Guid>k__BackingField: 70c286f0-39f2-45a4-8fa7-1e558238add7
   _archetype: 1
   _commands:
+  - rid: 3758369885830250580
   - rid: 3758369568633127020
   - rid: 3758369773434437641
   - rid: 4614097758933483520
@@ -298,7 +299,7 @@ MonoBehaviour:
       type: {class: CharacterUpdateCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 12
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _targetCharacterId: aad29799-f6ee-42af-96bd-0d09cdc990ae
         _updateType: 1
         _sourceTemplateId: 
@@ -307,16 +308,30 @@ MonoBehaviour:
       type: {class: CharacterUpdateCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 12
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _targetCharacterId: ad399f43-8535-432e-b47e-8fd330e63801
         _updateType: 0
         _sourceTemplateId: 35865b82-2d68-4685-ba5a-49d063ce83e0
         _overrideName: "\uC2E0\uBB38\uBC30\uB2EC\uC6D0"
+    - rid: 3758369885830250580
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "<\uBCF8 \uAC8C\uC784\uC5D0\uB294 \uC800\uC7A5 \uAE30\uB2A5\uC774
+          \uC81C\uACF5\uB418\uACE0 \uC788\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.>"
+        _characterName: 
+        _expression: 
+        _characterPosition: 0
+        _clearAllCharacters: 0
+        _showCharacter: 1
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3
     - rid: 4614097758933483520
       type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 6
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 1
         <AudioClip>k__BackingField: {fileID: 8300000, guid: a5ddfe9f8b2b8cd43b815148a1687ac7, type: 3}

@@ -11,9 +11,7 @@ namespace UGESystem
     /// </summary>
     public class UGESystemController : Singleton<UGESystemController>
     {
-        [SerializeField]
-        private GameObject _descriptionBox;
-        public GameObject DescriptionBox{get{return _descriptionBox;}}
+        
         private UGEUIManager _uiManager;
         public UGEUIManager UIManager
         {
