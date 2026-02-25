@@ -24,7 +24,6 @@ MonoBehaviour:
   - rid: 3758369457129652416
   - rid: 3758369457129652417
   - rid: 3758369457129652418
-  - rid: 3758369457129652419
   - rid: 3758369457129652420
   - rid: 3758369457129652421
   - rid: 3758369457129652422
@@ -145,26 +144,13 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uC798\uC740 \uC544\uB2C8\uACE0.. \uADF8\uB0E5 \uBA87\uAC00\uC9C0
           \uC815\uB3C4\uB9CC \uC54C\uC544\uC694. \uAF43\uB9D0\uB85C \uAF43\uC744
           \uC120\uBB3C\uD560\uB54C \uB354 \uC758\uBBF8\uC788\uAC8C \uB9CC\uB4E4\uC5B4\uC904
           \uC218 \uC788\uB2E4\uB294 \uC810\uC774 \uC7AC\uBC0C\uC5B4\uC694. \uADF8
           \uC0AC\uB78C\uC5D0\uAC8C \uC5B4\uC6B8\uB9AC\uB294 \uAF43\uC744 \uC120\uBB3C\uD560
           \uC218 \uC788\uAC8C\uB418\uB294\uAC70\uC8E0."
-        _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
-        _expression: Default
-        _characterPosition: 2
-        _clearAllCharacters: 0
-        _showCharacter: 1
-        _cinematicAnimDuration: 0
-        _cinematicDisplayDuration: 0
-    - rid: 3758369457129652419
-      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
-      data:
-        <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
-        _dialogueText: "\uC800\uC5D0\uAC8C \uC5B4\uB5A4 \uAF43\uC774 \uC5B4\uC6B8\uB9B4\uAE4C\uC694?"
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
         _expression: Default
         _characterPosition: 2
@@ -404,7 +390,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "...\uBB50\uAC00 \uB354 \uC788\uC5C8\uB294\uB370 \uAE30\uC5B5\uC774
           \uC798 \uC548\uB098\uB124\uC694."
         _characterName: f9e591d6-d9ba-4472-8d95-6083879b4513
