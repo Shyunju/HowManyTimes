@@ -18,6 +18,7 @@ MonoBehaviour:
   - rid: 3758369864458436616
   - rid: 3758369864458436617
   - rid: 3758369864458436618
+  - rid: 3758369931365449803
   - rid: 3758369864458436619
   references:
     version: 2
@@ -47,19 +48,19 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 1
-        _dialogueText: "\uC2A4\uD1A0\uB9AC - Shyunju\n\uC81C\uC791 - Shyunju\n\uADF8\uB9BC
-          - Shyunju\n\n\uC0AC\uC6A9\uD55C \uC74C\uC545\n\uB2EC\uB2F4\uBBA4\uC9C1
+        _dialogueText: "\uC2A4\uD1A0\uB9AC - Shyunju\n\n\uC81C\uC791 - Shyunju\n\n\uADF8\uB9BC
+          - Shyunju\n\n\n\n\n\n\uC0AC\uC6A9\uD55C \uC74C\uC545\n\n\uB2EC\uB2F4\uBBA4\uC9C1
           - \uC544\uBCF4\uCE74\uB3C4\n\uB2EC\uB2F4\uBBA4\uC9C1 - \uBAA9\uC695\uC624\uB9AC\n\uB2EC\uB2F4\uBBA4\uC9C1
           - \uB118\uC5B4\uAC00\uB294 \uCC45\uC7A5\n\uB2EC\uB2F4\uBBA4\uC9C1 - \uBC30\uCD94\n\uB2EC\uB2F4\uBBA4\uC9C1
           - \uB370\uC774\uC9C0 \n\uB2EC\uB2F4\uBBA4\uC9C1 - \uB808\uBAAC\n\uB2EC\uB2F4\uBBA4\uC9C1
-          -\uC624\uB80C\uC9C0\n\uB2EC\uB2F4\uBBA4\uC9C1 - \uC2E0\uB09C \uC591\uB9D0\n\n\n\n\uD50C\uB808\uC774
+          -\uC624\uB80C\uC9C0\n\uB2EC\uB2F4\uBBA4\uC9C1 - \uC2E0\uB09C \uC591\uB9D0\n\n\n\n\n\n\n\n\uD50C\uB808\uC774
           \uD574\uC8FC\uC154\uC11C \uAC10\uC0AC\uD569\uB2C8\uB2E4!"
         _characterName: 
         _expression: 
         _characterPosition: 0
         _clearAllCharacters: 0
         _showCharacter: 1
-        _cinematicAnimDuration: 1
+        _cinematicAnimDuration: 20
         _cinematicDisplayDuration: 3
     - rid: 3758369864458436619
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
@@ -69,3 +70,9 @@ MonoBehaviour:
         _rewards: []
         _isBranching: 0
         _targetNodeID: 
+    - rid: 3758369931365449803
+      type: {class: RewardCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 11
+        _isNodeExpanded: 1
+        _rewards: []
