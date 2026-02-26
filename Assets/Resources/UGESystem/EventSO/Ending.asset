@@ -32,7 +32,7 @@ MonoBehaviour:
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 0
         <AudioClip>k__BackingField: {fileID: 8300000, guid: 063e6f88034e9d241a4673fb1bbd3d56, type: 3}
-        <Volume>k__BackingField: 1
+        <Volume>k__BackingField: 0.5
         <Loop>k__BackingField: 1
     - rid: 3758369864458436617
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
