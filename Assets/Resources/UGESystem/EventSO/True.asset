@@ -602,7 +602,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 10
         _isNodeExpanded: 1
-        _targetRunnerId: 20859154-40a2-4023-91bc-6d5cdf71d3eb
+        _targetRunnerId: df57ce07-ecaf-4927-b5e0-45c82bb6d79a
     - rid: 3758369885830250581
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
@@ -620,8 +620,8 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
-        _dialogueText: "Ending 3 - \uBC18\uB824\uC790"
+        _isNodeExpanded: 1
+        _dialogueText: "Ending 3/3 - \uBC18\uB824\uC790"
         _characterName: 
         _expression: 
         _characterPosition: 0

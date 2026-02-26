@@ -59,7 +59,7 @@ MonoBehaviour:
         _isNodeExpanded: 0
         _dialogueText: "\uB529-\uB3D9,\uB529-\uB3D9"
         _characterName: 
-        _expression: Default
+        _expression: 
         _characterPosition: 1
         _clearAllCharacters: 0
         _showCharacter: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "\uADF8\uB098\uC800\uB098 \uC624\uB298\uC740 \uC5B4\uB5BB\uAC8C
           \uBCF4\uB0B4\uC2E4 \uC608\uC815\uC774\uC2E0\uAC00\uC694? \uAD1C\uCC2E\uC73C\uC2DC\uBA74
           \uC81C\uAC00 \uAC00\uBCFC\uB9CC\uD55C \uACF3\uC744 \uCD94\uCC9C\uD574\uB4DC\uB9B4\uAE4C\uC694?\n\uC774\uAC83\uB3C4
@@ -238,7 +238,7 @@ MonoBehaviour:
       type: {class: BackgroundCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 2
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _action: 0
         _type: 0
         _waitUntilInput: 1
@@ -248,7 +248,7 @@ MonoBehaviour:
       type: {class: EndCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 7
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _rewards: []
         _isBranching: 1
         _targetNodeID: c052a8c7-1989-4e0b-8cf5-271c89d393e7
@@ -286,7 +286,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: '[Day 1]'
         _characterName: 
         _expression: 
@@ -317,7 +317,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "<\uBCF8 \uAC8C\uC784\uC5D0\uB294 \uC800\uC7A5 \uAE30\uB2A5\uC774
           \uC81C\uACF5\uB418\uACE0 \uC788\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.>"
         _characterName: 

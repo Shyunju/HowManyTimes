@@ -26,7 +26,7 @@ public class GameManager : Singleton<GameManager>
     public void AddLikeablility(GameObject descriptText)
     {
         Likeability += _amount;
-        Debug.Log(Likeability);
+        //Debug.Log(Likeability);
         StartCoroutine(DescriptLikeablilityCO(descriptText));
     }
     private IEnumerator DescriptLikeablilityCO(GameObject descriptText)
@@ -34,8 +34,6 @@ public class GameManager : Singleton<GameManager>
         descriptText.SetActive(true);
         yield return new WaitForSeconds(5f);
         descriptText.SetActive(false);
-
-        //_characterManager.UpdateCharacterData();
     }
     public void SetUserName(TMP_Text name)
     {

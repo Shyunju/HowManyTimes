@@ -574,8 +574,8 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
-        _dialogueText: "Ending 2 - \uB3C4\uB3CC\uC774\uD45C"
+        _isNodeExpanded: 1
+        _dialogueText: "Ending 2/3 - \uB3C4\uB3CC\uC774\uD45C"
         _characterName: 
         _expression: 
         _characterPosition: 0

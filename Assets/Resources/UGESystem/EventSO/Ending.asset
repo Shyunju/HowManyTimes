@@ -18,6 +18,7 @@ MonoBehaviour:
   - rid: 3758369864458436616
   - rid: 3758369864458436617
   - rid: 3758369864458436618
+  - rid: 3758369931365449819
   - rid: 3758369931365449803
   - rid: 3758369864458436619
   references:
@@ -30,7 +31,7 @@ MonoBehaviour:
         _isNodeExpanded: 1
         <Action>k__BackingField: 0
         <SoundType>k__BackingField: 0
-        <AudioClip>k__BackingField: {fileID: 0}
+        <AudioClip>k__BackingField: {fileID: 8300000, guid: 063e6f88034e9d241a4673fb1bbd3d56, type: 3}
         <Volume>k__BackingField: 1
         <Loop>k__BackingField: 1
     - rid: 3758369864458436617
@@ -41,13 +42,13 @@ MonoBehaviour:
         _action: 0
         _type: 0
         _waitUntilInput: 0
-        _image: {fileID: 0}
+        _image: {fileID: 2800000, guid: e00ce0f6c69684509b6f976c3443ee7d, type: 3}
         _video: {fileID: 0}
     - rid: 3758369864458436618
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "\uC2A4\uD1A0\uB9AC - Shyunju\n\n\uC81C\uC791 - Shyunju\n\n\uADF8\uB9BC
           - Shyunju\n\n\n\n\n\n\uC0AC\uC6A9\uD55C \uC74C\uC545\n\n\uB2EC\uB2F4\uBBA4\uC9C1
           - \uC544\uBCF4\uCE74\uB3C4\n\uB2EC\uB2F4\uBBA4\uC9C1 - \uBAA9\uC695\uC624\uB9AC\n\uB2EC\uB2F4\uBBA4\uC9C1
@@ -75,4 +76,19 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 11
         _isNodeExpanded: 1
-        _rewards: []
+        _rewards:
+        - rid: 3758369931365449806
+    - rid: 3758369931365449806
+      type: {class: GoToStartScene, ns: , asm: Assembly-CSharp}
+      data:
+        <Description>k__BackingField: 
+    - rid: 3758369931365449819
+      type: {class: PlaySoundCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 6
+        _isNodeExpanded: 1
+        <Action>k__BackingField: 1
+        <SoundType>k__BackingField: 0
+        <AudioClip>k__BackingField: {fileID: 0}
+        <Volume>k__BackingField: 0.447
+        <Loop>k__BackingField: 0

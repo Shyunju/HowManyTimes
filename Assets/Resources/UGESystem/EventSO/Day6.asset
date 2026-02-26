@@ -39,6 +39,7 @@ MonoBehaviour:
   - rid: 3758369457129652614
   - rid: 3758369457129652615
   - rid: 3758369457129652616
+  - rid: 3758369931365449818
   - rid: 3758369457129652617
   - rid: 3758369457129652618
   - rid: 3758369457129652619
@@ -310,7 +311,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uC0AC\uB78C\uB3C4 \uB9C8\uCC2C\uAC00\uC9C0\uC8E0. \uC544\uB984\uB2F5\uAC8C
           \uD53C\uC5C8\uB2E4\uAC00 \uC9C0\uAE30 \uB9C8\uB828\uC774\uC8E0. \uB2F9\uC2E0\uC774
           \uADF8 \uC21C\uAC04\uC744 \uC990\uAE38 \uC904 \uC544\uB294 \uC0AC\uB78C\uC774\uB77C
@@ -443,3 +444,22 @@ MonoBehaviour:
         <AudioClip>k__BackingField: {fileID: 8300000, guid: a5ddfe9f8b2b8cd43b815148a1687ac7, type: 3}
         <Volume>k__BackingField: 0.5
         <Loop>k__BackingField: 0
+    - rid: 3758369931365449818
+      type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
+      data:
+        <CommandType>k__BackingField: 0
+        _isNodeExpanded: 0
+        _dialogueText: "\uC544\uB2C8 \uAE00\uC384, \uC5BC\uB9C8\uC804\uC5D0 \uC54C\uB808\uB974\uAE30
+          \uAC80\uC0AC\uB97C \uD574\uBD24\uB354\uB2C8 \uC5B4\uB9B4\uB550 \uBD84\uBA85
+          \uAD1C\uCC2E\uC558\uB294\uB370 \uC774\uC81C\uB294 \uBB38\uC81C\uAC00 \uC0DD\uAE38\uBC95\uD55C
+          \uC218\uC900\uC73C\uB85C \uBCC0\uD588\uB2E4\uB358\uAC00 \uBCC0\uD654\uAC00
+          \uC788\uB354\uB77C\uAD6C\uC694. \uB098\uC774\uAC00 \uB4E4\uC5B4\uC11C \uCCB4\uC9C8\uB3C4
+          \uBCC0\uD558\uB098\uBD10\uC694. \uACE0\uAC1D\uB2D8\uB3C4 \uC5B8\uC81C \uD55C\uBC88
+          \uCCB4\uD06C\uD574\uBCF4\uC138\uC694!"
+        _characterName: ad399f43-8535-432e-b47e-8fd330e63801
+        _expression: Thinking
+        _characterPosition: 1
+        _clearAllCharacters: 0
+        _showCharacter: 1
+        _cinematicAnimDuration: 1
+        _cinematicDisplayDuration: 3
