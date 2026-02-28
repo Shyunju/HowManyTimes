@@ -8,21 +8,19 @@ public class GameManager : Singleton<GameManager>
 {
     private int _likeability = 0;
     private int _amount = 10;
-   // [SerializeField]
-    //private GameObject _descriptText;
+    [SerializeField]
+    private AudioClip _buttonEffectSound;
     private UGECharacterManager _characterManager;
     //private CharacterUpdateCommand _testCommand;
     private string _userName = "test";
+    private AudioSource _audioSource;
     public string UserName { get { return _userName; } }
     public int Likeability {get {return _likeability;} private set { _likeability = value; } }
 
-//    void Start()
-//     {
-//         _testCommand = new CharacterUpdateCommand
-//         {
-//             //CommandType = CommandType.Dialogue
-//         };
-//     }
+    void start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
     public void AddLikeablility(GameObject descriptText)
     {
         Likeability += _amount;
@@ -52,5 +50,9 @@ public class GameManager : Singleton<GameManager>
 #else
         Application.Quit(); // 어플리케이션 종료
 #endif
+    }
+    public void PlaySound()
+    {
+        _audioSource.PlayOneShot(_buttonEffectSound);
     }
 }
