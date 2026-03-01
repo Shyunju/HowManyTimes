@@ -17,7 +17,7 @@ public class GameManager : Singleton<GameManager>
     public string UserName { get { return _userName; } }
     public int Likeability {get {return _likeability;} private set { _likeability = value; } }
 
-    void start()
+    void Start()
     {
         _audioSource = GetComponent<AudioSource>();
     }
