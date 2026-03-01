@@ -7,7 +7,7 @@ public class GoToTrueEnding : AbstractEventReward
     {
         if(GameManager.Instance.Likeability >= 60)
         {
-            SceneManager.LoadScene("TrueEnding");
+            SceneManager.LoadScene(2);
         }
     }
 }

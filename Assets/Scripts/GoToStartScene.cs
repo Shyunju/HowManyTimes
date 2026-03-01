@@ -5,6 +5,6 @@ public class GoToStartScene : AbstractEventReward
 {
     public override void GrantReward(UGEEventTaskRunner runner)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

@@ -39,7 +39,7 @@ public class GameManager : Singleton<GameManager>
         {
             _userName = name.text.ToString();
             
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             
         }
     }
