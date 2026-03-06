@@ -1104,11 +1104,11 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uD6C4\uC5D0\uC5E5~ \uACF0\uB3CC\uC774~"
         _characterName: 2c66136f-089c-4142-ad8e-073f258373cd
         _expression: Default
-        _characterPosition: 0
+        _characterPosition: 1
         _clearAllCharacters: 0
         _showCharacter: 1
         _cinematicAnimDuration: 0
@@ -1117,12 +1117,12 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 0
+        _isNodeExpanded: 1
         _dialogueText: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4. \uC27F! \uACC4\uC18D \uB54C\uC4F0\uBA74
           \uD63C\uB09C\uB2E4! \uAC00\uC790."
         _characterName: a1929b6b-f5a6-465c-819f-f7523ca952f7
         _expression: Default
-        _characterPosition: 1
+        _characterPosition: 0
         _clearAllCharacters: 0
         _showCharacter: 1
         _cinematicAnimDuration: 0
