@@ -52,7 +52,7 @@ MonoBehaviour:
       data:
         <CommandType>k__BackingField: 0
         _isNodeExpanded: 0
-        _dialogueText: "\uB098\uB294 \uD3C9\uC18C\uBCF4\uB2E4 \uCC28\uB9BC\uC138\uB97C
+        _dialogueText: "\uB098\uB294 \uD3C9\uC18C\uBCF4\uB2E4 \uCC28\uB9BC\uC0C8\uB97C
           \uB2E8\uC815\uD558\uAC8C \uD558\uACE0 \uCEE4\uD53C\uC20D\uC73C\uB85C \uD5A5\uD588\uB2E4."
         _characterName: 
         _expression: 
@@ -413,7 +413,7 @@ MonoBehaviour:
       type: {class: DialogueCommand, ns: UGESystem, asm: Assembly-CSharp}
       data:
         <CommandType>k__BackingField: 0
-        _isNodeExpanded: 1
+        _isNodeExpanded: 0
         _dialogueText: "Ending 1/3 - \uBC31\uD569\uC758 \uAF43\uB9D0"
         _characterName: 
         _expression: 
